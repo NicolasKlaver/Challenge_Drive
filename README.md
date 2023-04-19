@@ -1,5 +1,9 @@
 # Challenge_Meli
 
+Instalar bibliotecas para ejecutar:
+pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client mysql-connector-python redis
+
+
 # Pasos para realizar el challenge
 
 ### Escribir un script en Python que acceda a la API de Google Drive 
@@ -14,3 +18,4 @@
 ### Escribir lógica para cambiar la configuración de los archivos públicos a privados y enviar un correo electrónico al propietario del archivo notificándoles del cambio realizado.
 
 ### Escribir pruebas para verificar el correcto funcionamiento de la aplicación.
+
