@@ -11,23 +11,6 @@ import os
 
 
 
-####### Ejemplos de como conectarse a la base de datos
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="tu_usuario",
-  password="tu_contraseña",
-  database="nombre_de_la_base_de_datos"
-)
-
-# Creo la tabla
-mycursor = mydb.cursor()
-mycursor.execute("CREATE TABLE archivos (nombre_archivo VARCHAR(255), extension VARCHAR(10), propietario VARCHAR(255), visibilidad VARCHAR(10), fecha_ultima_modificacion VARCHAR(50))")
-
-## Ejemplo de como subir un archivo
-archivo = ("archivo.txt", "txt", "usuario1", "privado", "2022-01-01")
-sql = "INSERT INTO archivos (nombre_archivo, extension, propietario, visibilidad, fecha_ultima_modificacion) VALUES (%s, %s, %s, %s, %s)"
-mycursor.execute(sql, archivo)
-mydb.commit()
 
 #############################################################################################
 # Obtener una lista de todos los archivos en la unidad de Drive del usuario
@@ -72,61 +55,3 @@ sql = "UPDATE archivos SET visibilidad = %s WHERE nombre_archivo = %s"
 val = ("privado", item['name'])
 mycursor.execute(sql, val)
 mydb.commit()
-
-# Envía un correo electrónico al propietario del archivo 
-import smtplib
-
-sender_email = "tucorreoelectronico@gmail.com"
-receiver_email = "correoelectronicodelpropietario@gmail.com"
-password = "tu_contraseña"
-
-message = """\
-Subject: Visibilidad de archivo cambiada
-
-Hola,
-
-La visibilidad de tu archivo {} ha sido cambiada a privado.
-
-Saludos,
-""".format(item['name'])
-
-with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-    server.login(sender_email, password)
-    server.sendmail(sender_email, receiver_email, message)
-
-
-
-
-
-############### CREO Y ME CONECTO A LA BASE DE DATOS
-import mysql.connector
-
-# Conexión a la base de datos
-db = mysql.connector.connect(
-    host="localhost",
-    user="username",
-    password="password",
-    database="database_name"
-)
-
-# Cursor
-cursor = db.cursor()
-
-# Crear tabla
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS archivos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL,
-    extension VARCHAR(10) NOT NULL,
-    owner VARCHAR(255) NOT NULL,
-    visibilidad VARCHAR(10) NOT NULL,
-    fecha_modificacion DATETIME NOT NULL,
-    historico BOOLEAN NOT NULL DEFAULT FALSE
-)
-""")
-
-# Cerrar conexión
-db.close()
-
-
-
