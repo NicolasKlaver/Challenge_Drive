@@ -70,6 +70,7 @@ class Database:
         except mysql.connector.Error as err:
             print(f"Error al crear la tabla: {err}")    
     
+##################### A PARTIR DE AQUI ES EL CODIGO QUE ANDABA --> REVISAR#####################
     def insert_data(self, table_name, data):
         try:
             data_unique= self.get_unique_data(data)
@@ -92,8 +93,7 @@ class Database:
             
                 # Convertir el valor de was_public a un booleano
                 was_public = 1 if item.get('visibility', '') == 'publico' else 0
-                #print("Imprimo el valor de visibility: ", item.get('visibility', ''))
-               # print("Imprimo el valor de was_public: ", was_public)
+            
                 values = (
                     item['name'],
                     item['extension'],
@@ -132,9 +132,36 @@ class Database:
         except mysql.connector.Error as err:
             print(f"Error al actualizar los registros: {err}")
             
+    def update_last_modified_date(self, existing_data, new_data, table_name):
+    
+        # Tengo que cambiar el campo de datatime a string para poder comparar
+        # for item in existing_data:
+        # item['fecha_ultima_modificacion'] = item['fecha_ultima_modificacion'].strftime("%Y-%m-%d %H:%M:%S")
+        try:
+            # Crear el cursor
+            self.cursor = self.connection.cursor()
+
+            # Consulta SQL para actualizar los registros
+            sql = f"UPDATE {table_name} SET fecha_ultima_modificacion = %s "
+            
+            # Obtener la fecha y hora actual
+
+            # Ejecutar la consulta para actualizar los registros
+            self.cursor.execute(sql, ())
+
+            # Guardar los cambios en la base de datos
+            self.connection.commit()
+
+            print(f"Se han actualizado {self.cursor.rowcount} registros.")
+        
+        except mysql.connector.Error as err:
+            print(f"Error al actualizar los registros: {err}")
+           
     def select_all_data(self, table_name):
         try:
-            self.cursor = self.connection.cursor(dictionary=True)
+            #self.cursor = self.connection.cursor(dictionary=True)
+            self.cursor = self.connection.cursor()
+
             sql = f"SELECT name, extension, owner, visibility, fecha_ultima_modificacion FROM {table_name}"
             self.cursor.execute(sql)
             
@@ -142,40 +169,79 @@ class Database:
         
         except mysql.connector.Error as err:
             print(f"Error al seleccionar los datos: {err}")
+
+##################### A PARTIR DE AQUI ES EL CODIGO NUEVO --> PROBAR #####################
+    def get_files_list(self):
+        try:
+            #self.cursor = self.connection.cursor(dictionary=True)
+            self.cursor = self.connection.cursor()
+
+            sql = f"SELECT name, extension, owner, visibility, fecha_ultima_modificacion, was_public FROM Inventario"
+            self.cursor.execute(sql)
+            
+            return self.cursor.fetchall()
+        
+        except mysql.connector.Error as err:
+            print(f"Error al seleccionar los datos: {err}")
+
+    def buscar_archivo(self, file_name, file_extension):
+        self.cursor = self.connection.cursor()
+        
+        self.cursor.execute("SELECT * FROM tabla WHERE name={file_name} AND extension={file_extension}}")
+        result= self.cursor.fetchall()
+        
+        if len(result) > 0:
+            return True
+        else:
+            return False
+
+    def insertar_archivo(self, file_name, file_extension, file_owner, file_visibility, file_last_modified_date, file_was_public):
+        # Crear el cursor
+        self.cursor = self.connection.cursor()
+        
+        sql= "INSERT INTO Inventario (name, extension, owner, visibility, fecha_ultima_modificacion, was_public) VALUES (%s, %s, %s, %s, %s, %s)"
+        
+        values = ( file_name, file_extension,file_owner,file_visibility,file_last_modified_date,file_was_public)
+        
+        self.cursor.execute(sql, values)
+        self.cursor.commit()
+
+    def insertar_archivo_historico(self, file_name, file_extension, file_owner, file_visibility, file_last_modified_date):
+        # Crear el cursor
+        self.cursor = self.connection.cursor()
+        
+        sql= "INSERT INTO Inventario_Historico (name, extension, owner, visibility, fecha_ultima_modificacion, was_public) VALUES (%s, %s, %s, %s, %s, %s)"
+        
+        values = ( file_name, file_extension,file_owner,file_visibility,file_last_modified_date)
+        
+        self.cursor.execute(sql, values)
+        self.cursor.commit()
     
-    def get_unique_data(self, new_data):
-        unique_data = []
-        existing_data = self.select_all_data("Inventario")
+    def fue_modificado(self, file_name, file_extension, file_last_modified_date):
         
-        if existing_data is None or len(existing_data) == 0:
-            return new_data
+        sql= "SELECT fecha_ultima_modificacion FROM Inventario WHERE name={file_name} AND extension={file_extension}}"
         
-        #print("Base de datos ANTES de convertir:", existing_data)
-        
-        #Tengo que cambiar el campo de datatime a string para poder comparar
-      #  for item in existing_data:
-       #     item['fecha_ultima_modificacion'] = item['fecha_ultima_modificacion'].strftime("%Y-%m-%d %H:%M:%S")
-       # print("Imprimo los nuevos datos a agregar: \n", new_data)
-        
-        #print("Imprimo datos de la base de datos DESPUES DE convertir: \n",existing_data)
-        
-        for new_item in new_data:
-            is_unique = True
-            for existing_item in existing_data:
-                if existing_item['name'] == new_item['name'] and existing_item['extension'] == new_item['extension']:
-                    is_unique = False
-                    break
-            if is_unique:
-                unique_data.append(new_item)
-                
-        if not unique_data:
-            print("No hay datos nuevos que agregar")
-            sys.exit()  # Salir de la función y del programa
-        
-        return unique_data
+        ultima_modificacion= self.cursor.execute(sql)
+
+        if ultima_modificacion != file_last_modified_date:
+            return True
+        else:
+            return False
+
+    def update_last_modified_date(self, file_last_modified_date):
+        self.cursor = self.connection.cursor()
+        sql= "UPDATE Inventario SET fecha_ultima_modificacion={file_last_modified_date} WHERE name={file_name} AND extension={file_extension}}"
+        self.cursor.execute(sql)
+        self.cursor.commit()
+
+    def cambiar_visibilidad(self, file_name, file_extension, file_modified_time):
+        self.cursor = self.connection.cursor()
+        sql= "UPDATE Inventario SET visibility={file_visibility} WHERE name={file_name} AND extension={file_extension}}"
+        self.cursor.execute(sql)
+        self.cursor.commit()
 
 
-        
+
 
 db = Database(host="localhost", user="root", password="root")
 db.open_connection()
