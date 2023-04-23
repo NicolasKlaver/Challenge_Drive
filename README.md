@@ -1,8 +1,8 @@
 # Challenge_Meli
 
 Instalar bibliotecas para ejecutar:
-pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client mysql-connector-python redis
-
+pip install google-api-python-client
+pip install mysql-connector-python
 
 # Pasos para realizar el challenge
 
