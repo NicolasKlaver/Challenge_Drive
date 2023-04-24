@@ -1,8 +1,14 @@
 import tkinter as tk
-import os.path
+#import os.path
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-from googleAPI import GoogleDriveAPI
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+from google_DriveAPI import GoogleDriveAPI
+
 
 class App:
     def __init__(self, root):
@@ -41,21 +47,18 @@ class App:
         # configuramos la posición del botón dentro del Canvas utilizando el método create_window
         self.canvas.create_window(450, 100, window=self.button_listar)
     
-    def authenticate_google_drive(self):
-        self.driveAPI.authenticate()
-    
     def connect_to_google_drive(self):
         #Conectar a Google Drive y listar los archivos
-        self.authenticate_google_drive()
         self.driveAPI.connect()
-        
-        self.list_google_drive_files()
-        
+        print("\nConectado a Google Drive - desde Tkinter\n")
+                
     def list_google_drive_files(self):
-        self.driveAPI.get_files()
-    
+        files= self.driveAPI.get_files()
+        print(files)
+
 
 if __name__ == '__main__':
     root = tk.Tk()
     app = App(root)
     root.mainloop()
+

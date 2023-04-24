@@ -1,7 +1,7 @@
 import datetime
 import os
-from googleAPI import GoogleDriveAPI
-from googleBD import Database
+from google_DriveAPI import GoogleDriveAPI
+from google_Database import Database
 
 class GoogleDriveInventory:
     def __init__(self, db):
