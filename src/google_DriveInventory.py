@@ -7,7 +7,7 @@ class GoogleDriveInventory:
     def __init__(self, db):
         #self.drive_api = GoogleDriveAPI(credentials_file_path)
         self.db = Database()
-        #self.email = EmailNotifier()
+        self.emailObject = EmailNotifier()
         
     def get_files_list(self):
         #files_list = self.drive_api.get_files()
@@ -72,10 +72,10 @@ class GoogleDriveInventory:
       self.bd.cambiar_visibilidad(file_name, file_extension, last_modified_time)
 
     def send_email_owner(self, file_name, file_extension, file_owner):
-      #subject = f"Change in visibility for file '{file_name}'"
-      #body = f"Your file '{file_name}' is no longer publicly visible."
-      #self.email.send_email(file_owner, subject, body)
-      pass
+      subject = f"Change in visibility for file '{file_name}.{file_extension}'"
+      message = f"Your file '{file_name}' is no longer publicly visible."
+      self.emailObject.send_email(file_owner, subject, message)
+      
 
 
 
