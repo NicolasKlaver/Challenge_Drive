@@ -60,8 +60,10 @@ class GoogleDriveAPI:
             #fields = "nextPageToken, files(id, name, mimeType, owners(emailAddress), visibility, modifiedTime)"
 
             # Obtener los archivos de Google Drive
-            results = self.service.files().list(q=None, fields=fields, pageSize=10).execute()
+            results = self.service.files().list(q=None, fields=fields, pageSize=3).execute()
+            print("\n\nG-API: Imprimo Results: ", results)
             items = results.get('files', [])
+            print("\n\nG-API: Imprimo items: ", items)
             # Procesar la lista de archivos y extraer los campos necesarios
             files = []
             for item in items:
@@ -76,8 +78,11 @@ class GoogleDriveAPI:
                     'extension': extension,
                     'owner': owner,
                     #'visibility': item['visibility'],
+                    'visibility': "publico",
                     'modified_time': item['modifiedTime']
                 })
+                print("\n\nG-API: Imprimo una vuelta de files: ", files)
+            print("\n\nImprimo todo files: ", files)
             return files
     
         except HttpError as error:
