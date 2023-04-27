@@ -66,7 +66,6 @@ class Database:
         except mysql.connector.Error as err:
             print(f"Error al crear la tabla: {err}")    
     
-##################### A PARTIR DE AQUI ES EL CODIGO NUEVO --> PROBAR #####################
     def get_files_list(self):
         try:
             #self.cursor = self.connection.cursor(dictionary=True)

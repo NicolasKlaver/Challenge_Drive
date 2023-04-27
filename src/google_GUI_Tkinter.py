@@ -20,23 +20,41 @@ class App:
         self.root = root
         self.root.title("Lista de archivos de Google Drive")
         
+        
+        self.crear_ventana()
+        self.crear_boton_conexion()
+        self.crear_boton_listar_archivos()
+        self.crear_pestañas()
+    
+    def crear_ventana(self):
         # Creando un objeto Canvas que nos permitirá dibujar componentes gráficos 
         # en la ventana y lo estamos empaquetando (con el método pack) dentro de la ventana raíz.
-        self.canvas = tk.Canvas(self.root, height=300, width=300)
+        self.canvas = tk.Canvas(self.root, height=150, width=150)
         self.canvas.pack()
+        self.root.configure(bg='#3399FF')
 
         # Creando un objeto Label que nos permitirá mostrar un texto en la ventana.
         # Configuramos el tamaño de la fuente y la posición del Label dentro del Canvas
         # utilizando el método create_window.
-        self.label = tk.Label(self.root, text="Bienvenido a la lista de archivos de Google Drive!")
-        self.label.config(font=("Arial", 14))
+        self.label = tk.Label(self.root, text="Bienvenido al Inventario de Google Drive")
+        self.label.config(font=("Arial", 30), bg='#3399FF')
         self.canvas.create_window(250, 25, window= self.label)
 
-        
-        self.crear_arbol()
-        self.crear_boton_conexion()
-        self.crear_boton_listar_archivos()
-        
+    def crear_pestañas(self):
+        # Creando un objeto Notebook que nos permitirá tener varias pestañas en la ventana.
+        self.notebook = ttk.Notebook(self.root)
+        self.notebook.pack()
+
+        # Creamos la primera pestaña
+        self.tab1 = ttk.Frame(self.notebook)
+        self.notebook.add(self.tab1, text="Tabla Inventario")
+        self.crear_arbol_inventario()
+       
+        # Creamos la segunda pestaña
+        self.tab2 = ttk.Frame(self.notebook)
+        self.notebook.add(self.tab2, text="Tabla Publico - Historico")
+        self.crear_arbol_historico() 
+               
     def populate_table(self, files):
         # Obtener la lista de archivos de la API de Google Drive
       
@@ -52,28 +70,54 @@ class App:
                                     command=self.connect_to_google_drive)
         # configuramos la posición del botón dentro del Canvas utilizando el método create_window
         self.canvas.create_window(100, 100, window=self.button_conn)
-        
+        # cambia el color de fondo a blanco crema
+        self.button_conn.configure(bg="#FFE4C9")  
+    
     def crear_boton_listar_archivos(self):
         self.button_listar = tk.Button(text="Listar Archivos", 
                                     command=self.list_google_drive_files)
         # configuramos la posición del botón dentro del Canvas utilizando el método create_window
         self.canvas.create_window(100, 130, window=self.button_listar)
     
-    def crear_arbol(self):
+    def crear_arbol_inventario(self):
         # Crear el cuadro de la tabla
-        self.tree = tk.ttk.Treeview(root)
+        self.tree = ttk.Treeview(self.tab1)
         self.tree.pack()
         # Agregar encabezados de columna
-        #self.tree['columns'] = ('id','name','extension','owner','visibility','last_modified_date','was_public')
+        self.tree['columns'] = ('id','name','extension','owner','visibility','last_modified_date','was_public')
+        #self.tree['columns'] = ('id','name','extension','owner','last_modified_date')
+        self.tree.heading('id', text='id del archivo')
+        self.tree.column('id', width=50, minwidth=50)
+        self.tree.heading('name', text='Nombre del archivo')
+        self.tree.column('name', width=300, minwidth=300)
+        self.tree.heading('extension', text='extension del archivo')
+        self.tree.column('extension', width=300, minwidth=300)
+        self.tree.heading('owner', text='Owner')
+        self.tree.column('owner', width=100, minwidth=100)
+        self.tree.heading('visibility', text='Visibility')
+        self.tree.column('visibility', width=100, minwidth=100)     
+        self.tree.heading('last_modified_date', text='last_modified_date')
+        self.tree.column('last_modified_date', width=100, minwidth=100)
+        self.tree.heading('was_public', text='was_public')
+        self.tree.column('was_public', width=100, minwidth=100)
+    
+    def crear_arbol_historico(self):
+        # Crear el cuadro de la tabla
+        self.tree = ttk.Treeview(self.tab2)
+        self.tree.pack()
+        # Agregar encabezados de columna
         self.tree['columns'] = ('id','name','extension','owner','last_modified_date')
         self.tree.heading('id', text='id del archivo')
+        self.tree.column('id', width=50, minwidth=50)
         self.tree.heading('name', text='Nombre del archivo')
+        self.tree.column('name', width=300, minwidth=300)
         self.tree.heading('extension', text='extension del archivo')
+        self.tree.column('extension', width=300, minwidth=300)
         self.tree.heading('owner', text='Owner')
-        #self.tree.heading('visibility', text='Visibility')
+        self.tree.column('owner', width=100, minwidth=100)
         self.tree.heading('last_modified_date', text='last_modified_date')
-        #self.tree.heading('was_public', text='was_public')
-    
+        self.tree.column('last_modified_date', width=100, minwidth=100)
+
     def connect_to_google_drive(self):
         #Conectar a Google Drive y listar los archivos
         self.driveAPI.connect()
@@ -88,5 +132,6 @@ class App:
 if __name__ == '__main__':
     root = tk.Tk()
     app = App(root)
+    
     root.mainloop()
 
