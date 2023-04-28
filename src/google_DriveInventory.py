@@ -1,85 +1,91 @@
 import datetime
-import os
-from google_DriveAPI import GoogleDriveAPI
-from google_Database import Database
+from google_GUI_Tkinter import App
 
 class GoogleDriveInventory:
-    def __init__(self, db, drive_api):
-        self.drive_api = drive_api
-        self.db = db
+  ##### FUNCINO DE INICIALIZACION #####
+    def __init__(self):
+        obj_app = App()
+        self.db = obj_app.db
+        self.drive_api = obj_app.driveAPI
         #self.emailObject = EmailNotifier()
         
-    def get_files_list(self):
-        return self.drive_api.get_files()
-        
+    
+    def handler_files(self):
+        files_list =  self.drive_api.get_files()
+        self.inventory_files(files_list)
+    
+    ########## FUNCIONES PARA MANEJAR LOS ARCHIVOS ##########
     def inventory_files(self, files_list):
-        # Imprimo la lista de archivos de la Base de Datos
-        #bd_list = self.bd.get_files_list()
-        print("\n\nG-INV: files_list: " )
         for file in files_list:
             file_id = file['id']
-            print("File id: ",  file_id)
-            file_name = file['name']
-            print("name: ",  file_name)
-            #file_extension = os.path.splitext(file_name)[1]
-            file_extension= file['extension']
-            print("Extension id: ",  file_extension)
-            #file_owner = file['owners'][0]['emailAddress']
-            file_owner = file['owner']
-            file_visibility = file['visibility']
             file_modified_time = datetime.datetime.strptime(file['modified_time'], '%Y-%m-%dT%H:%M:%S.%fZ')
-            #file_modified_time = datetime.datetime.fromisoformat(file['modified_time'])
-            file_was_public = 1 if file_visibility == 'publico' else 0
- 
-        
-            # Check if the file is already in the inventory
-            se_encuentra = self.estaEnInventario(file_name, file_extension)
-
-            if not se_encuentra:
-              self.insertar_archivo(file_name, file_extension, file_owner, file_visibility, file_modified_time, file_was_public)
-               
-              if file_was_public:
-                self.insertar_historico(file_name, file_extension, file_owner, file_visibility, file_modified_time)
-              
-            elif file_visibility == "publico":
-              self.handler_visibility(file_id, file_name, file_extension)
-    
+                       
+            if file['visibility'] == 'publico':
+               file_was_public = 1
             else:
-              self.handler_last_modified(file_name, file_extension, file_modified_time)
+              file_was_public= 0
+ 
+            ######## Aca arranca la rutina de comparacion ########
+            
+            # Me fijo que NO este en la Base de Datos
+            if not self.estaEnInventario(file_id):
+              self.insertar_archivo(file, file_was_public)
+
+              #Si NO esta  --> lo agrego
+              if file_was_public:
+                self.insertar_historico(file, file_modified_time)
+                self.handler_visibility(file)                
               
+            # Si ESTA en la Base de Datos pero por algun motivo cambiaron el archivo a Publico
+            elif file_was_public:
+              self.handler_visibility(file, file_id)
+            # Si ESTA en la Base de Datos --> Chequear si tuvo alguna modificacion
+            else:
+              self.handler_last_modified(file_id, file_modified_time)
+                
+    def estaEnInventario(self, file_id):            
+      return self.db.existe_archivo(file_id)
     
-    def estaEnInventario(self, file_name, file_extension):            
-      return self.db.buscar_archivo(file_name, file_extension)
+    def estaEnHistorico(self, file_id):            
+      return self.db.existe_archivo_historico(file_id)
       
-    def insertar_archivo(self, file_name, file_extension, file_owner, file_visibility, file_modified_time, file_was_public):
-      self.db.insertar_archivo_nuevo(file_name, file_extension, file_owner, file_visibility, file_modified_time, file_was_public)
+    ########## FUNCIONES INSERTAR ARCHIVOS ##########      
+    def insertar_archivo(self, file, file_was_public):
+      self.db.insertar_archivo_nuevo(file, file_was_public)
 
-    def insertar_historico(self, file_name, file_extension, file_owner, file_visibility, file_modified_time):
-      self.db.insertar_archivo_historico(file_name, file_extension, file_owner, file_visibility, file_modified_time)
+    def insertar_historico(self, file):
+      self.db.insertar_archivo_historico(file)
 
-    def handler_last_modified(self, file_name, file_extension, file_modified_time):
-
-      if self.db.fue_modificado(file_name, file_extension, file_modified_time):
-          self.db.update_last_modified_date(file_modified_time)
-
-    def handler_visibility(self, file_id, file_name, file_extension, file_owner):
-      last_modified_time = self.cambiar_visibilidad_drive(file_id)
-      self.cambiar_visibilidad_bd(file_name, file_extension, last_modified_time)
-      self.send_email_owner(file_name, file_extension, file_owner)
     
-    def cambiar_visibilidad_drive(self, file_id):
-      #self.drive_api.revoke_file_permission(file_id)
-      #return time.now()
-      pass
-    
-    def cambiar_visibilidad_bd(self, file_name, file_extension, last_modified_time):
-      self.bd.cambiar_visibilidad(file_name, file_extension, last_modified_time)
+    ########## FUNCIONES PARA MANEJAR LA ULTIMA MODIFICACION ##########    
+    def handler_last_modified(self, file_id, file_modified_time):
+      if self.db.fue_modificado(file_id, file_modified_time):
+          self.db.update_last_modified_date(file_id, file_modified_time)
 
+    
+    ########## FUNCIONES PARA CAMBIAR LA VISIBILIDAD ##########   
+    def handler_visibility(self, file,  file_id):
+      file_owner = file['owner']
+      
+      #Remuevo los permisos publicos
+      self.drive_api.remove_public_visibility(file_id)
+      #Obtengo la ultima hora de la modificacion
+      last_modified_time = self.drive_api.get_last_modified_date(file_id)
+      #Update de la Tabla de Inventario
+      self.db.update_handler_visibility(file_id, last_modified_time)
+      # Si ya estaba le actualizo la ultima modificacion
+      if self.estaEnHistorico(file_id): 
+        self.db.update_archivo_historico(file_id, last_modified_time)
+      else:
+        self.db.insertar_archivo_historico(file)
+        
+      self.send_email_owner(file_id, file_owner)
+    
+  
+    ########## FUNCIONES PARA MANDAR MAIL ##########    
     def send_email_owner(self, file_name, file_extension, file_owner):
-      subject = f"Change in visibility for file '{file_name}.{file_extension}'"
-      message = f"Your file '{file_name}' is no longer publicly visible."
-      self.emailObject.send_email(file_owner, subject, message)
+      #subject = f"Change in visibility for file '{file_name}.{file_extension}'"
+      #message = f"Your file '{file_name}' is no longer publicly visible."
+      #self.emailObject.send_email(file_owner, subject, message)
+      pass
       
-
-
-
