@@ -65,12 +65,11 @@ class GoogleDriveAPI:
         try:
             # Definir los campos que queremos obtener para cada archivo
             fields = "nextPageToken, files(id, name, mimeType, owners(emailAddress), permissions, modifiedTime)"
-            query = "trashed = false"
+            query = "trashed = false and mimeType='application/pdf' "
 
             # Obtener los archivos de Google Drive
-            results = self.service.files().list(q=query, fields=fields, pageSize=10).execute()
+            results = self.service.files().list(q=query, fields=fields, pageSize=4).execute()
             items = results.get('files', [])
-
             # Procesar la lista de archivos y extraer los campos necesarios
             files = []
             for item in items:
@@ -81,8 +80,13 @@ class GoogleDriveAPI:
                 
                 # Obtener la lista de permisos del archivo
                 permissions = item.get('permissions', [])
-                is_public = self.es_publico(permissions)
-    
+                #is_public = self.es_publico(permissions)
+                is_public = False
+                for perm in permissions:
+                    if  perm.get('id', '') == 'anyoneWithLink':
+                        is_public = True
+                        break 
+        
                 # Agregar un diccionario con los campos que nos interesan a la lista de archivos
                 files.append({
                     'id': item['id'],
@@ -92,6 +96,7 @@ class GoogleDriveAPI:
                     'visibility': 'publico' if is_public else 'privado',
                     'modified_time': item['modifiedTime']
                 })
+            print(files)
             return files
     
         except HttpError as error:
@@ -110,7 +115,7 @@ class GoogleDriveAPI:
      
     def get_last_modified_date(self, file_id):
         try:
-            modified_info = self.service.about().get(fileId= file_id, fields='modifiedTime').execute()
+            modified_info = self.service.files().get(fileId= file_id, fields='modifiedTime').execute()
             return modified_info['modifiedTime']
         except HttpError as error:
             print(f"Se produjo un error al obtener la información del usuario autenticado: {error}")

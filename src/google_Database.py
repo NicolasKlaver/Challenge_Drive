@@ -1,9 +1,6 @@
 import mysql.connector
 import datetime
-#from google_DriveAPI import GoogleDriveAPI
-#from google_DriveInventory import GoogleDriveInventory
-#import google_DriveAPI
-#import google_DriveInventory
+
 
 class Database:
     ########## FUNCION DE INICIALIZACION ##########
@@ -55,37 +52,40 @@ class Database:
     def create_table_inventario(self, table_name):
         #Asigno el valor del nombre de la tabla 
         self.table_inv = table_name
+        print("\nTabla inventario: ",  self.table_inv)
+
         try:
             self.cursor = self.connection.cursor()
             sql = """CREATE TABLE IF NOT EXISTS {} (
-                id INT PRIMARY KEY,
+                id VARCHAR(100) PRIMARY KEY,
                 name VARCHAR(255),
                 extension VARCHAR(50),
                 owner VARCHAR(255),
                 visibility ENUM('publico', 'privado'),
                 fecha_ultima_modificacion DATETIME,
                 was_public BOOLEAN
-              )""".format(table_name)
+              )""".format(self.table_inv)
               
             self.cursor.execute(sql)
-            print("La tabla se ha creado exitosamente.")
+            print("La tabla de Inventario se ha creado exitosamente.")
         except mysql.connector.Error as err:
             print(f"Error al crear la tabla: {err}")    
     
     def create_table_historico(self, table_name):
         self.table_historico = table_name
+        print("\n\nTabla Historico: ",  self.table_historico)
         try: 
             self.cursor = self.connection.cursor()
             sql = """CREATE TABLE IF NOT EXISTS {} (
-                id INT PRIMARY KEY,
+                id VARCHAR(100) PRIMARY KEY,
                 name VARCHAR(255),
                 extension VARCHAR(50),
                 owner VARCHAR(255),
-                fecha_ultima_modificacion DATETIME,
-              )""".format(table_name)
+                fecha_ultima_modificacion DATETIME
+              )""".format(self.table_historico)
               
             self.cursor.execute(sql)
-            print("La tabla se ha creado exitosamente.")
+            print("La tabla Historica se ha creado exitosamente.")
         except mysql.connector.Error as err:
             print(f"Error al crear la tabla: {err}")   
     
@@ -129,25 +129,43 @@ class Database:
     
     
     ########## FUNCION QUE DEVUELVE LOS ARCHIVOS ???????? ##########
-    def get_files_list(self):
+    def pedido_archivos_inventario(self):
         try:
             self.cursor = self.connection.cursor()
 
-            sql = f"SELECT name, extension, owner, visibility, fecha_ultima_modificacion, was_public FROM {self.table_inv}"
+            sql = f"SELECT * FROM {self.table_inv}"
             self.cursor.execute(sql)
+
+            rows= self.cursor.fetchall()
+            columns = [desc[0] for desc in self.cursor.description]
             
-            return self.cursor.fetchall()
+            return [dict(zip(columns, row)) for row in rows]
         
         except mysql.connector.Error as err:
             print(f"Error al seleccionar los datos: {err}")
 
+    def pedido_archivos_historico(self):
+        try:
+            self.cursor = self.connection.cursor()
+
+            sql = f"SELECT * FROM {self.table_historico}"
+            self.cursor.execute(sql)
+            
+            rows= self.cursor.fetchall()
+            columns = [desc[0] for desc in self.cursor.description]
+            
+            return [dict(zip(columns, row)) for row in rows]
+        
+        except mysql.connector.Error as err:
+            print(f"Error al seleccionar los datos: {err}")
+    
     
     ########## FUNCION AUXILIARES PARA BUSCAR EN LA BASE DE DATOS ##########
     def existe_archivo(self, file_id):
         self.cursor = self.connection.cursor()
     
         sql = f"SELECT * FROM {self.table_inv} WHERE id=%s"
-        self.cursor.execute(sql, file_id)
+        self.cursor.execute(sql, (file_id,))
         
         result= self.cursor.fetchall()
         
@@ -157,7 +175,7 @@ class Database:
         self.cursor = self.connection.cursor()
     
         sql = f"SELECT * FROM {self.table_historico} WHERE id=%s"
-        self.cursor.execute(sql, file_id)
+        self.cursor.execute(sql, (file_id,))
         
         result= self.cursor.fetchall()
         
@@ -165,11 +183,12 @@ class Database:
 
     def fue_modificado(self, file_id, file_last_modified_date):
         
-        sql= f"SELECT fecha_ultima_modificacion FROM {self.table_inv} WHERE id={file_id}"
+        sql= f"SELECT fecha_ultima_modificacion FROM {self.table_inv} WHERE id=%s"
+        self.cursor.execute(sql, (file_id,))
         
-        ultima_modificacion= self.cursor.execute(sql)
+        ultima_modificacion=self.cursor.fetchone()[0]
         
-        return file_last_modified_date >ultima_modificacion 
+        return file_last_modified_date > ultima_modificacion 
 
 
 
@@ -177,9 +196,10 @@ class Database:
     def update_last_modified_date(self, file_id, file_modified_time):
         self.cursor = self.connection.cursor()
         
-        sql= f"UPDATE {self.table_inv} SET fecha_ultima_modificacion={file_modified_time} WHERE id={file_id}"
-        
-        self.cursor.execute(sql)
+        sql= f"UPDATE {self.table_inv} SET fecha_ultima_modificacion=%s WHERE id=%s"
+        values= (file_modified_time, file_id)
+    
+        self.cursor.execute(sql, values)
         self.connection.commit()
 
     def update_handler_visibility(self, file_id, file_modified_time):
@@ -187,18 +207,24 @@ class Database:
         new_visibility= "privado"
         was_public= 1
         
-        sql1= f"UPDATE {self.table_inv} SET visibility={new_visibility} WHERE id={file_id}"
-        self.cursor.execute(sql1)
-        sql2= f"UPDATE {self.table_inv} SET fecha_ultima_modificacion={file_modified_time} WHERE id={file_id}"
-        self.cursor.execute(sql2)
-        sql3= f"UPDATE {self.table_inv} SET was_public={was_public} WHERE id={file_id}"
-        self.cursor.execute(sql3)
+        sql1= f"UPDATE {self.table_inv} SET visibility=%s WHERE id=%s"
+        values= (new_visibility, file_id)
+        self.cursor.execute(sql1, values)
+        
+        sql2= f"UPDATE {self.table_inv} SET fecha_ultima_modificacion=%s WHERE id=%s"
+        values= (file_modified_time, file_id)
+        self.cursor.execute(sql2, values)
+        
+        sql3= f"UPDATE {self.table_inv} SET was_public=%s WHERE id=%s"
+        values= (was_public, file_id)        
+        self.cursor.execute(sql3, values)
 
         self.connection.commit()
 
     def update_archivo_historico(self, file_id, file_modified_time):
         self.cursor = self.connection.cursor()
         
-        sql= f"UPDATE {self.table_historico} SET fecha_ultima_modificacion={file_modified_time} WHERE id={file_id}"
-        self.cursor.execute(sql)
+        sql= f"UPDATE {self.table_historico} SET fecha_ultima_modificacion=%s WHERE id=%s"
+        values= (file_modified_time, file_id) 
+        self.cursor.execute(sql, values)
         self.connection.commit()
