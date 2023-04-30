@@ -1,12 +1,12 @@
 import datetime
+from google_Email import EmailNotifier
 
 class GoogleDriveInventory:
   ##### FUNCINO DE INICIALIZACION #####
-    def __init__(self, db, drive_api):
-        #self.obj_app = App()
+    def __init__(self, db, drive_api, email):
         self.db = db
         self.drive_api = drive_api
-        #self.emailObject = EmailNotifier()
+        self.email = EmailNotifier("nicooklaver@gmail.com", "drhhprjvdnybkaqo")
         
     
     def handler_files(self):
@@ -72,16 +72,14 @@ class GoogleDriveInventory:
     ########## FUNCIONES PARA CAMBIAR LA VISIBILIDAD ##########   
     def handler_visibility(self, file,  file_id):
       file_owner = file['owner']
-      print("\n\nFile ownwer: ", file_owner)
       
       #Remuevo los permisos publicos
       self.drive_api.remove_public_visibility(file_id)
       
       #Obtengo la ultima hora de la modificacion
       last_modified_time = self.drive_api.get_last_modified_date(file_id)
-      print("\nLast_mofiied_time", last_modified_time)
       last_modified_time = datetime.datetime.strptime(file['modified_time'], '%Y-%m-%dT%H:%M:%S.%fZ')
-      print("\nLast_mofiied_time", last_modified_time)
+      
       #Update de la Tabla de Inventario
       self.db.update_handler_visibility(file_id, last_modified_time)
       
@@ -91,13 +89,17 @@ class GoogleDriveInventory:
       else:
         self.db.insertar_archivo_historico(file)
         
-      self.send_email_owner(file_id, file_owner)
+      self.send_email_owner(file)
     
   
     ########## FUNCIONES PARA MANDAR MAIL ##########    
-    def send_email_owner(self, file_name, file_extension, file_owner):
-      #subject = f"Change in visibility for file '{file_name}.{file_extension}'"
-      #message = f"Your file '{file_name}' is no longer publicly visible."
-      #self.emailObject.send_email(file_owner, subject, message)
-      pass
+    def send_email_owner(self, file):
+      file_owner = file['owner']
+      file_name = file['name']
+      file_extension = file['extension']
+      
+      subject = f"Change in visibility for file '{file_name}.{file_extension}'"
+      message = f"Your file '{file_name}' is no longer publicly visible."
+      self.email.send_email(file_owner, subject, message)
+  
       

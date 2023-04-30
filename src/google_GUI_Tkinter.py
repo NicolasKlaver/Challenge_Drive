@@ -189,12 +189,9 @@ class App:
 
     def completar_tablas_app(self):
         datos_inv= self.db.pedido_archivos_inventario()
-        print("\n\n\nCompletar tablas app- datos_inv: ", datos_inv)
-        print("\n entrando a add_table_inventario\n")
         self.add_table_inventario(datos_inv)
         
         datos_hist= self.db.pedido_archivos_historico()
-        print("\n\n\nCompletar tablas historico- datos_hist: ", datos_inv)
         self.add_table_inventario(datos_hist)
         
         self.alerta_tablas_completas()
