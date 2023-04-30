@@ -11,6 +11,15 @@ import os
 
 class App:
     def __init__(self, root):
+        """
+        Inicializa la interfaz de usuario y todas las variables necesarias para conectarse con la base de datos y con la API de Google Drive.
+
+        Args:
+            root: Objeto Tk que representa la ventana principal de la aplicación.
+        
+        Returns: None
+        """
+        
         self.driveAPI = GoogleDriveAPI()
         
         # Carga las variables de entorno desde el archivo .env
@@ -21,8 +30,6 @@ class App:
         db_host = os.getenv("DB_HOST")
         
         self.db= Database(db_user, db_password, db_host)
-        
-        
         self.driveINV = GoogleDriveInventory(self.db, self.driveAPI)
 
         
@@ -36,6 +43,12 @@ class App:
     
     ########## FUNCIONES PARA CREAR LOS GRAFICOS ##########
     def crear_ventana(self):
+        """
+        Crea la ventana principal de la aplicación y define la etiqueta de bienvenida.
+
+        :return: None
+        """
+        
         # Creando un objeto Canvas que nos permitirá dibujar componentes gráficos en la ventana 
         # y lo estamos empaquetando dentro de la ventana raíz.
         self.canvas = tk.Canvas(self.root, height=150, width=150)
@@ -49,6 +62,12 @@ class App:
         self.canvas.create_window(100, 25, window= self.label)
 
     def crear_pestañas(self):
+        """
+        Crea dos pestañas en la ventana principal de la aplicación y llama a las funciones necesarias para crear los árboles de cada pestaña.
+
+        :return: None
+        """
+        
         # Creando un objeto Notebook que nos permitirá tener varias pestañas en la ventana.
         self.notebook = ttk.Notebook(self.root)
         self.notebook.pack()
@@ -64,6 +83,12 @@ class App:
         self.crear_arbol_historico() 
                
     def crear_boton_conexion(self):
+        """
+        Crea un botón en la ventana para conectarse a la API de Google Drive.
+
+        Returns: None
+        """
+        
             # Button que nos permitirá conectar a la API de Google Drive
             # self.connect_to_google_drive es la acción a ejecutar cuando el botón sea presionado.
         self.button_conn = tk.Button(text="Iniciar el Programa", command=self.ejecucion_del_programa)
@@ -73,6 +98,12 @@ class App:
         self.button_conn.configure(bg="#FFE4C9")  
     
     def crear_arbol_inventario(self):
+        """
+        Crea un árbol (TreeView) en la pestaña 1 de la ventana, para mostrar los archivos inventariados.
+
+        Returns: None
+        """
+        
         # Crear el cuadro de la tabla
         self.tree = ttk.Treeview(self.tab1)
         self.tree.pack()
@@ -94,6 +125,12 @@ class App:
         self.tree.column('was_public', width=100, minwidth=100)
     
     def crear_arbol_historico(self):
+        """
+        Crea un árbol (TreeView) en la pestaña 2 de la ventana, para mostrar el historial de los archivos.
+
+        Returns:  None
+        """
+        
         # Crear el cuadro de la tabla
         self.tree = ttk.Treeview(self.tab2)
         self.tree.pack()
@@ -112,26 +149,71 @@ class App:
 
     ########## ALERTAS ##########
     def alerta_google_drive(self):
+        """
+        Muestra una alerta cuando se conecta correctamente a la API de Google Drive.
+
+        Returns: None
+        """
         messagebox.showwarning("Actualizacion", "Conectado a Google Drive con exito.\n Se procede a conectarse con la base de datos") 
 
     def alerta_base_datos(self):
+        """
+        Muestra una alerta.
+
+        Args:
+
+        Returns: None.
+        
+        """
         messagebox.showwarning("Actualizacion","Conectado a la Base de Datos con exito. \n Se procede a listar los archivos en Google Drive")
 
     def alerta_archivos_listados(self):
+        """
+        Muestra una alerta con el mensaje.
+
+        Args:
+
+        Returns:  None.
+        """
         messagebox.showwarning("Actualizacion","Archivos obtenidos correctamente. \nComienza el análisis.") 
        
     def alerta_finalizacion(self):
+        """
+        Muestra una alerta con el mensaje. Asimismo, imprime 
+        Llama al método completar_tablas_app.
+
+        Args:
+
+        Returns: None.
+        """
+        
         messagebox.showwarning("Actualizacion","Analisis finalizado. Se hicieron los siguientes cambios: \n - Se pasaron los archivos publicos a privados.")
         print("Se empieza a descargar todo para la aplicacion") 
         self.completar_tablas_app()
     
     def alerta_tablas_completas(self):
+        """
+        Muestra una alerta y llama al método desconectar_aplicacion.
+
+        Args:
+
+        Returns: None.
+        """
+        
         messagebox.showwarning("Actualizacion","Analisis finalizado. Se hicieron los siguientes cambios: \n - Se pasaron los archivos publicos a privados.")
         print("Se empieza a descargar todo para la aplicacion") 
         self.desconectar_aplicacion()
         
     ########## FUNCION PARA AGREGAR INFORMACION A LA TABLA ##########
     def add_table_inventario(self, files):
+        """
+        Agrega cada archivo en la lista de archivos a la tabla de inventario.
+
+        Args:
+            files (list): La lista de archivos.
+
+        Returns: None.
+        """
         # Obtener la lista de archivos de la API de Google Drive
       
         # Agregar cada archivo como una fila en la tabla
@@ -146,6 +228,14 @@ class App:
                                                 file['was_public']))
              
     def add_table_historico(self, files):
+        """
+        Agrega cada archivo en la lista de archivos a la tabla histórica.
+
+        Args: files (list): La lista de archivos.
+
+        Returns: None.
+        """
+        
     # Agregar cada archivo como una fila en la tabla
         for file in files:
             fecha_ultima_modificacion= datetime.datetime.strptime(file['fecha_ultima_modificacion'], '%Y-%m-%dT%H:%M:%S.%fZ')
@@ -159,17 +249,40 @@ class App:
     ########## RECORRIDO DEL PROGRAMA ##########
 
     def conectarse_google_drive(self):
+        """
+        Conecta a la API de Google Drive.
+
+        Args: None
+        
+        Returns: None
+        """
         #Conectar a Google Drive y listar los archivos
         self.driveAPI.connect()
         print("\nConectado a Google Drive - desde Tkinter\n")
 
     def conectarse_a_SQL(self):
+        """
+        Opens a connection to a MySQL database, creates and selects a database called "Inventario_Drive".
+
+        Args: None
+
+        Returns: None
+        """
         self.db.open_connection()
         #Creo y selecciono una Base de Datos
         self.db.create_database("Inventario_Drive")
         self.db.select_database("Inventario_Drive")
 
     def crear_tablas_SQL(self):
+        """
+        Creates two tables in the MySQL database called "Inventario_Drive". 
+        The names of the tables are "Inventario_{user}" and "Historico_{user}", where {user} is the name of the authenticated user.
+
+        Args: None
+
+        Returns: None
+        """
+        
         owner= self.driveAPI.get_authenticated_user()
         owner = owner.split("@")[0]
         nombre_inventario= "Inventario_" + owner
@@ -180,12 +293,30 @@ class App:
         self.db.create_table_historico(nombre_inventario_historico)
 
     def list_google_drive_files(self):
+        """
+        Lists all the files in the Google Drive of the authenticated user and calls the handler_files() function to  inventory the files in the Inventario_Drive database.
+
+        Parameters: None
+
+        Returns: None
+        """
+        
         flag_fin = self.driveINV.handler_files()
         if flag_fin:
             self.alerta_finalizacion()
         
     ########## FUNCION PARA LOS BOTONES ##########       
     def ejecucion_del_programa(self):
+        """
+        Main function that executes the program. It connects to the Google Drive of the authenticated user, 
+        connects to the Inventario_Drive database, creates tables in the database, lists all the files in the user's Google Drive, 
+        and inventories the files in the database.
+
+        Args:  None
+
+        Returns: None
+        """
+        
         #Conectar a Google Drive y listar los archivos        
         self.conectarse_google_drive()
         self.alerta_google_drive()
@@ -199,6 +330,15 @@ class App:
         self.list_google_drive_files()
 
     def completar_tablas_app(self):
+        """
+        Retrieves the inventory of files in the Inventario_Drive and Historico_{user} tables and adds them to the 
+        respective tables in the application's UI. 
+
+        Args:  None
+
+        Returns: None
+        """
+        
         datos_inv= self.db.pedido_archivos_inventario()
         self.add_table_inventario(datos_inv)
         
@@ -208,6 +348,13 @@ class App:
         self.alerta_tablas_completas()
         
     def desconectar_aplicacion(self):
+        """
+        Closes the connection to the Inventario_Drive database and disconnects the application from the authenticated user's Google Drive.
+
+        Args: None
+
+        Returns: None
+        """
         self.db.close_connection()
         self.driveAPI.disconnect()
         

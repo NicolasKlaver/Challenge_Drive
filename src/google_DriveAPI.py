@@ -10,6 +10,13 @@ from google.auth.transport.requests import Request
 class GoogleDriveAPI:
     ########## FUNCION DE INICIALIZACION ##########
     def __init__(self):
+        """
+        Inicializa la clase DriveAPI y define los scopes de acceso para la autenticación de la API de Google Drive.
+        
+        Args: Ninguno
+            
+        Returns: Ninguno
+        """
         #self.SCOPES = ['https://www.googleapis.com/auth/drive']
         self.SCOPES =['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive']
         self.creds = None
@@ -17,6 +24,17 @@ class GoogleDriveAPI:
     
     ########## FUNCIONES PARA CONECTARSE ##########
     def authenticate(self):
+        """
+        Autenticar a la aplicación para acceder a la API de Google Drive. 
+        Si existe un token previamente guardado y no ha expirado, se utiliza ese token. 
+        En caso contrario, se solicita la autenticación del usuario y se guarda el token en un archivo local.
+        
+        Args: None
+        
+        Returns:
+            Credenciales de autenticación para acceder a la API de Google Drive.
+        """
+        
         if os.path.exists('token.pickle'):
             with open('token.pickle', 'rb') as token:
                 self.creds = pickle.load(token)
@@ -42,6 +60,13 @@ class GoogleDriveAPI:
         return self.creds
     
     def connect(self):
+        """
+        Conectarse a la API de Google Drive. 
+        Si la autenticación es exitosa, se guarda el objeto del servicio de Google Drive en la variable 'self.service'.
+        Args: None
+        
+        Returns: None
+        """
         try:
             self.authenticate()
             self.service = build('drive', 'v3', credentials=self.creds)
@@ -50,6 +75,14 @@ class GoogleDriveAPI:
             print(f"Se produjo un error al conectarse a Google Drive: {error}")
     
     def disconnect(self):
+        """
+        Desconectar de la API de Google Drive. Se establece la variable 'self.service' en None.
+        
+        Args: None
+        
+        Returns: None
+        """
+        
         # Desconectar de Google Drive
         self.service = None
         print("Desconexión exitosa de Google Drive.")
@@ -57,6 +90,14 @@ class GoogleDriveAPI:
     
     ########## FUNCIONES PARA OBTENER ARCHIVOS ##########
     def get_authenticated_user(self):
+        """
+        Obtener la dirección de correo electrónico del usuario autenticado en Google Drive.
+        
+        Args: None
+        
+        Return (str): Dirección de correo electrónico del usuario autenticado en Google Drive.
+        """
+        
         try:
             user_info = self.service.about().get(fields='user(emailAddress)').execute()
             return user_info['user']['emailAddress']
@@ -65,6 +106,16 @@ class GoogleDriveAPI:
             return None 
     
     def get_files(self):
+        """
+        Obtener los archivos de Google Drive que cumplan con ciertos criterios de búsqueda. 
+        Los campos que se obtienen para cada archivo son: id, name, mimeType, owners, permissions y modifiedTime.
+        
+        Args: None
+        
+        Return (list):
+            Lista de archivos que cumplen con los criterios de búsqueda.
+        """
+        
         try:
             # Definir los campos que queremos obtener para cada archivo
             fields = "nextPageToken, files(id, name, mimeType, owners(emailAddress), permissions, modifiedTime)"
@@ -109,6 +160,15 @@ class GoogleDriveAPI:
     
     ########## FUNCION PARA CAMBIAR LA VISIBILIDAD ##########    
     def remove_public_visibility(self, file_id):
+        """
+        Revocar los permisos públicos de un archivo de Google Drive, de manera que solo pueda ser accedido por los 
+        usuarios con permisos explícitos. 
+        
+        Args:
+            file_id(str): ID del archivo de Google Drive.
+            
+        Returns: None
+        """
         # Revocar los permisos de un archivo en Google Drive
         try:
             self.service.permissions().delete(fileId= file_id, permissionId='anyoneWithLink').execute()
@@ -117,6 +177,18 @@ class GoogleDriveAPI:
             print(f"Se produjo un error al revocar los permisos del archivo con ID {file_id}: {error}")
      
     def get_last_modified_date(self, file_id):
+        """
+        Obtener la fecha de última modificación de un archivo de Google Drive.
+        
+        Parameters:
+        ------------
+        file_id (str): ID del archivo de Google Drive.
+        
+        Returns:
+            Fecha de última modificación del archivo de Google Drive.
+        """
+        
+        
         try:
             modified_info = self.service.files().get(fileId= file_id, fields='modifiedTime').execute()
             return modified_info['modifiedTime']
@@ -125,6 +197,16 @@ class GoogleDriveAPI:
             return None 
     
     def es_publico(permissions):
+        """
+        Verificar si un archivo de Google Drive es público o no, en base a la lista de permisos del archivo.
+        
+        Args:
+            permissions(list): Lista de permisos del archivo de Google Drive.
+        
+        Returns:
+            True si el archivo es público (cualquiera con el enlace puede acceder), False en caso contrario.
+        """
+        
         # Buscar si hay algún permiso
         is_public = False
         for perm in permissions:
