@@ -5,13 +5,24 @@ import tkinter.messagebox as messagebox
 from google_DriveAPI import GoogleDriveAPI
 from google_Database import Database
 from google_DriveInventory import GoogleDriveInventory
-
+from dotenv import load_dotenv
+import os
 
 
 class App:
     def __init__(self, root):
         self.driveAPI = GoogleDriveAPI()
-        self.db= Database(user="root", password="root", host="localhost")
+        
+        # Carga las variables de entorno desde el archivo .env
+        load_dotenv('config/.env')
+        # Obtiene las credenciales de la base de datos desde las variables de entorno
+        db_user = os.getenv("DB_USER")
+        db_password = os.getenv("DB_PASSWORD")
+        db_host = os.getenv("DB_HOST")
+        
+        self.db= Database(db_user, db_password, db_host)
+        
+        
         self.driveINV = GoogleDriveInventory(self.db, self.driveAPI)
 
         

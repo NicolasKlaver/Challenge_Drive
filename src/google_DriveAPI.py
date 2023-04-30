@@ -1,4 +1,5 @@
 from googleapiclient.discovery import build
+from dotenv import load_dotenv
 import os
 import pickle
 from googleapiclient.errors import HttpError
@@ -27,7 +28,9 @@ class GoogleDriveAPI:
             else:
                 # Si no existe un token o está vencido y no se cuenta con el refresh token, se procede
                 # a realizar la autenticación con el usuario.
-                flow = InstalledAppFlow.from_client_secrets_file('C:/Users/HP/Downloads/INTEGRACION/credential_tkinter.json', self.SCOPES)
+                # Carga las variables de entorno desde el archivo .env
+                load_dotenv('config/.env')
+                flow = InstalledAppFlow.from_client_secrets_file(os.getenv("DRIVE_CREDENTIALS"), self.SCOPES)
                 self.creds = flow.run_local_server(port=0)
                 
             # Una vez que se obtiene el token, se almacena en un archivo local para futuras consultas

@@ -1,12 +1,20 @@
 import datetime
 from google_Email import EmailNotifier
+from dotenv import load_dotenv
+import os
 
 class GoogleDriveInventory:
   ##### FUNCINO DE INICIALIZACION #####
     def __init__(self, db, drive_api, email):
         self.db = db
         self.drive_api = drive_api
-        self.email = EmailNotifier("nicooklaver@gmail.com", "drhhprjvdnybkaqo")
+        
+        # Carga las variables de entorno desde el archivo .env
+        load_dotenv('config/.env')
+        # Obtiene las credenciales de la base de datos desde las variables de entorno
+        em_user = os.getenv("EM_USER")
+        em_password = os.getenv("EM_PASSWORD")
+        self.email = EmailNotifier(em_user, em_password)
         
     
     def handler_files(self):
