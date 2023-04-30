@@ -157,6 +157,60 @@ class GoogleDriveAPI:
             print(f"Se produjo un error al obtener los archivos: {error}")
             return None
     
+    def test_visibility_file(file_id):
+        pass
+    
+    def test_list_one_file(self):
+        """
+        Obtener los archivos de Google Drive que cumplan con ciertos criterios de búsqueda. 
+        Los campos que se obtienen para cada archivo son: id, name, mimeType, owners, permissions y modifiedTime.
+        
+        Args: None
+        
+        Return (list):
+            Lista de archivos que cumplen con los criterios de búsqueda.
+        """
+        
+        try:
+            # Definir los campos que queremos obtener para cada archivo
+            fields = "nextPageToken, files(id, name, mimeType, owners(emailAddress), permissions, modifiedTime)"
+            query = "trashed = false and mimeType='application/pdf' "
+
+            # Obtener los archivos de Google Drive
+            results = self.service.files().list(q=query, fields=fields, pageSize=2).execute()
+            items = results.get('files', [])
+            # Procesar la lista de archivos y extraer los campos necesarios
+            files = []
+            for item in items:
+                # Obtener la extensión del archivo a partir del tipo MIME
+                extension = item['mimeType'].split('/')[-1]
+                # Obtener el nombre del propietario
+                owner = item['owners'][0]['emailAddress']
+                
+                # Obtener la lista de permisos del archivo
+                permissions = item.get('permissions', [])
+                #is_public = self.es_publico(permissions)
+                is_public = False
+                for perm in permissions:
+                    if  perm.get('id', '') == 'anyoneWithLink':
+                        is_public = True
+                        break 
+        
+                # Agregar un diccionario con los campos que nos interesan a la lista de archivos
+                files.append({
+                    'id': item['id'],
+                    'name': item['name'],
+                    'extension': extension,
+                    'owner': owner,
+                    'visibility': 'publico' if is_public else 'privado',
+                    'modified_time': item['modifiedTime']
+                })
+            print(files)
+            return files
+    
+        except HttpError as error:
+            print(f"Se produjo un error al obtener los archivos: {error}")
+            return None    
     
     ########## FUNCION PARA CAMBIAR LA VISIBILIDAD ##########    
     def remove_public_visibility(self, file_id):
@@ -180,15 +234,12 @@ class GoogleDriveAPI:
         """
         Obtener la fecha de última modificación de un archivo de Google Drive.
         
-        Parameters:
-        ------------
-        file_id (str): ID del archivo de Google Drive.
+        Args:
+            file_id (str): ID del archivo de Google Drive.
         
         Returns:
             Fecha de última modificación del archivo de Google Drive.
         """
-        
-        
         try:
             modified_info = self.service.files().get(fileId= file_id, fields='modifiedTime').execute()
             return modified_info['modifiedTime']

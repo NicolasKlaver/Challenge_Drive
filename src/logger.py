@@ -1,7 +1,7 @@
 import logging
 
 class Logger:
-    def __init__(self, level='INFO', filename='log_info.log'):
+    def __init__(self, level='INFO', filename='logs/log_info.log'):
         """
         Inicializa un objeto Logger con un nivel de registro y un archivo de registro.
 
