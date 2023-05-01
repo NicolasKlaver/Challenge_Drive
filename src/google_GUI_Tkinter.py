@@ -8,6 +8,10 @@ from google_DriveInventory import GoogleDriveInventory
 from dotenv import load_dotenv
 import os
 
+"""def salirAplicacion():
+	valor=messagebox.askquestion("Salir","¿Está seguro que desea salir de la Aplicación?")
+	if valor=="yes":
+		root.destroy()"""
 
 class App:
     def __init__(self, root):
@@ -36,13 +40,14 @@ class App:
         # Definimos el objeto raíz de la aplicación y estableciendo el título de la ventana.
         self.root = root
         self.root.title("Challenge Docs en Drive Publico")
+        self.root.configure(background="#7cdaf9")
         
-        self.crear_ventana()
-        self.crear_boton_conexion()
+        self.crear_ventana_bienvenida()
+        self.crear_boton_inicio()
         self.crear_pestañas()
     
     ########## FUNCIONES PARA CREAR LOS GRAFICOS ##########
-    def crear_ventana(self):
+    def crear_ventana_bienvenida(self):
         """
         Crea la ventana principal de la aplicación y define la etiqueta de bienvenida.
 
@@ -51,16 +56,13 @@ class App:
         
         # Creando un objeto Canvas que nos permitirá dibujar componentes gráficos en la ventana 
         # y lo estamos empaquetando dentro de la ventana raíz.
-        self.canvas = tk.Canvas(self.root, height=150, width=150)
-        self.canvas.pack()
-        self.root.configure(bg='#3399FF')
-
-        # Creando un objeto Label que nos permitirá mostrar un texto en la ventana.
-        # create_window: tamaño y posición dentro del Canvas
-        self.label = tk.Label(self.root, text="Bienvenido al Inventario de Google Drive")
-        self.label.config(font=("Arial", 30), bg='#3399FF')
-        self.canvas.create_window(100, 25, window= self.label)
-
+        # Crear el rectángulo de bienvenida
+        self.label = tk.Label(self.root, 
+                              text="Bienvenidos al Inventario de Google Drive", 
+                              font=("Franklin Gothic Heavy", 25))
+        self.label.pack(side="top", pady=20)
+        self.label.configure(background="#7cdaf9")
+        
     def crear_pestañas(self):
         """
         Crea dos pestañas en la ventana principal de la aplicación y llama a las funciones necesarias para crear los árboles de cada pestaña.
@@ -70,7 +72,7 @@ class App:
         
         # Creando un objeto Notebook que nos permitirá tener varias pestañas en la ventana.
         self.notebook = ttk.Notebook(self.root)
-        self.notebook.pack()
+        self.notebook.pack(side="top", fill="both", expand=True)
 
         # Creamos la primera pestaña
         self.tab1 = ttk.Frame(self.notebook)
@@ -82,20 +84,20 @@ class App:
         self.notebook.add(self.tab2, text="Tabla Publico - Historico")
         self.crear_arbol_historico() 
                
-    def crear_boton_conexion(self):
+    def crear_boton_inicio(self):
         """
         Crea un botón en la ventana para conectarse a la API de Google Drive.
 
         Returns: None
         """
-        
-            # Button que nos permitirá conectar a la API de Google Drive
-            # self.connect_to_google_drive es la acción a ejecutar cuando el botón sea presionado.
-        self.button_conn = tk.Button(text="Iniciar el Programa", command=self.ejecucion_del_programa)
-        
-        # configuramos la posición del botón dentro del Canvas utilizando el método create_window
-        self.canvas.create_window(100, 100, window=self.button_conn)
-        self.button_conn.configure(bg="#FFE4C9")  
+        # Button que nos permitirá conectar a la API de Google Drive
+        # Crear el botón "Iniciar programa"
+        self.button = tk.Button(self.root, 
+                                text="Iniciar programa", 
+                                font=("Arial", 16), 
+                                command=self.ejecucion_del_programa)
+        self.button.pack(side="top", pady=10)
+        self.button.configure(bg="#FFE4C9" )  
     
     def crear_arbol_inventario(self):
         """
@@ -103,26 +105,27 @@ class App:
 
         Returns: None
         """
-        
-        # Crear el cuadro de la tabla
+        # Crear la tabla
         self.tree = ttk.Treeview(self.tab1)
-        self.tree.pack()
-        # Agregar encabezados de columna
-        self.tree['columns'] = ('id','name','extension','owner','visibility','last_modified_date','was_public')
-        self.tree.heading('id', text='file_id')
-        self.tree.column('id', width=50, minwidth=50)
-        self.tree.heading('name', text='name')
-        self.tree.column('name', width=300, minwidth=300)
-        self.tree.heading('extension', text='extension')
-        self.tree.column('extension', width=300, minwidth=300)
-        self.tree.heading('owner', text='Owner')
-        self.tree.column('owner', width=100, minwidth=100)
-        self.tree.heading('visibility', text='visibility')
-        self.tree.column('visibility', width=100, minwidth=100)     
-        self.tree.heading('last_modified_date', text='last_modified_date')
-        self.tree.column('last_modified_date', width=100, minwidth=100)
-        self.tree.heading('was_public', text='was_public')
-        self.tree.column('was_public', width=100, minwidth=100)
+        self.tree["columns"] = ('file_id','name','extension','owner','visibility','last_modified_date','was_public')
+        self.tree.heading("#0", text="id", anchor='center')
+        self.tree.heading("file_id", text="file_id", anchor='center')
+        self.tree.heading("name", text="name", anchor='center')
+        self.tree.heading("extension", text="extension", anchor='center')
+        self.tree.heading("owner", text="Owner", anchor='center')
+        self.tree.heading("visibility", text="visibility", anchor='center')
+        self.tree.heading("last_modified_date", text="last_modified_date", anchor='center')
+        self.tree.heading("was_public", text="was_public", anchor='center')
+        
+        self.tree.column('file_id', width=100)
+        self.tree.column('name', width=100)
+        self.tree.column('extension', width=80)
+        self.tree.column('owner', width=100)
+        self.tree.column('visibility', width=100)     
+        self.tree.column('last_modified_date', width=120)
+        self.tree.column('was_public', width=100)
+        
+        self.tree.pack(side="bottom", padx=20, pady=10)
     
     def crear_arbol_historico(self):
         """
@@ -130,23 +133,23 @@ class App:
 
         Returns:  None
         """
-        
-        # Crear el cuadro de la tabla
+        # Crear la tabla
         self.tree = ttk.Treeview(self.tab2)
-        self.tree.pack()
-        # Agregar encabezados de columna
-        self.tree['columns'] = ('id','name','extension','owner','last_modified_date')
-        self.tree.heading('id', text='file_id')
-        self.tree.column('id', width=50, minwidth=50)
-        self.tree.heading('name', text='name')
-        self.tree.column('name', width=300, minwidth=300)
-        self.tree.heading('extension', text='extension')
-        self.tree.column('extension', width=300, minwidth=300)
-        self.tree.heading('owner', text='Owner')
-        self.tree.column('owner', width=100, minwidth=100)
-        self.tree.heading('last_modified_date', text='last_modified_date')
-        self.tree.column('last_modified_date', width=100, minwidth=100)
-
+        self.tree["columns"] = ('file_id','name','extension','owner','last_modified_date')
+        self.tree.heading("#0", text="id", anchor='center')
+        self.tree.heading("file_id", text="file_id", anchor='center')
+        self.tree.heading("name", text="name", anchor='center')
+        self.tree.heading("extension", text="extension", anchor='center')
+        self.tree.heading("owner", text="Owner", anchor='center')
+        self.tree.heading("last_modified_date", text="last_modified_date", anchor='center')
+        
+        self.tree.column('file_id', width=100)
+        self.tree.column('name', width=100)
+        self.tree.column('extension', width=80)
+        self.tree.column('owner', width=100)
+        self.tree.column('last_modified_date', width=120)
+        
+        self.tree.pack(side="bottom", padx=20, pady=10)
     ########## ALERTAS ##########
     def alerta_google_drive(self):
         """
