@@ -1,0 +1,21 @@
+2023-05-01 23:44:02,078:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-01 23:44:04,475:INFO:Conectado a MySQL con éxito
+2023-05-01 23:44:04,507:INFO:La base de datos se ha creado exitosamente.
+2023-05-01 23:44:04,512:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-01 23:44:06,124:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-01 23:44:06,132:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-01 23:44:16,767:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 00:03:01,200:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 00:03:02,592:INFO:Conectado a MySQL con éxito
+2023-05-02 00:03:02,618:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 00:03:02,624:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:03:03,392:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:03:03,397:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:03:07,072:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 00:03:07,096:INFO:Se han insertado 1 archivos exitosamente.
+2023-05-02 00:03:07,106:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 00:03:07,108:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:03:07,110:INFO:Archivos terminados de analizar correctamente
+2023-05-02 00:03:09,236:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:03:09,236:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:03:12,190:INFO:Desconectado a MySQL con éxito

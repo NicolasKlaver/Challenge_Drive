@@ -1,5 +1,4 @@
 import tkinter as tk
-import datetime
 from tkinter import ttk
 import tkinter.messagebox as messagebox
 from google_DriveAPI import GoogleDriveAPI
@@ -14,6 +13,9 @@ import os
 		root.destroy()"""
 
 class App:
+    """
+    Clase que representa la interfaz de usuario de la aplicación.
+    """
     def __init__(self, root):
         """
         Inicializa la interfaz de usuario y todas las variables necesarias para conectarse con la base de datos y con la API de Google Drive.
@@ -106,26 +108,26 @@ class App:
         Returns: None
         """
         # Crear la tabla
-        self.tree = ttk.Treeview(self.tab1)
-        self.tree["columns"] = ('file_id','name','extension','owner','visibility','last_modified_date','was_public')
-        self.tree.heading("#0", text="id", anchor='center')
-        self.tree.heading("file_id", text="file_id", anchor='center')
-        self.tree.heading("name", text="name", anchor='center')
-        self.tree.heading("extension", text="extension", anchor='center')
-        self.tree.heading("owner", text="Owner", anchor='center')
-        self.tree.heading("visibility", text="visibility", anchor='center')
-        self.tree.heading("last_modified_date", text="last_modified_date", anchor='center')
-        self.tree.heading("was_public", text="was_public", anchor='center')
+        self.tree_inv = ttk.Treeview(self.tab1)
+        self.tree_inv["columns"] = ('file_id','name','extension','owner','visibility','last_modified_date','was_public')
+        self.tree_inv.heading("#0", text="id", anchor='center')
+        self.tree_inv.heading("file_id", text="file_id", anchor='center')
+        self.tree_inv.heading("name", text="name", anchor='center')
+        self.tree_inv.heading("extension", text="extension", anchor='center')
+        self.tree_inv.heading("owner", text="Owner", anchor='center')
+        self.tree_inv.heading("visibility", text="visibility", anchor='center')
+        self.tree_inv.heading("last_modified_date", text="last_modified_date", anchor='center')
+        self.tree_inv.heading("was_public", text="was_public", anchor='center')
         
-        self.tree.column('file_id', width=100)
-        self.tree.column('name', width=100)
-        self.tree.column('extension', width=80)
-        self.tree.column('owner', width=100)
-        self.tree.column('visibility', width=100)     
-        self.tree.column('last_modified_date', width=120)
-        self.tree.column('was_public', width=100)
+        self.tree_inv.column('file_id', width=100)
+        self.tree_inv.column('name', width=100)
+        self.tree_inv.column('extension', width=80)
+        self.tree_inv.column('owner', width=100)
+        self.tree_inv.column('visibility', width=100)     
+        self.tree_inv.column('last_modified_date', width=120)
+        self.tree_inv.column('was_public', width=100)
         
-        self.tree.pack(side="bottom", padx=20, pady=10)
+        self.tree_inv.pack(side="bottom", padx=20, pady=10)
     
     def crear_arbol_historico(self):
         """
@@ -134,22 +136,22 @@ class App:
         Returns:  None
         """
         # Crear la tabla
-        self.tree = ttk.Treeview(self.tab2)
-        self.tree["columns"] = ('file_id','name','extension','owner','last_modified_date')
-        self.tree.heading("#0", text="id", anchor='center')
-        self.tree.heading("file_id", text="file_id", anchor='center')
-        self.tree.heading("name", text="name", anchor='center')
-        self.tree.heading("extension", text="extension", anchor='center')
-        self.tree.heading("owner", text="Owner", anchor='center')
-        self.tree.heading("last_modified_date", text="last_modified_date", anchor='center')
+        self.tree_hist = ttk.Treeview(self.tab2)
+        self.tree_hist["columns"] = ('file_id','name','extension','owner','last_modified_date')
+        self.tree_hist.heading("#0", text="id", anchor='center')
+        self.tree_hist.heading("file_id", text="file_id", anchor='center')
+        self.tree_hist.heading("name", text="name", anchor='center')
+        self.tree_hist.heading("extension", text="extension", anchor='center')
+        self.tree_hist.heading("owner", text="Owner", anchor='center')
+        self.tree_hist.heading("last_modified_date", text="last_modified_date", anchor='center')
         
-        self.tree.column('file_id', width=100)
-        self.tree.column('name', width=100)
-        self.tree.column('extension', width=80)
-        self.tree.column('owner', width=100)
-        self.tree.column('last_modified_date', width=120)
+        self.tree_hist.column('file_id', width=100)
+        self.tree_hist.column('name', width=100)
+        self.tree_hist.column('extension', width=80)
+        self.tree_hist.column('owner', width=100)
+        self.tree_hist.column('last_modified_date', width=120)
         
-        self.tree.pack(side="bottom", padx=20, pady=10)
+        self.tree_hist.pack(side="bottom", padx=20, pady=10)
     ########## ALERTAS ##########
     def alerta_google_drive(self):
         """
@@ -157,8 +159,11 @@ class App:
 
         Returns: None
         """
-        messagebox.showwarning("Actualizacion", "Conectado a Google Drive con exito.\n Se procede a conectarse con la base de datos") 
-
+        #messagebox.showwarning("Actualizacion", "Conectado a Google Drive con exito.\n Se procede a conectarse con la base de datos") 
+        messagebox.showinfo("Conexion Exitosa", "Conectado a Google Drive con exito.\n Se procede a conectarse con la base de datos")
+        #self.root.mainloop()
+        
+        
     def alerta_base_datos(self):
         """
         Muestra una alerta.
@@ -217,12 +222,16 @@ class App:
 
         Returns: None.
         """
-        # Obtener la lista de archivos de la API de Google Drive
+        # Seleccionar la primera pestaña
+        self.notebook.select(self.tab1)
+        
+        # Obtener la tabla de la primera pestaña
+        #table = self.tabla1
       
         # Agregar cada archivo como una fila en la tabla
         for file in files:
            # fecha_ultima_modificacion= datetime.datetime.strptime(file['fecha_ultima_modificacion'], '%Y-%m-%dT%H:%M:%S.%fZ')
-            self.tree.insert('', 'end', values=(file['id'], 
+            self.tree_inv.insert('', 'end', values=(file['id'], 
                                                 file['name'], 
                                                 file['extension'], 
                                                 file['owner'], 
@@ -238,11 +247,14 @@ class App:
 
         Returns: None.
         """
+        # Seleccionar la primera pestaña
+        self.notebook.select(self.tab2)
         
+       
     # Agregar cada archivo como una fila en la tabla
         for file in files:
-            fecha_ultima_modificacion= datetime.datetime.strptime(file['fecha_ultima_modificacion'], '%Y-%m-%dT%H:%M:%S.%fZ')
-            self.tree.insert('', 'end', values=(file['id'], 
+           # fecha_ultima_modificacion= datetime.datetime.strptime(file['fecha_ultima_modificacion'], '%Y-%m-%dT%H:%M:%S.%fZ')
+            self.tree_hist.insert('', 'end', values=(file['id'], 
                                                 file['name'], 
                                                 file['extension'], 
                                                 file['owner'], 
@@ -342,11 +354,11 @@ class App:
         Returns: None
         """
         
-        datos_inv= self.db.pedido_archivos_inventario()
+        datos_inv= self.db.pedido_archivos(flag_inventario=1, flag_historico=0)
         self.add_table_inventario(datos_inv)
         
-        datos_hist= self.db.pedido_archivos_historico()
-        self.add_table_inventario(datos_hist)
+        datos_hist= self.db.pedido_archivos(flag_inventario=0, flag_historico=1)
+        self.add_table_historico(datos_hist)
         
         self.alerta_tablas_completas()
         

@@ -1,0 +1,1499 @@
+2023-05-01 23:44:04,475 - INFO - Conectado a MySQL con éxito
+2023-05-01 23:44:04,475 - INFO - Conectado a MySQL con éxito
+2023-05-01 23:44:04,475 - INFO - Conectado a MySQL con éxito
+2023-05-01 23:44:04,507 - INFO - La base de datos se ha creado exitosamente.
+2023-05-01 23:44:04,507 - INFO - La base de datos se ha creado exitosamente.
+2023-05-01 23:44:04,507 - INFO - La base de datos se ha creado exitosamente.
+2023-05-01 23:44:04,512 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-01 23:44:04,512 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-01 23:44:04,512 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-01 23:44:06,124 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-01 23:44:06,124 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-01 23:44:06,124 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-01 23:44:06,132 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-01 23:44:06,132 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-01 23:44:06,132 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-01 23:44:16,767 - INFO - Se ha comprobado si existe el archivo.
+2023-05-01 23:44:16,767 - INFO - Se ha comprobado si existe el archivo.
+2023-05-01 23:44:16,767 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:03:02,592 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:03:02,592 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:03:02,592 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:03:02,618 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 00:03:02,618 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 00:03:02,618 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 00:03:02,624 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:03:02,624 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:03:02,624 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:03:03,392 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:03:03,392 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:03:03,392 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:03:03,397 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:03:03,397 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:03:03,397 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:03:07,072 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:03:07,072 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:03:07,072 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:03:07,096 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 00:03:07,096 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 00:03:07,096 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 00:03:07,106 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:03:07,106 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:03:07,106 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:03:07,108 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:03:07,108 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:03:07,108 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:03:07,110 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 00:03:07,110 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 00:03:07,110 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 00:03:09,236 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:03:09,236 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:03:09,236 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:03:09,236 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:03:09,236 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:03:09,236 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:03:12,190 - INFO - Desconectado a MySQL con éxito
+2023-05-02 00:03:12,190 - INFO - Desconectado a MySQL con éxito
+2023-05-02 00:03:12,190 - INFO - Desconectado a MySQL con éxito
+2023-05-02 00:21:11,614:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 00:21:13,234 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:21:13,234 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:21:13,234 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:21:13,234:INFO:Conectado a MySQL con éxito
+2023-05-02 00:21:13,258 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 00:21:13,258 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 00:21:13,258 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 00:21:13,258:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 00:21:13,258 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:21:13,258 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:21:13,258 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:21:13,258:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:21:13,758 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:21:13,758 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:21:13,758 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:21:13,758:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:21:13,766 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:21:13,766 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:21:13,766 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:21:13,766:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:21:16,105 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:21:16,105 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:21:16,105 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:21:16,105:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 00:21:16,105 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:21:16,105 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:21:16,105 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:21:16,105:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:21:16,113 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:21:16,113 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:21:16,113 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:21:16,113:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 00:21:16,113 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:21:16,113 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:21:16,113 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:21:16,113:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 00:21:16,113 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 00:21:16,113 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 00:21:16,113 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 00:21:16,113:INFO:Archivos terminados de analizar correctamente
+2023-05-02 00:21:16,841 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:21:16,841 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:21:16,841 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:21:16,841:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:21:16,841 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:21:16,841 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:21:16,841 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:21:16,841:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:21:17,538 - INFO - Desconectado a MySQL con éxito
+2023-05-02 00:21:17,538 - INFO - Desconectado a MySQL con éxito
+2023-05-02 00:21:17,538 - INFO - Desconectado a MySQL con éxito
+2023-05-02 00:21:17,538:INFO:Desconectado a MySQL con éxito
+2023-05-02 00:23:31,171:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 00:23:32,757 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:23:32,757 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:23:32,757 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:23:32,757:INFO:Conectado a MySQL con éxito
+2023-05-02 00:23:32,783 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 00:23:32,783 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 00:23:32,783 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 00:23:32,783:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 00:23:32,789 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:23:32,789 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:23:32,789 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:23:32,789:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 00:23:33,252 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:23:33,252 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:23:33,252 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:23:33,252:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:23:33,283 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:23:33,283 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:23:33,283 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:23:33,283:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 00:23:34,865 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:23:34,865 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:23:34,865 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:23:34,865:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 00:23:34,883 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 00:23:34,883 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 00:23:34,883 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 00:23:34,883:INFO:Se han insertado 1 archivos exitosamente.
+2023-05-02 00:23:34,886 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:23:34,886 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:23:34,886 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 00:23:34,886:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 00:23:34,897 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 00:23:34,897 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 00:23:34,897 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 00:23:34,897:INFO:Se han insertado 1 archivos exitosamente.
+2023-05-02 00:23:34,897 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 00:23:34,897 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 00:23:34,897 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 00:23:34,897:INFO:Archivos terminados de analizar correctamente
+2023-05-02 00:23:39,618 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:23:39,618 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:23:39,618 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:23:39,618:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:23:39,618 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:23:39,618 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:23:39,618 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:23:39,618:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 00:23:41,781 - INFO - Desconectado a MySQL con éxito
+2023-05-02 00:23:41,781 - INFO - Desconectado a MySQL con éxito
+2023-05-02 00:23:41,781 - INFO - Desconectado a MySQL con éxito
+2023-05-02 00:23:41,781:INFO:Desconectado a MySQL con éxito
+2023-05-02 00:37:13,924 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:37:13,924 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-02 00:37:13,944 - ERROR - Error al seleccionar los datos de la tabla: None 1146 (42S02): Table 'inventario_drive.none' doesn't exist
+2023-05-02 00:40:53,734 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:40:53,742 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-02 00:40:53,750 - ERROR - Error al seleccionar los datos de la tabla: nicooklaver 1146 (42S02): Table 'inventario_drive.nicooklaver' doesn't exist
+2023-05-02 00:42:37,853 - INFO - Conectado a MySQL con éxito
+2023-05-02 00:42:37,853 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-02 00:42:37,861 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:04:57,686 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:04:57,687 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-02 01:04:57,689 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:05:03,042:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 01:05:04,354 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:05:04,354 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:05:04,354 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:05:04,354 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:05:04,354:INFO:Conectado a MySQL con éxito
+2023-05-02 01:05:04,370 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:05:04,370 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:05:04,370 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:05:04,370 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:05:04,370:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 01:05:04,371 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:05:04,371 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:05:04,371 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:05:04,371 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:05:04,371:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:05:04,766 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:05:04,766 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:05:04,766 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:05:04,766 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:05:04,766:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:05:04,772 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:05:04,772 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:05:04,772 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:05:04,772 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:05:04,772:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:05:06,163 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:05:06,163 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:05:06,163 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:05:06,163 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:05:06,163:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:05:06,165 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:05:06,165 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:05:06,165 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:05:06,165 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:05:06,165:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:05:06,167 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:05:06,167 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:05:06,167 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:05:06,167 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:05:06,167:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:05:06,169 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:05:06,169 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:05:06,169 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:05:06,169 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:05:06,169:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:05:06,171 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:05:06,171 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:05:06,171 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:05:06,171 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:05:06,171:INFO:Archivos terminados de analizar correctamente
+2023-05-02 01:05:07,100 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:05:07,100 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:05:07,100 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:05:07,100 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:05:07,100:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:05:56,767 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:05:56,768 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-02 01:05:56,769 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:05:58,754:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 01:05:59,970 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:05:59,970 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:05:59,970 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:05:59,970 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:05:59,970:INFO:Conectado a MySQL con éxito
+2023-05-02 01:05:59,987 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:05:59,987 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:05:59,987 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:05:59,987 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:05:59,987:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 01:05:59,989 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:05:59,989 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:05:59,989 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:05:59,989 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:05:59,989:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:06:00,285 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:00,285 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:00,285 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:00,285 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:00,285:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:00,302 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:00,302 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:00,302 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:00,302 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:00,302:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:01,511 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:01,511 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:01,511 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:01,511 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:01,511:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:06:01,514 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:01,514 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:01,514 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:01,514 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:01,514:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:01,517 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:01,517 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:01,517 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:01,517 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:01,517:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:06:01,519 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:01,519 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:01,519 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:01,519 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:01,519:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:01,520 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:06:01,520 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:06:01,520 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:06:01,520 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:06:01,520:INFO:Archivos terminados de analizar correctamente
+2023-05-02 01:06:02,032 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:06:02,032 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:06:02,032 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:06:02,032 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:06:02,032:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:06:50,304 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:06:50,305 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-02 01:06:50,306 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:06:52,028:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 01:06:53,143 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:06:53,143 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:06:53,143 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:06:53,143 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:06:53,143:INFO:Conectado a MySQL con éxito
+2023-05-02 01:06:53,161 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:06:53,161 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:06:53,161 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:06:53,161 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:06:53,161:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 01:06:53,164 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:06:53,164 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:06:53,164 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:06:53,164 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:06:53,164:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:06:53,546 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:53,546 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:53,546 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:53,546 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:53,546:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:53,555 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:53,555 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:53,555 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:53,555 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:53,555:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:06:54,705 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:54,705 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:54,705 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:54,705 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:54,705:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:06:54,708 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:54,708 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:54,708 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:54,708 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:54,708:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:54,711 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:54,711 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:54,711 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:54,711 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:06:54,711:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:06:54,714 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:54,714 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:54,714 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:54,714 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:54,714:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:06:54,715 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:06:54,715 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:06:54,715 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:06:54,715 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:06:54,715:INFO:Archivos terminados de analizar correctamente
+2023-05-02 01:06:56,011 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:06:56,011 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:06:56,011 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:06:56,011 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:06:56,011:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:41,500 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:09:41,501 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-02 01:09:41,502 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:43,606:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 01:09:44,929 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:09:44,929 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:09:44,929 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:09:44,929 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:09:44,929:INFO:Conectado a MySQL con éxito
+2023-05-02 01:09:44,945 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:09:44,945 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:09:44,945 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:09:44,945 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:09:44,945:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 01:09:44,947 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:09:44,947 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:09:44,947 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:09:44,947 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:09:44,947:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:09:45,265 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:09:45,265 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:09:45,265 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:09:45,265 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:09:45,265:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:09:45,276 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:09:45,276 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:09:45,276 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:09:45,276 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:09:45,276:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:09:46,424 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:09:46,424 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:09:46,424 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:09:46,424 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:09:46,424:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:09:46,426 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:09:46,426 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:09:46,426 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:09:46,426 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:09:46,426:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:09:46,429 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:09:46,429 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:09:46,429 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:09:46,429 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:09:46,429:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:09:46,432 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:09:46,432 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:09:46,432 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:09:46,432 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:09:46,432:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:09:46,433 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:09:46,433 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:09:46,433 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:09:46,433 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:09:46,433:INFO:Archivos terminados de analizar correctamente
+2023-05-02 01:09:46,897 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:46,897 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:46,897 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:46,897 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:46,897:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:46,900 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:46,900 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:46,900 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:46,900 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:46,900:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:09:48,113 - INFO - Desconectado a MySQL con éxito
+2023-05-02 01:09:48,113 - INFO - Desconectado a MySQL con éxito
+2023-05-02 01:09:48,113 - INFO - Desconectado a MySQL con éxito
+2023-05-02 01:09:48,113 - INFO - Desconectado a MySQL con éxito
+2023-05-02 01:09:48,113:INFO:Desconectado a MySQL con éxito
+2023-05-02 01:15:08,554 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:15:08,555 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-02 01:15:08,558 - ERROR - Error al seleccionar los datos de la tabla: inventario_nicooklaver 1146 (42S02): Table 'inventario_drive.inventario_nicooklaver' doesn't exist
+2023-05-02 01:16:19,098 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:16:19,099 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-02 01:16:19,101 - ERROR - Error al seleccionar los datos de la tabla: inventario_nicooklaver 1146 (42S02): Table 'inventario_drive.inventario_nicooklaver' doesn't exist
+2023-05-02 01:16:59,909:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 01:17:02,337 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:17:02,337 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:17:02,337 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:17:02,337:INFO:Conectado a MySQL con éxito
+2023-05-02 01:17:02,352 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:17:02,352 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:17:02,352 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:17:02,352:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 01:17:02,354 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:17:02,354 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:17:02,354 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:17:02,354:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:17:02,855 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:17:02,855 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:17:02,855 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:17:02,855:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:17:02,872 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:17:02,872 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:17:02,872 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:17:02,872:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:17:06,026 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:17:06,026 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:17:06,026 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:17:06,026:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:17:06,041 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:17:06,041 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:17:06,041 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:17:06,041:INFO:Se han insertado 1 archivos exitosamente.
+2023-05-02 01:17:06,048 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:17:06,048 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:17:06,048 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:17:06,048:INFO:Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:02,489:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 01:19:03,956 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:19:03,956 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:19:03,956 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:19:03,956:INFO:Conectado a MySQL con éxito
+2023-05-02 01:19:03,972 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:19:03,972 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:19:03,972 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:19:03,972:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 01:19:03,974 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:19:03,974 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:19:03,974 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:19:03,974:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:19:04,315 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:19:04,315 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:19:04,315 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:19:04,315:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:19:04,331 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:19:04,331 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:19:04,331 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:19:04,331:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:19:05,382 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:19:05,382 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:19:05,382 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:19:05,382:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:19:05,398 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:05,398 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:05,398 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:05,398:INFO:Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:05,406 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:05,406 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:05,406 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:05,406:INFO:Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:06,660 - INFO - Se han actualizado los archivos correctamente.
+2023-05-02 01:19:06,660 - INFO - Se han actualizado los archivos correctamente.
+2023-05-02 01:19:06,660 - INFO - Se han actualizado los archivos correctamente.
+2023-05-02 01:19:06,660:INFO:Se han actualizado los archivos correctamente.
+2023-05-02 01:19:06,662 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:19:06,662 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:19:06,662 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:19:06,662:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:19:06,667 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-02 01:19:06,667 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-02 01:19:06,667 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-02 01:19:06,667:INFO:Se ha Actualizado el archivo historico correctamente.
+2023-05-02 01:19:09,359 - INFO - Correo electrónico enviado correctamente.
+2023-05-02 01:19:09,359 - INFO - Correo electrónico enviado correctamente.
+2023-05-02 01:19:09,359 - INFO - Correo electrónico enviado correctamente.
+2023-05-02 01:19:09,359:INFO:Correo electrónico enviado correctamente.
+2023-05-02 01:19:09,365 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:19:09,365 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:19:09,365 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:19:09,365:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:19:09,371 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:09,371 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:09,371 - INFO - Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:09,371:INFO:Se han insertado 1 archivos exitosamente.
+2023-05-02 01:19:09,373 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:19:09,373 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:19:09,373 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:19:09,373:INFO:Archivos terminados de analizar correctamente
+2023-05-02 01:19:10,375 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:19:10,375 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:19:10,375 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:19:10,375:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:19:10,377 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:19:10,377 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:19:10,377 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:19:10,377:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:24:42,239:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 01:24:43,272 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:24:43,272 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:24:43,272 - INFO - Conectado a MySQL con éxito
+2023-05-02 01:24:43,272:INFO:Conectado a MySQL con éxito
+2023-05-02 01:24:43,287 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:24:43,287 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:24:43,287 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 01:24:43,287:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 01:24:43,289 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:24:43,289 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:24:43,289 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:24:43,289:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 01:24:43,635 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:24:43,635 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:24:43,635 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:24:43,635:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:24:43,654 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:24:43,654 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:24:43,654 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:24:43,654:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 01:24:44,632 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:24:44,632 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:24:44,632 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:24:44,632:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:24:44,634 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:24:44,634 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:24:44,634 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:24:44,634:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:24:44,637 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:24:44,637 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:24:44,637 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 01:24:44,637:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 01:24:44,639 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:24:44,639 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:24:44,639 - INFO - Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:24:44,639:INFO:Se ha obtenido la ultima_fecha_modificacion exitosamente.
+2023-05-02 01:24:44,641 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:24:44,641 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:24:44,641 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 01:24:44,641:INFO:Archivos terminados de analizar correctamente
+2023-05-02 01:24:45,130 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:24:45,130 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:24:45,130 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:24:45,130:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:24:45,133 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:24:45,133 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:24:45,133 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:24:45,133:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 01:24:45,825 - INFO - Desconectado a MySQL con éxito
+2023-05-02 01:24:45,825 - INFO - Desconectado a MySQL con éxito
+2023-05-02 01:24:45,825 - INFO - Desconectado a MySQL con éxito
+2023-05-02 01:24:45,825:INFO:Desconectado a MySQL con éxito
+2023-05-02 02:49:24,070:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 02:49:24,070 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:49:24,070 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:49:24,070 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:49:24,070 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:49:24,070:INFO:Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:49:32,227 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:49:32,227 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:49:32,227 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:49:32,227 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:49:32,227:INFO:Conectado a MySQL con éxito
+2023-05-02 02:49:32,243 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:49:32,243 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:49:32,243 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:49:32,243 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:49:32,243:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 02:49:32,251 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:49:32,251 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:49:32,251 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:49:32,251 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:49:32,251:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:49:32,879 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:49:32,879 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:49:32,879 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:49:32,879 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:49:32,879:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:49:32,887 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:49:32,887 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:49:32,887 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:49:32,887 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:49:32,887:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:05,060:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 02:50:05,060 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:50:05,060 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:50:05,060 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:50:05,060 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:50:05,060:INFO:Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:50:06,685 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:50:06,685 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:50:06,685 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:50:06,685 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:50:06,685:INFO:Conectado a MySQL con éxito
+2023-05-02 02:50:06,706 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:50:06,706 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:50:06,706 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:50:06,706 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:50:06,706:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 02:50:06,706 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:50:06,706 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:50:06,706 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:50:06,706 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:50:06,706:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:50:07,182 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:07,182 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:07,182 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:07,182 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:07,182:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:07,191 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:07,191 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:07,191 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:07,191 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:07,191:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:24,132:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 02:50:24,132 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:50:24,132 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:50:24,132 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:50:24,132 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:50:24,132:INFO:Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:50:26,789 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:50:26,789 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:50:26,789 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:50:26,789 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:50:26,789:INFO:Conectado a MySQL con éxito
+2023-05-02 02:50:26,815 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:50:26,815 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:50:26,815 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:50:26,815 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:50:26,815:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 02:50:26,821 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:50:26,821 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:50:26,821 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:50:26,821 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:50:26,821:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:50:27,253 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:27,253 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:27,253 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:27,253 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:27,253:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:27,261 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:27,261 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:27,261 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:27,261 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:27,261:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:50:29,083 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:50:29,083 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:50:29,083 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:50:29,083 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:50:29,083:INFO:Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:51:31,372:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 02:51:31,372 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:51:31,372 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:51:31,372 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:51:31,372 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:51:31,372:INFO:Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:51:32,422 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:51:32,422 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:51:32,422 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:51:32,422 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:51:32,422:INFO:Conectado a MySQL con éxito
+2023-05-02 02:51:32,433 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:51:32,433 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:51:32,433 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:51:32,433 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:51:32,433:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 02:51:32,442 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:51:32,442 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:51:32,442 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:51:32,442 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:51:32,442:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:51:32,998 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:51:32,998 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:51:32,998 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:51:32,998 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:51:32,998:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:51:33,007 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:51:33,007 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:51:33,007 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:51:33,007 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:51:33,007:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:51:34,310 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:51:34,310 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:51:34,310 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:51:34,310 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:51:34,310:INFO:Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:51:34,310 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:51:34,310 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:51:34,310 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:51:34,310 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:51:34,310:INFO:Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:51:34,321 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:51:34,321 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:51:34,321 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:51:34,321 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:51:34,321:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 02:52:28,372:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 02:52:28,372 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:52:28,372 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:52:28,372 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:52:28,372 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:52:28,372:INFO:Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:52:29,354 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:52:29,354 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:52:29,354 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:52:29,354 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:52:29,354:INFO:Conectado a MySQL con éxito
+2023-05-02 02:52:29,375 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:52:29,375 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:52:29,375 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:52:29,375 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:52:29,375:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 02:52:29,375 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:52:29,375 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:52:29,375 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:52:29,375 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:52:29,375:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:52:30,032 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:52:30,032 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:52:30,032 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:52:30,032 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:52:30,032:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:52:30,042 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:52:30,042 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:52:30,042 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:52:30,042 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:52:30,042:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:52:31,145 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:52:31,145 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:52:31,145 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:52:31,145 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:52:31,145:INFO:Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:52:31,145 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:52:31,145 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:52:31,145 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:52:31,145 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:52:31,145:INFO:Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:52:31,155 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:52:31,155 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:52:31,155 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:52:31,155 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:52:31,155:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 02:52:31,166 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:52:31,166 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:52:31,166 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:52:31,166 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:52:31,166:INFO:Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:53:10,265:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-05-02 02:53:10,280 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:53:10,280 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:53:10,280 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:53:10,280 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:53:10,280:INFO:Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 02:53:11,918 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:53:11,918 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:53:11,918 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:53:11,918 - INFO - Conectado a MySQL con éxito
+2023-05-02 02:53:11,918:INFO:Conectado a MySQL con éxito
+2023-05-02 02:53:11,929 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:53:11,929 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:53:11,929 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:53:11,929 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 02:53:11,929:INFO:La base de datos se ha creado exitosamente.
+2023-05-02 02:53:11,929 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:53:11,929 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:53:11,929 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:53:11,929 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:53:11,929:INFO:La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 02:53:12,531 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:53:12,531 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:53:12,531 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:53:12,531 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:53:12,531:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:53:12,537 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:53:12,537 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:53:12,537 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:53:12,537 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:53:12,537:INFO:La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 02:53:13,750 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:53:13,750 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:53:13,750 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:53:13,750 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:53:13,750:INFO:Se listaron los archivos de Google Drive con exito.
+2023-05-02 02:53:13,750 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:53:13,750 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:53:13,750 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:53:13,750 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:53:13,750:INFO:Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 02:53:13,757 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,757 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,757 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,757 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,757:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,760 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:53:13,760 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:53:13,760 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:53:13,760 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:53:13,760:INFO:Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:53:13,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,771:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,771:INFO:Se ha comprobado si existe el archivo.
+2023-05-02 02:53:13,771 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:53:13,771 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:53:13,771 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:53:13,771 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:53:13,771:INFO:Se analiza si el archivo fue modificado correctamente.
+2023-05-02 02:53:13,780 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 02:53:13,780 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 02:53:13,780 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 02:53:13,780 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 02:53:13,780:INFO:Lista de Archivos terminados de analizar correctamente
+2023-05-02 02:53:13,780 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 02:53:13,780 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 02:53:13,780 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 02:53:13,780 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 02:53:13,780:INFO:Archivos terminados de analizar correctamente
+2023-05-02 02:53:14,389 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 02:53:14,389 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 02:53:14,389 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 02:53:14,389 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 02:53:14,389:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 02:53:14,400 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 02:53:14,400 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 02:53:14,400 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 02:53:14,400 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 02:53:14,400:INFO:Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 02:53:15,966 - INFO - Desconectado a MySQL con éxito
+2023-05-02 02:53:15,966 - INFO - Desconectado a MySQL con éxito
+2023-05-02 02:53:15,966 - INFO - Desconectado a MySQL con éxito
+2023-05-02 02:53:15,966 - INFO - Desconectado a MySQL con éxito
+2023-05-02 02:53:15,966:INFO:Desconectado a MySQL con éxito
+2023-05-02 02:53:15,966 - INFO - Desconexión exitosa de Google Drive.
+2023-05-02 02:53:15,966 - INFO - Desconexión exitosa de Google Drive.
+2023-05-02 02:53:15,966 - INFO - Desconexión exitosa de Google Drive.
+2023-05-02 02:53:15,966 - INFO - Desconexión exitosa de Google Drive.
+2023-05-02 02:53:15,966:INFO:Desconexión exitosa de Google Drive.
+2023-05-02 12:00:01,043 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:00:01,043 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:00:01,043 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:00:01,043 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:00:02,155 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:00:02,155 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:00:02,155 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:00:02,155 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:00:02,195 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:00:02,195 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:00:02,195 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:00:02,195 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:00:02,200 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:00:02,200 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:00:02,200 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:00:02,200 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:00:03,198 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:00:03,198 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:00:03,198 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:00:03,198 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:00:03,207 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:00:03,207 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:00:03,207 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:00:03,207 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:00:05,920 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:00:05,920 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:00:05,920 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:00:05,920 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:00:05,927 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:00:05,927 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:00:05,927 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:00:05,927 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:00:05,942 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,942 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,942 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,942 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,950 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:00:05,950 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:00:05,950 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:00:05,950 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:00:05,950 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,950 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,950 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,950 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,958 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,958 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,958 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,958 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,958 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:00:05,958 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:00:05,958 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:00:05,958 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:00:05,971 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,971 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,971 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:00:05,971 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:15,723 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:01:15,723 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:01:15,723 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:01:15,723 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:01:16,701 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:01:16,701 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:01:16,701 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:01:16,701 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:01:16,726 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:01:16,726 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:01:16,726 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:01:16,726 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:01:16,731 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:01:16,731 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:01:16,731 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:01:16,731 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:01:17,521 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:01:17,521 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:01:17,521 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:01:17,521 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:01:17,533 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:01:17,533 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:01:17,533 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:01:17,533 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:01:19,756 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:01:19,756 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:01:19,756 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:01:19,756 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:01:19,756 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:01:19,756 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:01:19,756 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:01:19,756 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:01:19,756 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,756 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,756 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,756 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,763 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:01:19,763 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:01:19,763 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:01:19,763 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:01:19,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,771 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,778 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,778 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,778 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,778 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,778 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:01:19,778 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:01:19,778 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:01:19,778 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:01:19,786 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,786 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,786 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,786 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:01:19,794 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-02 12:01:19,794 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-02 12:01:19,794 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-02 12:01:19,794 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-02 12:01:19,808 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 12:01:19,808 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 12:01:19,808 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 12:01:19,808 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 12:01:19,809 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 12:01:19,809 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 12:01:19,809 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 12:01:19,809 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 12:01:20,814 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:01:20,814 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:01:20,814 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:01:20,814 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:01:20,829 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:01:20,829 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:01:20,829 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:01:20,829 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:01:21,837 - INFO - Desconectado a MySQL con éxito
+2023-05-02 12:01:21,837 - INFO - Desconectado a MySQL con éxito
+2023-05-02 12:01:21,837 - INFO - Desconectado a MySQL con éxito
+2023-05-02 12:01:21,837 - INFO - Desconectado a MySQL con éxito
+2023-05-02 12:01:21,837 - INFO - Desconexión exitosa de Google Drive.
+2023-05-02 12:01:21,837 - INFO - Desconexión exitosa de Google Drive.
+2023-05-02 12:01:21,837 - INFO - Desconexión exitosa de Google Drive.
+2023-05-02 12:01:21,837 - INFO - Desconexión exitosa de Google Drive.
+2023-05-02 12:23:01,234 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:23:01,234 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:23:01,234 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:23:01,234 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-02 12:23:04,557 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:23:04,557 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:23:04,557 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:23:04,557 - INFO - Conectado a MySQL con éxito
+2023-05-02 12:23:04,573 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:23:04,573 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:23:04,573 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:23:04,573 - INFO - La base de datos se ha creado exitosamente.
+2023-05-02 12:23:04,573 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:23:04,573 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:23:04,573 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:23:04,573 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-02 12:23:05,573 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:23:05,573 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:23:05,573 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:23:05,573 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:23:05,581 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:23:05,581 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:23:05,581 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:23:05,581 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-02 12:23:07,311 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:23:07,311 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:23:07,311 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:23:07,311 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-02 12:23:07,319 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:23:07,319 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:23:07,319 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:23:07,319 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-02 12:23:07,319 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,319 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,319 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,319 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,335 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,335 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,335 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,335 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,335 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,335 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,335 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,335 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,342 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,342 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,342 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,342 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,342 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,342 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,342 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,342 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,355 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,355 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,355 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,355 - INFO - Se ha comprobado si existe el archivo.
+2023-05-02 12:23:07,355 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,355 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,355 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,355 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-02 12:23:07,355 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 12:23:07,355 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 12:23:07,355 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 12:23:07,355 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-02 12:23:07,364 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 12:23:07,364 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 12:23:07,364 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 12:23:07,364 - INFO - Archivos terminados de analizar correctamente
+2023-05-02 12:23:07,925 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:23:07,925 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:23:07,925 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:23:07,925 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:23:07,932 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:23:07,932 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:23:07,932 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:23:07,932 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-02 12:23:08,573 - INFO - Desconectado a MySQL con éxito
+2023-05-02 12:23:08,573 - INFO - Desconectado a MySQL con éxito
+2023-05-02 12:23:08,573 - INFO - Desconectado a MySQL con éxito
+2023-05-02 12:23:08,573 - INFO - Desconectado a MySQL con éxito
+2023-05-02 12:23:08,573 - INFO - Desconexión exitosa de Google Drive.
+2023-05-02 12:23:08,573 - INFO - Desconexión exitosa de Google Drive.
+2023-05-02 12:23:08,573 - INFO - Desconexión exitosa de Google Drive.
+2023-05-02 12:23:08,573 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 11:35:21,687 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:35:21,687 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:35:21,687 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:35:21,687 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:35:27,111 - ERROR - Error al conectar a la base de datos: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2023-05-03 11:35:27,111 - ERROR - Error al conectar a la base de datos: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2023-05-03 11:35:27,111 - ERROR - Error al conectar a la base de datos: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2023-05-03 11:35:27,111 - ERROR - Error al conectar a la base de datos: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2023-05-03 11:36:25,996 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:36:25,996 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:36:25,996 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:36:25,996 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:36:28,207 - INFO - Conectado a MySQL con éxito
+2023-05-03 11:36:28,207 - INFO - Conectado a MySQL con éxito
+2023-05-03 11:36:28,207 - INFO - Conectado a MySQL con éxito
+2023-05-03 11:36:28,207 - INFO - Conectado a MySQL con éxito
+2023-05-03 11:36:28,239 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 11:36:28,239 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 11:36:28,239 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 11:36:28,239 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 11:36:28,239 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 11:36:28,239 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 11:36:28,239 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 11:36:28,239 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 11:36:28,879 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:36:28,879 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:36:28,879 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:36:28,879 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:36:28,890 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:36:28,890 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:36:28,890 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:36:28,890 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:36:30,366 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 11:36:30,366 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 11:36:30,366 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 11:36:30,366 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 11:36:30,377 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 11:36:30,377 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 11:36:30,377 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 11:36:30,377 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 11:36:30,389 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,389 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,389 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,389 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,405 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,405 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,405 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,405 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,414 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,414 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,414 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,414 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,419 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,419 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,419 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,419 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,419 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,419 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,419 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,419 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,428 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,428 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,428 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,428 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:36:30,428 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,428 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,428 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,428 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:36:30,436 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 11:36:30,436 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 11:36:30,436 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 11:36:30,436 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 11:36:30,436 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 11:36:30,436 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 11:36:30,436 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 11:36:30,436 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 11:36:31,130 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:36:31,130 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:36:31,130 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:36:31,130 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:36:31,136 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:36:31,136 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:36:31,136 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:36:31,136 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:36:31,911 - INFO - Desconectado a MySQL con éxito
+2023-05-03 11:36:31,911 - INFO - Desconectado a MySQL con éxito
+2023-05-03 11:36:31,911 - INFO - Desconectado a MySQL con éxito
+2023-05-03 11:36:31,911 - INFO - Desconectado a MySQL con éxito
+2023-05-03 11:36:31,915 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 11:36:31,915 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 11:36:31,915 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 11:36:31,915 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 11:37:37,103 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:37:37,103 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:37:37,103 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:37:37,103 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 11:37:38,409 - INFO - Conectado a MySQL con éxito
+2023-05-03 11:37:38,409 - INFO - Conectado a MySQL con éxito
+2023-05-03 11:37:38,409 - INFO - Conectado a MySQL con éxito
+2023-05-03 11:37:38,409 - INFO - Conectado a MySQL con éxito
+2023-05-03 11:37:38,432 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 11:37:38,432 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 11:37:38,432 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 11:37:38,432 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 11:37:38,438 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 11:37:38,438 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 11:37:38,438 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 11:37:38,438 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 11:37:38,996 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:37:38,996 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:37:38,996 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:37:38,996 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:37:39,010 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:37:39,010 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:37:39,010 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:37:39,010 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 11:37:40,521 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 11:37:40,521 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 11:37:40,521 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 11:37:40,521 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 11:37:40,525 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 11:37:40,525 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 11:37:40,525 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 11:37:40,525 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 11:37:40,525 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,525 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,525 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,525 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,536 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,536 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,536 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,536 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,552 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,552 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,552 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,552 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,557 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,557 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,557 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,557 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,557 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,557 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,557 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,557 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,566 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,566 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,566 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,566 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,579 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:40,579 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:40,579 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:40,579 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:40,584 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,584 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,584 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,584 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,589 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,589 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,589 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,589 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-03 11:37:40,589 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,589 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,589 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,589 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,597 - INFO - Se ha insertado Final 2023 02 22 SOLUCION.pdf en el Inventario exitosamente.
+2023-05-03 11:37:40,597 - INFO - Se ha insertado Final 2023 02 22 SOLUCION.pdf en el Inventario exitosamente.
+2023-05-03 11:37:40,597 - INFO - Se ha insertado Final 2023 02 22 SOLUCION.pdf en el Inventario exitosamente.
+2023-05-03 11:37:40,597 - INFO - Se ha insertado Final 2023 02 22 SOLUCION.pdf en el Inventario exitosamente.
+2023-05-03 11:37:40,605 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,605 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,605 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,605 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,605 - INFO - Se ha insertado final.jpg en el Inventario exitosamente.
+2023-05-03 11:37:40,605 - INFO - Se ha insertado final.jpg en el Inventario exitosamente.
+2023-05-03 11:37:40,605 - INFO - Se ha insertado final.jpg en el Inventario exitosamente.
+2023-05-03 11:37:40,605 - INFO - Se ha insertado final.jpg en el Inventario exitosamente.
+2023-05-03 11:37:40,621 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,621 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,621 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,621 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:40,627 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:40,627 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:40,627 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:40,627 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:40,632 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:40,632 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:40,632 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:40,632 - ERROR - Error al insertar el archivo: 1406 (22001): Data too long for column 'extension' at row 1
+2023-05-03 11:37:41,740 - INFO - Permisos revocados para el archivo con ID 1hKV5R3RmJzBFJvLVfLv5Oe4_7MxfnhZk
+2023-05-03 11:37:41,740 - INFO - Permisos revocados para el archivo con ID 1hKV5R3RmJzBFJvLVfLv5Oe4_7MxfnhZk
+2023-05-03 11:37:41,740 - INFO - Permisos revocados para el archivo con ID 1hKV5R3RmJzBFJvLVfLv5Oe4_7MxfnhZk
+2023-05-03 11:37:41,740 - INFO - Permisos revocados para el archivo con ID 1hKV5R3RmJzBFJvLVfLv5Oe4_7MxfnhZk
+2023-05-03 11:37:42,056 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 11:37:42,056 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 11:37:42,056 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 11:37:42,056 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 11:37:42,071 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 11:37:42,071 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 11:37:42,071 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 11:37:42,071 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 11:37:45,223 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 11:37:45,223 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 11:37:45,223 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 11:37:45,223 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 11:37:45,223 - INFO - Email sent to inform the change of visibility
+2023-05-03 11:37:45,223 - INFO - Email sent to inform the change of visibility
+2023-05-03 11:37:45,223 - INFO - Email sent to inform the change of visibility
+2023-05-03 11:37:45,223 - INFO - Email sent to inform the change of visibility
+2023-05-03 11:37:45,229 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,229 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,229 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,229 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,229 - INFO - Se ha insertado support_vector_machine.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,229 - INFO - Se ha insertado support_vector_machine.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,229 - INFO - Se ha insertado support_vector_machine.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,229 - INFO - Se ha insertado support_vector_machine.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,250 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,250 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,250 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,250 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,258 - INFO - Se ha insertado k_nearest_neighbors.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,258 - INFO - Se ha insertado k_nearest_neighbors.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,258 - INFO - Se ha insertado k_nearest_neighbors.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,258 - INFO - Se ha insertado k_nearest_neighbors.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,263 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,263 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,263 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,263 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 11:37:45,263 - INFO - Se ha insertado multiple_linear_regression.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,263 - INFO - Se ha insertado multiple_linear_regression.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,263 - INFO - Se ha insertado multiple_linear_regression.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,263 - INFO - Se ha insertado multiple_linear_regression.ipynb en el Inventario exitosamente.
+2023-05-03 11:37:45,271 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 11:37:45,271 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 11:37:45,271 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 11:37:45,271 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 11:37:45,279 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 11:37:45,279 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 11:37:45,279 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 11:37:45,279 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 11:37:48,169 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:37:48,169 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:37:48,169 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:37:48,169 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:37:48,169 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:37:48,169 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:37:48,169 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:37:48,169 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 11:37:51,668 - INFO - Desconectado a MySQL con éxito
+2023-05-03 11:37:51,668 - INFO - Desconectado a MySQL con éxito
+2023-05-03 11:37:51,668 - INFO - Desconectado a MySQL con éxito
+2023-05-03 11:37:51,668 - INFO - Desconectado a MySQL con éxito
+2023-05-03 11:37:51,668 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 11:37:51,668 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 11:37:51,668 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 11:37:51,668 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 11:50:23,009 - INFO - Conectado a MySQL con éxito
+2023-05-03 11:50:23,009 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-03 11:50:52,893 - INFO - Conectado a MySQL con éxito
+2023-05-03 11:50:52,893 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-03 11:51:50,098 - INFO - Conectado a MySQL con éxito
+2023-05-03 11:51:50,114 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-03 12:03:58,352 - INFO - Conectado a MySQL con éxito
+2023-05-03 12:03:58,352 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-03 12:04:40,119 - INFO - Conectado a MySQL con éxito
+2023-05-03 12:04:40,119 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-03 12:04:40,135 - ERROR - Error al insertar el archivo: 1146 (42S02): Table 'inventario_drive.none' doesn't exist
+2023-05-03 12:06:11,467 - INFO - Conectado a MySQL con éxito
+2023-05-03 12:06:11,467 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-03 12:07:14,662 - INFO - Conectado a MySQL con éxito
+2023-05-03 12:07:14,670 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-03 12:07:14,678 - INFO - Se ha insertado archivo en el Historico exitosamente.
+2023-05-03 12:07:18,786 - INFO - Conectado a MySQL con éxito
+2023-05-03 12:07:18,786 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-03 12:07:18,811 - ERROR - Error al insertar el archivo: 1062 (23000): Duplicate entry '123' for key 'historico_nicooklaver.PRIMARY'
+2023-05-03 12:43:22,385 - INFO - Conectado a MySQL con éxito
+2023-05-03 12:43:22,393 - INFO - La base de datos: inventario_drive se ha seleccionado correctamente.
+2023-05-03 12:51:11,820 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 12:51:11,820 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 12:51:11,820 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 12:51:11,820 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-03 12:51:13,376 - INFO - Conectado a MySQL con éxito
+2023-05-03 12:51:13,376 - INFO - Conectado a MySQL con éxito
+2023-05-03 12:51:13,376 - INFO - Conectado a MySQL con éxito
+2023-05-03 12:51:13,376 - INFO - Conectado a MySQL con éxito
+2023-05-03 12:51:13,394 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 12:51:13,394 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 12:51:13,394 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 12:51:13,394 - INFO - La base de datos se ha creado exitosamente.
+2023-05-03 12:51:13,397 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 12:51:13,397 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 12:51:13,397 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 12:51:13,397 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-03 12:51:14,084 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 12:51:14,084 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 12:51:14,084 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 12:51:14,084 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 12:51:14,269 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 12:51:14,269 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 12:51:14,269 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 12:51:14,269 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-03 12:51:19,866 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 12:51:19,866 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 12:51:19,866 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 12:51:19,866 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-03 12:51:19,866 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 12:51:19,866 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 12:51:19,866 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 12:51:19,866 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-03 12:51:19,866 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:19,866 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:19,866 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:19,866 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:19,887 - INFO - Se ha insertado CV_Klaver Nicolas.pdf en el Inventario exitosamente.
+2023-05-03 12:51:19,887 - INFO - Se ha insertado CV_Klaver Nicolas.pdf en el Inventario exitosamente.
+2023-05-03 12:51:19,887 - INFO - Se ha insertado CV_Klaver Nicolas.pdf en el Inventario exitosamente.
+2023-05-03 12:51:19,887 - INFO - Se ha insertado CV_Klaver Nicolas.pdf en el Inventario exitosamente.
+2023-05-03 12:51:19,901 - INFO - Se ha insertado CV_Klaver Nicolas.pdf en el Historico exitosamente.
+2023-05-03 12:51:19,901 - INFO - Se ha insertado CV_Klaver Nicolas.pdf en el Historico exitosamente.
+2023-05-03 12:51:19,901 - INFO - Se ha insertado CV_Klaver Nicolas.pdf en el Historico exitosamente.
+2023-05-03 12:51:19,901 - INFO - Se ha insertado CV_Klaver Nicolas.pdf en el Historico exitosamente.
+2023-05-03 12:51:20,785 - INFO - Permisos revocados para el archivo con ID 1jfHGCVg8eaFQSyX67cfe9eBGv_paVpzr
+2023-05-03 12:51:20,785 - INFO - Permisos revocados para el archivo con ID 1jfHGCVg8eaFQSyX67cfe9eBGv_paVpzr
+2023-05-03 12:51:20,785 - INFO - Permisos revocados para el archivo con ID 1jfHGCVg8eaFQSyX67cfe9eBGv_paVpzr
+2023-05-03 12:51:20,785 - INFO - Permisos revocados para el archivo con ID 1jfHGCVg8eaFQSyX67cfe9eBGv_paVpzr
+2023-05-03 12:51:21,080 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 12:51:21,080 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 12:51:21,080 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 12:51:21,080 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 12:51:21,088 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 12:51:21,088 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 12:51:21,088 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 12:51:21,088 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 12:51:24,261 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 12:51:24,261 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 12:51:24,261 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 12:51:24,261 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 12:51:24,261 - INFO - Email sent to inform the change of visibility
+2023-05-03 12:51:24,261 - INFO - Email sent to inform the change of visibility
+2023-05-03 12:51:24,261 - INFO - Email sent to inform the change of visibility
+2023-05-03 12:51:24,261 - INFO - Email sent to inform the change of visibility
+2023-05-03 12:51:24,275 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:24,275 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:24,275 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:24,275 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:24,275 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-03 12:51:24,275 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-03 12:51:24,275 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-03 12:51:24,275 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-03 12:51:24,292 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-03 12:51:24,292 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-03 12:51:24,292 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-03 12:51:24,292 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-03 12:51:24,999 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-03 12:51:24,999 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-03 12:51:24,999 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-03 12:51:24,999 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-03 12:51:25,251 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 12:51:25,251 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 12:51:25,251 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 12:51:25,251 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-03 12:51:25,266 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 12:51:25,266 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 12:51:25,266 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 12:51:25,266 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-03 12:51:27,968 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 12:51:27,968 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 12:51:27,968 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 12:51:27,968 - INFO - Correo electrónico enviado correctamente.
+2023-05-03 12:51:27,968 - INFO - Email sent to inform the change of visibility
+2023-05-03 12:51:27,968 - INFO - Email sent to inform the change of visibility
+2023-05-03 12:51:27,968 - INFO - Email sent to inform the change of visibility
+2023-05-03 12:51:27,968 - INFO - Email sent to inform the change of visibility
+2023-05-03 12:51:27,974 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:27,974 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:27,974 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:27,974 - INFO - Se ha comprobado si existe el archivo.
+2023-05-03 12:51:27,974 - INFO - Se ha insertado prueba_pdf.pdf en el Inventario exitosamente.
+2023-05-03 12:51:27,974 - INFO - Se ha insertado prueba_pdf.pdf en el Inventario exitosamente.
+2023-05-03 12:51:27,974 - INFO - Se ha insertado prueba_pdf.pdf en el Inventario exitosamente.
+2023-05-03 12:51:27,974 - INFO - Se ha insertado prueba_pdf.pdf en el Inventario exitosamente.
+2023-05-03 12:51:27,995 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 12:51:27,995 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 12:51:27,995 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 12:51:27,995 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-03 12:51:27,995 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 12:51:27,995 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 12:51:27,995 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 12:51:27,995 - INFO - Archivos terminados de analizar correctamente
+2023-05-03 12:51:29,789 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 12:51:29,789 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 12:51:29,789 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 12:51:29,789 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 12:51:29,789 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 12:51:29,789 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 12:51:29,789 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 12:51:29,789 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-03 12:51:31,214 - INFO - Desconectado a MySQL con éxito
+2023-05-03 12:51:31,214 - INFO - Desconectado a MySQL con éxito
+2023-05-03 12:51:31,214 - INFO - Desconectado a MySQL con éxito
+2023-05-03 12:51:31,214 - INFO - Desconectado a MySQL con éxito
+2023-05-03 12:51:31,220 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 12:51:31,220 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 12:51:31,220 - INFO - Desconexión exitosa de Google Drive.
+2023-05-03 12:51:31,220 - INFO - Desconexión exitosa de Google Drive.

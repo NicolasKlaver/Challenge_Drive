@@ -4,6 +4,19 @@ from logger import Logger
 
 
 class Database:
+    """
+    Clase para conectarse a una base de datos MySQL y ejecutar consultas SQL.
+
+    Raises:
+        err: _description_
+        err: _description_
+        err: _description_
+        err: _description_
+        err: _description_
+
+    Returns:
+        _type_: _description_
+    """
     ########## FUNCION DE INICIALIZACION ##########
     def __init__(self, user, password, host):
         """
@@ -113,27 +126,7 @@ class Database:
             except mysql.connector.Error as err:
                 print(f"Error al crear la base de datos: {err}")
                 self.logger.error(f"Error al crear la base de datos: {err}")
-            
-    def existe_Database(self, db_name):
-        """
-        Checks if a given database exists in the MySQL server.
-
-        Args:
-            db_name (str): The name of the database to check.
-
-        Returns:
-            bool: True if the database exists, False otherwise.
-        """
-        # Se crea un cursor para ejecutar comandos SQL en la conexión
-        #self.cursor = self.connection.cursor()
-        # Se ejecuta el comando para obtener la lista de bases de datos
-        self.cursor.execute("SHOW DATABASES")
-        # Se obtiene la lista de bases de datos y se guarda en la variable databases
-        databases = [db[0] for db in self.cursor.fetchall()]
-        
-        # Se verifica si el nombre de la base de datos se encuentra en la lista de bases de datos
-        return db_name in databases
-                        
+                                
     def select_database(self, db_name):
         """
         Changes the currently selected database to the provided name.
@@ -176,9 +169,10 @@ class Database:
            # self.cursor = self.connection.cursor()
             # Definimos la consulta SQL para crear la tabla
             sql = """CREATE TABLE IF NOT EXISTS {} (
-                id VARCHAR(100) PRIMARY KEY,
+                id INT AUTO_INCREMENT PRIMARY KEY
+                file_id VARCHAR(100),
                 name VARCHAR(255),
-                extension VARCHAR(50),
+                extension VARCHAR(100),
                 owner VARCHAR(255),
                 visibility ENUM('publico', 'privado'),
                 fecha_ultima_modificacion DATETIME,
@@ -222,7 +216,7 @@ class Database:
             sql = """CREATE TABLE IF NOT EXISTS {} (
                 id VARCHAR(100) PRIMARY KEY,
                 name VARCHAR(255),
-                extension VARCHAR(50),
+                extension VARCHAR(100),
                 owner VARCHAR(255),
                 fecha_ultima_modificacion DATETIME
               )""".format(self.table_historico)
@@ -244,7 +238,7 @@ class Database:
     
     
     ########## FUNCION PARA INSERTAR ARCHIVOS EN LA BASE DE DATOS ##########
-    def insertar_archivo_nuevo(self, file, file_was_public):
+    def insertar_archivo_nuevo(self, file, flag_inventario, flag_historico ):
         """
         Inserta un nuevo archivo en la tabla 'inventario'.
 
@@ -257,65 +251,50 @@ class Database:
         Raises:
             mysql.connector.Error: Si ocurre un error al insertar el archivo en la tabla 'inventario'.
         """
+
         try:
             # Cambio de formato la fecha
             file_modified_time = datetime.datetime.strptime(file['modified_time'], '%Y-%m-%dT%H:%M:%S.%fZ')
 
             # Crear el cursor
-          #  self.cursor = self.connection.cursor()    
+            # self.cursor = self.connection.cursor()    
+            
             # Definimos la consulta SQL para crear la tabla
-            sql= f"INSERT INTO {self.table_inv} (id, name, extension, owner, visibility, fecha_ultima_modificacion, was_public) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+            sql_inventario= f"INSERT INTO {self.table_inv} (id, name, extension, owner, visibility, fecha_ultima_modificacion, was_public) VALUES (%s, %s, %s, %s, %s, %s, %s)"
             #Creamos una tupla con los valores a insertar
-            values = (file['id'], file['name'], file['extension'],file['owner'], file['visibility'],file_modified_time, file_was_public)
+            values_inventario = (file['id'], file['name'], file['extension'],file['owner'], file['visibility'],file_modified_time, file['was_public'])
+            
+            # Definimos la consulta SQL para crear la tabla
+            sql_historico= f"INSERT INTO {self.table_historico} (id, name, extension, owner, fecha_ultima_modificacion) VALUES (%s, %s, %s, %s, %s)"
+
+            #Creamos una tupla con los valores a insertar
+            values_historico = ( file['id'], file['name'], file['extension'],file['owner'],file_modified_time)
+            
+            
+            if flag_inventario:
             # Ejecutamos la consulta SQL para crear la tabla
-            self.cursor.execute(sql, values)
+                self.cursor.execute(sql_inventario, values_inventario)
+                flag_inventario=0
+                self.logger.info(f"Se ha insertado {file['name']} en el Inventario exitosamente.") 
+                
+            if flag_historico:
+            # Ejecutamos la consulta SQL para crear la tabla
+                self.cursor.execute(sql_historico, values_historico)
+                flag_historico=0   
+                self.logger.info(f"Se ha insertado {file['name']} en el Historico exitosamente.") 
+
+            
             # Guardamos los cambios
             self.connection.commit()
-            
-            print(f"Se han insertado {self.cursor.rowcount} archivos exitosamente.")
-            self.logger.info(f"Se han insertado {self.cursor.rowcount} archivos exitosamente.")       
+                      
         
         except mysql.connector.Error as err:
             print(f"Error al insertar el archivo: {err}")
             self.logger.error(f"Error al insertar el archivo: {err}")
 
-    def insertar_archivo_historico(self, file):
-        """
-        Inserta un nuevo archivo en la tabla 'historico'.
 
-        Args:
-            file: Un diccionario que contiene la información del archivo a insertar.
-
-        Returns:None
-
-        Raises:
-            mysql.connector.Error: Si ocurre un error al insertar el archivo en la tabla 'inventario'.
-        """
-        try: 
-            # Cambio de formato la fecha
-            file_modified_time = datetime.datetime.strptime(file['modified_time'], '%Y-%m-%dT%H:%M:%S.%fZ')
-            
-            # Crear el cursor
-        #    self.cursor = self.connection.cursor()
-            # Definimos la consulta SQL para crear la tabla
-            sql= f"INSERT INTO {self.table_historico} (id, name, extension, owner, fecha_ultima_modificacion) VALUES (%s, %s, %s, %s, %s)"
-            #Creamos una tupla con los valores a insertar
-            values = ( file['id'], file['name'], file['extension'],file['owner'],file_modified_time)
-            # Ejecutamos la consulta SQL para crear la tabla
-            self.cursor.execute(sql, values)
-            # Guardamos los cambios
-            self.connection.commit()
-            
-            print(f"Se han insertado {self.cursor.rowcount} archivos exitosamente.")
-            self.logger.info(f"Se han insertado {self.cursor.rowcount} archivos exitosamente.")       
-               
-        except mysql.connector.Error as err:
-            print(f"Error al insertar el archivo: {err}")
-            self.logger.error(f"Error al insertar el archivo: {err}") 
-    
-    
     ########## FUNCION QUE DEVUELVE LOS ARCHIVOS  ##########
-    def pedido_archivos_inventario(self):
+    def pedido_archivos(self, flag_inventario, flag_historico):
         """
         Consulta en SQL para seleccionar todos los datos de la tabla de inventario.
         
@@ -332,9 +311,18 @@ class Database:
             #self.cursor = self.connection.cursor()
             
             # Definimos la consulta SQL para seleccionar los datos de la tabla
-            sql = f"SELECT * FROM {self.table_inv}"
-            # Ejecutamos la consulta SQL
-            self.cursor.execute(sql)
+            sql_inventario = f"SELECT * FROM {self.table_inv}"
+            
+            # Definimos la consulta SQL para seleccionar los datos de la tabla
+            sql_historico = f"SELECT * FROM {self.table_historico}"
+            
+            if flag_inventario:
+                # Ejecutamos la consulta SQL
+                self.cursor.execute(sql_inventario)
+                
+            elif flag_historico:
+                self.cursor.execute(sql_historico)
+                
 
             # Obtener los datos de la consulta y crear una lista de diccionarios
             rows= self.cursor.fetchall()
@@ -350,44 +338,10 @@ class Database:
             # En caso de error, imprimir el mensaje correspondiente
             print(f"Error al seleccionar los datos: {err}")
             self.logger.error(f"Error al seleccionar los datos de la tabla: {self.table_inv} {err}")
-
-    def pedido_archivos_historico(self):
-        """
-        Consulta en SQL para seleccionar todos los datos de la tabla Historico.
-        
-        Args: None
-
-        Returns: lista de diccionarios, donde cada diccionario representa un archivo en el inventario.
-
-        Raises:
-            mysql.connector.Error: Si ocurre un error al seleccionar los datos en la tabla.
-        """
-        
-        try:
-           #self.cursor = self.connection.cursor()
-           
-            # Definimos la consulta SQL para seleccionar los datos de la tabla
-            sql = f"SELECT * FROM {self.table_historico}"
-            # Ejecutamos la consulta SQL
-            self.cursor.execute(sql)
-            
-            # Obtener los datos de la consulta y crear una lista de diccionarios
-            rows= self.cursor.fetchall()
-            # Se guardan los nombres de las columnas
-            columns = [desc[0] for desc in self.cursor.description]
-            
-            self.logger.info(f"Se ha hecho un pedido de archivos historicos exitosamente.")
-            
-            # Devuelve una lista de diccionarios, donde cada diccionario representa un archivo en el inventario
-            return [dict(zip(columns, row)) for row in rows]
-        
-        except mysql.connector.Error as err:
-            print(f"Error al seleccionar los datos: {err}")
-            self.logger.error(f"Error al seleccionar los datos de la tabla: {self.table_historico} {err}")
     
     
     ########## FUNCION AUXILIARES PARA BUSCAR EN LA BASE DE DATOS ##########
-    def existe_archivo(self, file_id):
+    def existe_archivo(self, file_id, flag_inventario, flag_historico):
         """
         Comprueba si un archivo con el ID especificado ya existe en la tabla del inventario.
 
@@ -404,9 +358,18 @@ class Database:
             # self.cursor = self.connection.cursor()
         
             # Definimos la consulta SQL 
-            sql = f"SELECT * FROM {self.table_inv} WHERE id=%s"
-            # Ejecutamos la consulta SQL
-            self.cursor.execute(sql, (file_id,))
+            sql_inventario = f"SELECT * FROM {self.table_inv} WHERE id=%s"
+            sql_historico = f"SELECT * FROM {self.table_historico} WHERE id=%s"
+           
+            
+            if flag_inventario:
+                # Ejecutamos la consulta SQL
+                self.cursor.execute(sql_inventario, (file_id,))
+            
+            elif flag_historico:
+                # Ejecutamos la consulta SQL
+                self.cursor.execute(sql_historico, (file_id,))
+            
             # Obtener los datos de la consulta
             result= self.cursor.fetchall()
             
@@ -419,34 +382,6 @@ class Database:
             print(f"Error al comprobar la existencia del archivo: {err}")
             self.logger.error(f"Error al comprobar la existencia del archivo: {err}")
             raise err
-
-    def existe_archivo_historico(self, file_id):
-        """
-        Comprueba si un archivo con el ID especificado ya existe en la tabla historica.
-
-        Args:
-            file_id (str): El ID del archivo a comprobar.
-
-        Returns:
-            bool: True si el archivo existe en la tabla, False en caso contrario.
-
-        Raises:
-            mysql.connector.Error: Si ocurre algún error al realizar la consulta SQL.
-        """
-       
-        # self.cursor = self.connection.cursor()
-        
-        # Definimos la consulta SQL 
-        sql = f"SELECT * FROM {self.table_historico} WHERE id=%s"
-        # Ejecutamos la consulta SQL
-        self.cursor.execute(sql, (file_id,))
-        # Obtener los datos de la consulta
-        result= self.cursor.fetchall()
-        
-        self.logger.info(f"Se ha comprobado si existe el archivo historico.")
-        
-        # Devuelve True si el archivo existe en la tabla, False en caso contrario
-        return bool(len(result))
 
     def fue_modificado(self, file_id, file_last_modified_date):
         """
@@ -468,7 +403,7 @@ class Database:
             # obtiene la fecha de la última modificación de un archivo que se encuentra en la base de datos
             ultima_modificacion= self.cursor.fetchone()[0]
             
-            self.logger.info("Se ha obtenido la ultima_fecha_modificacion exitosamente.")
+            self.logger.info("Se analiza si el archivo fue modificado correctamente.")
             
             return file_last_modified_date > ultima_modificacion 
         
@@ -477,13 +412,30 @@ class Database:
             self.logger.error(f"Error al comprobar la ultima fecha de modificacion: {err}")
             raise err
 
-
-
-    ########## FUNCIONES DE UPDATES ##########
-    def update_last_modified_date(self, file_id, file_modified_time):
+    def existe_Database(self, db_name):
         """
-        Actualiza la fecha de última modificación de un archivo en la tabla del inventario.
+        Checks if a given database exists in the MySQL server.
 
+        Args:
+            db_name (str): The name of the database to check.
+
+        Returns:
+            bool: True if the database exists, False otherwise.
+        """
+        # Se crea un cursor para ejecutar comandos SQL en la conexión
+        #self.cursor = self.connection.cursor()
+        # Se ejecuta el comando para obtener la lista de bases de datos
+        self.cursor.execute("SHOW DATABASES")
+        # Se obtiene la lista de bases de datos y se guarda en la variable databases
+        databases = [db[0] for db in self.cursor.fetchall()]
+        
+        # Se verifica si el nombre de la base de datos se encuentra en la lista de bases de datos
+        return db_name in databases
+
+    ########## FUNCIONES DE UPDATES ########## DOCSTRING
+    def update_time_inventario(self, file_id, file_modified_time, flag_inventario, flag_historico):
+        """
+        Actualiza la fecha ntario.
         Args:
             file_id (str): El ID del archivo a actualizar.
             file_modified_time (datetime.datetime): La nueva fecha de última modificación del archivo.
@@ -495,19 +447,29 @@ class Database:
             #self.cursor = self.connection.cursor()
             
             # Definimos la consulta SQL y los valores
-            sql= f"UPDATE {self.table_inv} SET fecha_ultima_modificacion=%s WHERE id=%s"
+            sql_inventario= f"UPDATE {self.table_inv} SET fecha_ultima_modificacion=%s WHERE id=%s"
+            sql_historico= f"UPDATE {self.table_historico} SET fecha_ultima_modificacion=%s WHERE id=%s"
+           
             values= (file_modified_time, file_id)
-            # Ejecutamos la consulta SQL
-            self.cursor.execute(sql, values)
+            
+            if flag_inventario:
+                # Ejecutamos la consulta SQL
+                self.cursor.execute(sql_inventario, values)
+                self.logger.info(f"Se ha Actualizado el archivo inventario correctamente.")       
+            
+            elif flag_historico:
+                self.cursor.execute(sql_historico, values)
+                self.logger.info(f"Se ha Actualizado el archivo historico correctamente.")  
+            
             # Guardamos los cambios
             self.connection.commit()
-            
+     
         except mysql.connector.Error as err:
-            print(f"Error al comprobar la existencia del archivo: {err}")
-            self.logger.error(f"Error al update modifiedDate: {err}")
+            self.logger.error(f"Error al update: {err}")
+
             raise err
             
-    def update_handler_visibility(self, file_id, file_modified_time):
+    def update_visibility_inventario(self, file_id, file_modified_time):
         """
         Actualiza la visibilidad y la fecha de última modificación de un archivo en el inventario.
 
@@ -540,7 +502,7 @@ class Database:
 
             #Guarda los cambios
             self.connection.commit()
-            self.logger.info(f"Se han actualizado los archivos correctamente.")       
+            self.logger.info(f"Se ha actualizado la visibilidad del archivo en la DB correctamente.")       
    
             
         except mysql.connector.Error as err:
@@ -548,30 +510,14 @@ class Database:
             self.logger.error(f"Error al update visibility: {err}")
             raise err
 
-    def update_archivo_historico(self, file_id, file_modified_time):
-        """
-        Actualiza la fecha de última modificación de un archivo en la tabla del histórico.
 
-        Args:
-            file_id (str): El ID del archivo a actualizar.
-            file_modified_time (str): La fecha de última modificación del archivo a actualizar.
 
-        Raises:
-            mysql.connector.Error: Si ocurre algún error al realizar la consulta SQL.
-        """
-        try: 
-            #self.cursor = self.connection.cursor()
-            # Definimos la consulta SQL y los valores y ejecutamos la consulta
-            sql= f"UPDATE {self.table_historico} SET fecha_ultima_modificacion=%s WHERE id=%s"
-            values= (file_modified_time, file_id) 
-            self.cursor.execute(sql, values)
-            
-            # Guardamos los cambios
-            self.connection.commit()
-            
-            self.logger.info(f"Se ha Actualizado el archivo historico correctamente.")       
-        
-        except mysql.connector.Error as err:
-            print(f"Error al comprobar la existencia del archivo: {err}")
-            self.logger.error(f"Error al update el historico: {err}")
-            raise err
+#db= Database("root", "root", "localhost")
+#db.open_connection()
+#db.select_database("inventario_drive")
+
+#file= {'id':"123", 'name':"archivo", 'extension':"pdf", 'owner':'nicooklaver@gmail.com','modified_time':"2022-09-26T05:50:23.917Z"}
+
+#db.insertar_archivo_nuevo(file, flag_inventario=0, flag_historico=1)
+
+

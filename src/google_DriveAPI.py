@@ -5,9 +5,16 @@ import pickle
 from googleapiclient.errors import HttpError
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
+from logger import Logger
 
 
 class GoogleDriveAPI:
+    """
+    Clase para conectarse a la API de Google Drive y obtener los archivos que se encuentran en la carpeta compartida.
+
+    Returns:
+        _type_: _description_
+    """
     ########## FUNCION DE INICIALIZACION ##########
     def __init__(self):
         """
@@ -20,6 +27,7 @@ class GoogleDriveAPI:
         #self.SCOPES = ['https://www.googleapis.com/auth/drive']
         self.SCOPES =['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive']
         self.creds = None
+        self.logger = Logger().get_logger()
     
     
     ########## FUNCIONES PARA CONECTARSE ##########
@@ -70,9 +78,13 @@ class GoogleDriveAPI:
         try:
             self.authenticate()
             self.service = build('drive', 'v3', credentials=self.creds)
+            
             print("Conexión exitosa a Google Drive - Desde google_DriveAPI.")
+            self.logger.info("Conexión exitosa a Google Drive - Desde google_DriveAPI.")
+            
         except HttpError as error:
             print(f"Se produjo un error al conectarse a Google Drive: {error}")
+            self.logger.error(f"Error al conectar a la base de datos: {error}")
     
     def disconnect(self):
         """
@@ -86,24 +98,10 @@ class GoogleDriveAPI:
         # Desconectar de Google Drive
         self.service = None
         print("Desconexión exitosa de Google Drive.")
+        self.logger.info("Desconexión exitosa de Google Drive.")
     
     
     ########## FUNCIONES PARA OBTENER ARCHIVOS ##########
-    def get_authenticated_user(self):
-        """
-        Obtener la dirección de correo electrónico del usuario autenticado en Google Drive.
-        
-        Args: None
-        
-        Return (str): Dirección de correo electrónico del usuario autenticado en Google Drive.
-        """
-        
-        try:
-            user_info = self.service.about().get(fields='user(emailAddress)').execute()
-            return user_info['user']['emailAddress']
-        except HttpError as error:
-            print(f"Se produjo un error al obtener la información del usuario autenticado: {error}")
-            return None 
     
     def get_files(self):
         """
@@ -122,7 +120,7 @@ class GoogleDriveAPI:
             query = "trashed = false and mimeType='application/pdf' "
 
             # Obtener los archivos de Google Drive
-            results = self.service.files().list(q=query, fields=fields, pageSize=4).execute()
+            results = self.service.files().list(q=query, fields=fields, pageSize=3).execute()
             items = results.get('files', [])
             # Procesar la lista de archivos y extraer los campos necesarios
             files = []
@@ -151,14 +149,45 @@ class GoogleDriveAPI:
                     'modified_time': item['modifiedTime']
                 })
             print(files)
+            self.logger.info("Se listaron los archivos de Google Drive con exito.")
             return files
     
         except HttpError as error:
             print(f"Se produjo un error al obtener los archivos: {error}")
+            self.logger.error(f"Se produjo un error al obtener los archivos: {error}")
             return None
     
-    def test_visibility_file(file_id):
-        pass
+    def test_visibility_file(self, file_id):
+        """
+        Obtener un archivo de Google Drive por su ID.
+
+        Args:
+            file_id (str): ID del archivo que se desea obtener.
+
+        Return:
+            Un diccionario con la información del archivo, incluyendo su ID, nombre, tipo MIME,
+            propietario, permisos y fecha de modificación. Si no se encuentra el archivo, devuelve None.
+        """
+        
+        try:
+            # Definir los campos que queremos obtener para el archivo
+            fields = "id, permissions"
+            
+            # Obtener el archivo de Google Drive
+            file = self.service.files().get(fileId=file_id, fields=fields).execute()
+                        
+            # Obtener la lista de permisos del archivo
+            permissions = file.get('permissions', [])
+            for perm in permissions:
+                if perm.get('id', '') == 'anyoneWithLink':
+                    return "publico"
+
+            return 'privado'
+
+        except HttpError as error:
+            print(f"Se produjo un error al obtener el archivo: {error}")
+            self.logger.error(f"Se produjo un error al obtener el archivo: {error}")
+            return None
     
     def test_list_one_file(self):
         """
@@ -227,8 +256,11 @@ class GoogleDriveAPI:
         try:
             self.service.permissions().delete(fileId= file_id, permissionId='anyoneWithLink').execute()
             print(f"Permisos revocados para el archivo con ID {file_id}")
+            self.logger.info(f"Permisos revocados para el archivo con ID {file_id}")
+            
         except HttpError as error:
             print(f"Se produjo un error al revocar los permisos del archivo con ID {file_id}: {error}")
+            self.logger.error(f"Se produjo un error al revocar los permisos del archivo con ID {file_id}: {error}")
      
     def get_last_modified_date(self, file_id):
         """
@@ -243,8 +275,28 @@ class GoogleDriveAPI:
         try:
             modified_info = self.service.files().get(fileId= file_id, fields='modifiedTime').execute()
             return modified_info['modifiedTime']
+        
         except HttpError as error:
             print(f"Se produjo un error al obtener la información del usuario autenticado: {error}")
+            self.logger.error(f"Se produjo un error al obtener la información del usuario autenticado: {error}")
+            return None 
+    
+    def get_authenticated_user(self):
+        """
+        Obtener la dirección de correo electrónico del usuario autenticado en Google Drive.
+        
+        Args: None
+        
+        Return (str): Dirección de correo electrónico del usuario autenticado en Google Drive.
+        """
+        
+        try:
+            user_info = self.service.about().get(fields='user(emailAddress)').execute()
+            return user_info['user']['emailAddress']
+        
+        except HttpError as error:
+            print(f"Se produjo un error al obtener la información del usuario autenticado: {error}")
+            self.logger.error(f"Se produjo un error al obtener la información del usuario autenticado: {error}")
             return None 
     
     def es_publico(permissions):

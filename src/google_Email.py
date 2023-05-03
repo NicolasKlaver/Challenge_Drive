@@ -5,6 +5,9 @@ from logger import Logger
 
 #Crea una clase GoogleDriveEmailNotifier para enviar correos electrónicos:    
 class EmailNotifier:
+    """
+    Clase para enviar correos electrónicos a través de Yagmail.SMTP.
+    """
     def __init__(self):
         """
         Inicializa la clase EmailManager.

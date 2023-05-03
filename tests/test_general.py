@@ -6,6 +6,10 @@ from google_Database import Database
 from google_DriveAPI import GoogleDriveAPI
 from google_Email import EmailNotifier
 
+#Ejecutar pytest -v
+
+
+#@pytest.mark.parametrize() --> Probar varios parametros a la vez
 
 
 # Test que se conecta a la API de Google Drive y lista los archivos
@@ -53,19 +57,20 @@ def test_save_files_in_database():
     db.create_table_inventario("Test_Inventario")
 
     # Conectarse a la API de Google Drive
+    drive_api =GoogleDriveAPI
     drive_api.connect()
     file = drive_api.test_list_one_file()
     
     #Me fijo si es publico o no
     if file['visibility'] == 'publico':
-        file_was_public = 1
+        file['was_public'] = 1
     else:
-        file_was_public= 0
+        file['was_public'] = 0
      
-    db.insertar_archivo_nuevo(file, file_was_public)
+    db.insertar_archivo_nuevo(file, flag_inventario=1, flag_historico=0)
     drive_api.disconnect()
     
-    results= db.pedido_archivos_inventario()
+    results= db.pedido_archivos(flag_inventario=1, flag_historico=0)
     db.close_connection()
     assert len(results) > 0
     
@@ -86,17 +91,17 @@ def test_change_visibility():
     drive_api= GoogleDriveAPI()
     drive_api.connect()
     
-    file_id= "asd"
-    file_visibility = drive_api.visibility_file(file_id)
-    print("Verificar la visibilidad del file_id: ", file_visibility)
-    
+    #Es el archivo prueba_pdf.pdf
+    file_id= '19znWgF8kOggXHWnpbZ6ejYUDRYtPaQN8'
+    file_visibility_before = drive_api.test_visibility_file(file_id)
+
     # Cambiar la visibilidad del archivo de público a privado
     drive_api.remove_public_visibility(file_id)
     
     # Verificar que la visibilidad del archivo haya cambiado
-    file_visibility = drive_api.list_files(file_id)
+    file_visibility_after = drive_api.test_visibility_file(file_id)
     
-    assert file_visibility == 'privado'
+    assert file_visibility_after == 'privado' and file_visibility_before == "publico"
 
 
 # Enviar un correo electrónico al Propietario del archivo, avisando que la visibilidad ha sido cambiada
