@@ -118,10 +118,11 @@ class GoogleDriveAPI:
         try:
             # Definir los campos que queremos obtener para cada archivo
             fields = "nextPageToken, files(id, name, mimeType, owners(emailAddress), permissions, modifiedTime)"
-            query = "trashed = false and mimeType='application/pdf' "
-
+            query = "trashed = false and mimeType='application/pdf' "# Para pruebas
+            #query= "trashed = false"
             # Obtener los archivos de Google Drive
-            results = self.service.files().list(q=query, fields=fields, pageSize=3).execute()
+            results = self.service.files().list(q=query, fields=fields, pageSize=3).execute() # Para pruebas
+            
             items = results.get('files', [])
             # Procesar la lista de archivos y extraer los campos necesarios
             files = []
@@ -153,6 +154,62 @@ class GoogleDriveAPI:
             print(f"Se produjo un error al obtener los archivos: {error}")
             self.logger.error(f"Se produjo un error al obtener los archivos: {error}")
             return None
+    
+ 
+    def get_all_files(self):
+        """
+        Obtener los archivos de Google Drive que cumplan con ciertos criterios de búsqueda. 
+        Los campos que se obtienen para cada archivo son: id, name, mimeType, owners, permissions y modifiedTime.
+
+        Args: None
+
+        Return (list):
+            Lista de archivos que cumplen con los criterios de búsqueda.
+        """
+        try:
+            # Definir los campos que queremos obtener para cada archivo
+            fields = "nextPageToken, files(id, name, mimeType, owners(emailAddress), permissions, modifiedTime)"
+            query = "trashed = false and mimeType='application/pdf'"
+            all_files = []
+            page_token = None
+            
+            while True:
+                results = self.service.files().list(q=query, fields=fields, pageToken=page_token).execute()
+                items = results.get('files', [])
+                all_files.extend(items)
+                page_token = results.get('nextPageToken')
+                if not page_token:
+                    break
+            # Procesar la lista de archivos y extraer los campos necesarios
+            files = []
+            for item in all_files:
+                # Obtener la extensión del archivo a partir del tipo MIME
+                extension = item['mimeType'].split('/')[-1]
+                # Obtener el nombre del propietario
+                owner = item['owners'][0]['emailAddress']
+
+                # Obtener la lista de permisos del archivo
+                permissions = item.get('permissions', [])
+                # is_public = self.es_publico(permissions)
+                is_public = self.es_publico(permissions)
+
+                # Agregar un diccionario con los campos que nos interesan a la lista de archivos
+                files.append({
+                    'id': item['id'],
+                    'name': item['name'],
+                    'extension': extension,
+                    'owner': owner,
+                    'visibility': 'publico' if is_public else 'privado',
+                    'modified_time': item['modifiedTime']
+                })
+            print(files)
+            self.logger.info("Se listaron los archivos de Google Drive con exito.")
+            return files
+        except HttpError as error:
+            print(f"Se produjo un error al obtener los archivos: {error}")
+            self.logger.error(f"Se produjo un error al obtener los archivos: {error}")
+            return None
+   
     
     def test_visibility_file(self, file_id):
         """

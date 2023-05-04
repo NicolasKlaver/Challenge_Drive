@@ -97,7 +97,7 @@ En esta caso estoy cargando un archivo nuevo con Visibilidad publica y en el mis
 
 
 
-## Detalles sobre la Base de Datos (google_Database)
+# Detalles sobre la Base de Datos (google_Database)
 - MySQL es un sistema de bases de datos muy potente y versátil que puede manejar una gran cantidad de datos y proporcionar un alto rendimiento y disponibilidad.
 
 - Como explico en el desarrollo del programa, utilizo una sola Database en la cual va a ver muchas Tablas. Dada la estructuracion del codigo, considero que se puede cambiar facilmente si cambia algun requerimiento.
@@ -160,13 +160,8 @@ En esta caso estoy cargando un archivo nuevo con Visibilidad publica y en el mis
 **def existe_Database(self, db_name)**
 
 
-#### Cosas a agregar:
-    - Una vez conectado el usuario se podria hacer una consulta a SQL y mostrandole al usuario los archivos que tenia antes de iniciar nuevamente el programa.
-    - Se puede mejorar la logica de la Creacion de tablas, ya que aunque la funcion se llamen "create_table", si no existe, no las crea, pero lo que si hace es asignarle el nombre que es importante para trabajar posteriormente.
-   
 
-
-##Detalles sobre la API de Google Drive (google_DriveAPI)
+# Detalles sobre la API de Google Drive (google_DriveAPI)
 - La API de Google Drive es una interfaz de programación de aplicaciones que permite a los desarrolladores interactuar con los archivos y carpetas almacenados en Google Drive. 
 - Se utiliza para crear aplicaciones que pueden acceder, modificar y compartir archivos en Google Drive.
 - Se basa en el protocolo HTTP y utiliza el formato JSON para enviar y recibir datos.
@@ -174,11 +169,11 @@ En esta caso estoy cargando un archivo nuevo con Visibilidad publica y en el mis
 - Hay distintos Scopes para conectarse. En este caso utilice uno que me permita acceder a todos los archivos con permisos de lectura y escritura ya que puede que tengamos que hacer modificaciones. 
 
 
-**f __init__(self):**
+**__init__(self):**
   - Inicializa la clase DriveAPI y define los scopes de acceso para la autenticación de la API de Google Drive.
   - Se utiliza un scope que permita acceder a todos los archivos con permisos de lectura y escritura ya que puede que tengamos que hacer modificaciones.
 
-**f authenticate(self): **
+**authenticate(self):**
   - Autenticar a la aplicación para acceder a la API de Google Drive. 
   - Si existe un token previamente guardado y no ha expirado, se utiliza ese token. 
   - En caso contrario, se solicita la autenticación del usuario y se guarda el token en un archivo local.
@@ -196,6 +191,9 @@ En esta caso estoy cargando un archivo nuevo con Visibilidad publica y en el mis
   - Obtener los archivos de Google Drive que cumplan con ciertos criterios de búsqueda. 
   - results = self.service.files().list(q=query, fields=fields, pageSize=3).execute()
       - Devuelve una lista de archivos y carpetas que cumplen con los criterios de búsqueda especificados. 
+
+**def get_all_files(self):**
+  - Devuelve todos los archivos
 
 **def remove_public_visibility(self, file_id):**
   - self.service.permissions().delete(fileId= file_id, permissionId='anyoneWithLink').execute()
@@ -360,3 +358,6 @@ Clase para enviar correos electrónicos a través de Yagmail.SMTP.
 # Puntos a futuro
   - En el archivo de base de datos se pueden agregar nuevas consultas para hacer un analisis de los datos obtenidos.
     -Por ejemplo, utilizando Joins entre las dos tablas con el "file_id" se pueden obtener los archivos publicos que siguen en la Database y tambien los que fueron eliminados.
+    - Una vez conectado el usuario se podria hacer una consulta a SQL y mostrandole al usuario los archivos que tenia antes de iniciar nuevamente el programa.
+    - Se puede mejorar la logica de la Creacion de tablas, ya que aunque la funcion se llamen "create_table", si no existe, no las crea, pero lo que si hace es asignarle el nombre que es importante para trabajar posteriormente.
+   

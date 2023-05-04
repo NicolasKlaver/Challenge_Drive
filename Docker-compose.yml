@@ -1,7 +1,9 @@
 version: "3.9"
 services:
   mi_app_python:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile_python
     depends_on:
       - mi_app_mysql
 
