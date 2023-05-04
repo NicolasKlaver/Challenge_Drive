@@ -53,11 +53,14 @@
 - Mejorar los tests, faltan crear modelos para generar mas pruebas y organizarlos mejor.
 -  Separar en una nueva clase la Interfaz grafica de la ejecucion del programa.
 
+-Mejorar el manejo de las excepciones
+
 
 # Ejecucion del programa
   - Debera tener instaladas las bibliotecas necesarias.
   - Tener instalado y ejecutandose el servicio de MySQL.
-  - Ejecutar el archivo "main.py".
+  - git clone https://github.com/NicolasKlaver/Challenge_Drive.git
+  - Ejecutar el archivo "main.py" (desde el directorio de trabajo)
 
 
   # Explicacion de la estructura del codigo
