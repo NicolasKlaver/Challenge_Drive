@@ -5,19 +5,17 @@ FROM python:3.9
 WORKDIR /app
 
 # Copiar el archivo requirements.txt a la imagen
-COPY requirements.txt .
+COPY config/requirements.txt .
+COPY config/requirements_gui.txt .
 
 # Instalar las dependencias
-#RUN pip install -r requirements.txt
-RUN pip install mysql-connector google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client yagmail pytest
+RUN pip install -r requirements.txt
 
+# Para la interfaz grafica utilizo Xming
+RUN config/requirements_gui.txt
 
 # Copiar el código fuente de la aplicación a la imagen
-COPY src/ .
-#COPY src/ ./src
-COPY config/ .
-COPY tests/ .
-COPY Logs/ .
+COPY . .
 
 # Exponer el puerto 5000
 EXPOSE 5000
@@ -29,15 +27,15 @@ CMD ["python", "src/main.py"]
 
 
 
-
-
-
 ##############################################################
 ##############################################################
 #  Crear imagen
-#docker build -t nombre_de_la_imagen .
+#docker build -t gui_image .
 
 # Ejecutar contenedor
-#docker run -p 5000:5000 nombre_de_la_imagen
+#set DISPLAY=ip:0.0
+#XmingXming.exe -ac
+#docker run -it --rm -e DISPLAY=%DISPLAY% --network="host" --name gui_container gui_image
+
 ##############################################################
 ##############################################################

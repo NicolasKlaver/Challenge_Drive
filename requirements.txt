@@ -1,7 +1,0 @@
-pip install pytest
-pip install yagmai
-pip install google-auth-httplib2
-pip install google-auth-oauthlib
-pip install google-api-python-client
-pip install python-dotenv
-pip install mysql-connector-python

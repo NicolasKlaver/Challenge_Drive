@@ -1,5 +1,10 @@
 #### Instalar bibliotecas para ejecutar:
+- pip install pytest
+- pip install yagmai
+- pip install google-auth-httplib2
+- pip install google-auth-oauthlib
 - pip install google-api-python-client
+- pip install python-dotenv
 - pip install mysql-connector-python
 
 ## Estructuras de las carpetas
@@ -22,12 +27,29 @@
     - Config:
       - credential_drive.json
       - .env: archivo con las variables y contraseñas.
+      - requirement.txt: archivo que le paso a docker con las librerias necesarias para ejecutar el programa.
+    
+    - Dockerfile_python: configuracion de la imagen de python.
+    - Dockerfile_mysql: configuracion de la imagen de mysql.
+    - Dockerfile-compose.yml: conexion de estas dos imagenes.
 
 
 # Aclaraciones acerca de la construccion y el objetivo del programa.
     Realice el programa pensando que trabajo en el área de Seguridad Informática, y que el objetivo es tratar con archivos sensibles que pueden llegar a ser publicos. 
     Por eso, como podras ver mas adelante, el usuario no tiene relación ni elección con la ejecución del programa, si no que se le deberá explicar de que se trata y ejecutarlo en caso de que este de acuerdo.
    
+
+# Puntos Pendientes
+     - Manejo mas seguro de las credenciales, no llegue a terminar de implementarlo, la idea es guardar las credenciales en AWS Secrets Manager y la libreria cryptography para su cifrado.
+  - Dockerfile: no llegue a terminar de implementarlo correctamente para que ande. Tuve varias complicaciones debido a que realice una aplicación de escritorio, pero estoy viendo si hoy puedo hacerlo andar.
+  - Mejorar los tests, faltan crear modelos para generar mas pruebas y organizarlos mejor.
+  -  Separar en una nueva clase la Interfaz grafica de la ejecucion del programa.
+
+
+# Ejecucion del programa
+  - Debera tener instaladas las bibliotecas necesarias.
+  - Tener instalado y ejecutandose el servicio de MySQL.
+  - Ejecutar el archivo "main.py".
 
 
   # Explicacion de la estructura del codigo
@@ -329,25 +351,12 @@ Clase para enviar correos electrónicos a través de Yagmail.SMTP.
 
 
 
-# Puntos que se pueden mejorar:
-    - Mejorar los tests --> Crear modelos para listar los archivos y generar mas pruebas.
-
-
-    - Agregar mas messagebox cuando falla el programa --> Ahora solo se informa por logs
-    - Darle mas control de la aplicacion al usuario en caso de que se requiera
-    - Separar de la clase App la parte de Interfaz grafica y ejecucion del progranma en una nueva clase. Analizar inicializar en el main los objetos.
+# Puntos a Revisar
+    - Agregar mas messagebox cuando falla el programa. Ahora solo se informa por logs.
+    - Darle mas control de la aplicacion al usuario en caso de que se requiera.
     - Analizar usar la libreria smtp para el envío de mails ya que permite una configuración mas personalizada.
+    -Revisar las instancias del Logger porque en estos momentos se imprimen multiples.
 
-    -Revisar las instancias del Logger
-    Mejorar el google_GUI_Tkinter: mejorar la logica de ejecucion
-
-
-
-
-********AGREGAR*******
-En el archivo de base de datos se pueden agregar nuevas consultas para hacer un analisis de los datos obtenidos.
-Por ejemplo, utilizando Joins entre las dos tablas con el "file_id" se pueden obtener los archivos publicos que siguen en la Database y tambien los que fueron eliminados.
-
-Agregar lo de la Database que siempre ejecuto
-********AGREGAR*******
-
+# Puntos a futuro
+  - En el archivo de base de datos se pueden agregar nuevas consultas para hacer un analisis de los datos obtenidos.
+    -Por ejemplo, utilizando Joins entre las dos tablas con el "file_id" se pueden obtener los archivos publicos que siguen en la Database y tambien los que fueron eliminados.

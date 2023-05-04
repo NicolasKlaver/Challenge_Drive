@@ -1,21 +1,21 @@
-#services:
-#  pythonapp:
-#    build: ./python/
-#    command: sh -c "sleep 10s ; python3 ./main.py"
-
-
 version: "3.9"
 services:
   mi_app_python:
     build: .
-    ports:
-      -"3000:3000"
-    links:
+    depends_on:
       - mi_app_mysql
 
   mi_app_mysql:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile_mysql
+    container_name: mysql
     ports:
-      -"3306:3306"
+      - 3306:3306
     environment:
       - MYSQL_ROOT_PASSWORD: "root"
+      #- MYSQL_USER: "root"
+      # MY_SQL_PASSWORD: "root"
+      #- MYSQL_DATABASE: "name"
+
+# Generar Volumes
