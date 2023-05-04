@@ -20,7 +20,7 @@ class Database:
     ########## FUNCION DE INICIALIZACION ##########
     def __init__(self, user, password, host):
         """
-        Constructor de la clase BaseDeDatos.
+        Constructor de la clase BaseDeDatos
         
         Args:
             user (str): Nombre de usuario para conectarse a la base de datos.
@@ -36,7 +36,8 @@ class Database:
         self.cursor = None
         self.table_inv= None
         self.table_historico= None
-        self.logger = Logger().get_logger()
+        #self.logger = Logger().get_logger()
+        self.logger= None
 
 
     ########## FUNCION DE CONEXION ##########
@@ -169,14 +170,13 @@ class Database:
            # self.cursor = self.connection.cursor()
             # Definimos la consulta SQL para crear la tabla
             sql = """CREATE TABLE IF NOT EXISTS {} (
-                id INT AUTO_INCREMENT PRIMARY KEY
+                id INT AUTO_INCREMENT PRIMARY KEY,
                 file_id VARCHAR(100),
                 name VARCHAR(255),
                 extension VARCHAR(100),
                 owner VARCHAR(255),
                 visibility ENUM('publico', 'privado'),
-                fecha_ultima_modificacion DATETIME,
-                was_public BOOLEAN
+                fecha_ultima_modificacion DATETIME
               )""".format(self.table_inv)
             
             # Ejecutamos la consulta SQL para crear la tabla
@@ -214,7 +214,8 @@ class Database:
           #  self.cursor = self.connection.cursor()
             # Definimos la consulta SQL para crear la tabla
             sql = """CREATE TABLE IF NOT EXISTS {} (
-                id VARCHAR(100) PRIMARY KEY,
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                file_id VARCHAR(100),
                 name VARCHAR(255),
                 extension VARCHAR(100),
                 owner VARCHAR(255),
@@ -244,8 +245,8 @@ class Database:
 
         Args:
             file: Un diccionario que contiene la información del archivo a insertar.
-            file_was_public: Un valor booleano que indica si el archivo era público o no.
-
+            flag_inventario: Un booleano que indica si se debe insertar el archivo en la tabla 'inventario'.
+            flag_historico: Un booleano que indica si se debe insertar el archivo en la tabla 'historico'.
         Returns:None
 
         Raises:
@@ -260,12 +261,12 @@ class Database:
             # self.cursor = self.connection.cursor()    
             
             # Definimos la consulta SQL para crear la tabla
-            sql_inventario= f"INSERT INTO {self.table_inv} (id, name, extension, owner, visibility, fecha_ultima_modificacion, was_public) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+            sql_inventario= f"INSERT INTO {self.table_inv} (file_id, name, extension, owner, visibility, fecha_ultima_modificacion) VALUES (%s, %s, %s, %s, %s, %s)"
             #Creamos una tupla con los valores a insertar
-            values_inventario = (file['id'], file['name'], file['extension'],file['owner'], file['visibility'],file_modified_time, file['was_public'])
+            values_inventario = (file['id'], file['name'], file['extension'],file['owner'], file['visibility'],file_modified_time)
             
             # Definimos la consulta SQL para crear la tabla
-            sql_historico= f"INSERT INTO {self.table_historico} (id, name, extension, owner, fecha_ultima_modificacion) VALUES (%s, %s, %s, %s, %s)"
+            sql_historico= f"INSERT INTO {self.table_historico} (file_id, name, extension, owner, fecha_ultima_modificacion) VALUES (%s, %s, %s, %s, %s)"
 
             #Creamos una tupla con los valores a insertar
             values_historico = ( file['id'], file['name'], file['extension'],file['owner'],file_modified_time)
@@ -296,10 +297,12 @@ class Database:
     ########## FUNCION QUE DEVUELVE LOS ARCHIVOS  ##########
     def pedido_archivos(self, flag_inventario, flag_historico):
         """
-        Consulta en SQL para seleccionar todos los datos de la tabla de inventario.
+        Consulta en SQL para seleccionar todos los datos de la tabla correspondiente.
         
-        Args: None
-
+        Args: 
+            flag_inventario: Un booleano que indica si se debe seleccionar el archivo en la tabla 'inventario'.
+            flag_historico: Un booleano que indica si se debe seleccionar el archivo en la tabla 'historico'.
+            
         Returns: lista de diccionarios, donde cada diccionario representa un archivo en el inventario.
 
         Raises:
@@ -358,8 +361,8 @@ class Database:
             # self.cursor = self.connection.cursor()
         
             # Definimos la consulta SQL 
-            sql_inventario = f"SELECT * FROM {self.table_inv} WHERE id=%s"
-            sql_historico = f"SELECT * FROM {self.table_historico} WHERE id=%s"
+            sql_inventario = f"SELECT * FROM {self.table_inv} WHERE file_id=%s"
+            sql_historico = f"SELECT * FROM {self.table_historico} WHERE file_id=%s"
            
             
             if flag_inventario:
@@ -396,7 +399,7 @@ class Database:
         """
         try: 
             # Definimos la consulta SQL 
-            sql= f"SELECT fecha_ultima_modificacion FROM {self.table_inv} WHERE id=%s"
+            sql= f"SELECT fecha_ultima_modificacion FROM {self.table_inv} WHERE file_id=%s"
             # Ejecutamos la consulta SQL
             self.cursor.execute(sql, (file_id,))
             
@@ -433,13 +436,14 @@ class Database:
         return db_name in databases
 
     ########## FUNCIONES DE UPDATES ########## DOCSTRING
-    def update_time_inventario(self, file_id, file_modified_time, flag_inventario, flag_historico):
+    def update_time(self, file_id, file_modified_time, flag_inventario, flag_historico):
         """
         Actualiza la fecha ntario.
         Args:
             file_id (str): El ID del archivo a actualizar.
             file_modified_time (datetime.datetime): La nueva fecha de última modificación del archivo.
-
+            flag_inventario (bool): True si se quiere actualizar la tabla inventario, False en caso contrario.
+            flag_historico (bool): True si se quiere actualizar la tabla historico, False en caso contrario.
         Raises:
             mysql.connector.Error: Si ocurre algún error al realizar la consulta SQL.
         """
@@ -447,8 +451,8 @@ class Database:
             #self.cursor = self.connection.cursor()
             
             # Definimos la consulta SQL y los valores
-            sql_inventario= f"UPDATE {self.table_inv} SET fecha_ultima_modificacion=%s WHERE id=%s"
-            sql_historico= f"UPDATE {self.table_historico} SET fecha_ultima_modificacion=%s WHERE id=%s"
+            sql_inventario= f"UPDATE {self.table_inv} SET fecha_ultima_modificacion=%s WHERE file_id=%s"
+            sql_historico= f"UPDATE {self.table_historico} SET fecha_ultima_modificacion=%s WHERE file_id=%s"
            
             values= (file_modified_time, file_id)
             
@@ -483,22 +487,16 @@ class Database:
         try:
             #self.cursor = self.connection.cursor()
             new_visibility= "privado"
-            was_public= 1
             
             # Definimos la consulta SQL, valores y ejecutamos la consulta
-            sql1= f"UPDATE {self.table_inv} SET visibility=%s WHERE id=%s"
+            sql1= f"UPDATE {self.table_inv} SET visibility=%s WHERE file_id=%s"
             values= (new_visibility, file_id)
             self.cursor.execute(sql1, values)
             
             # Definimos la consulta SQL, valores y ejecutamos la consulta
-            sql2= f"UPDATE {self.table_inv} SET fecha_ultima_modificacion=%s WHERE id=%s"
+            sql2= f"UPDATE {self.table_inv} SET fecha_ultima_modificacion=%s WHERE file_id=%s"
             values= (file_modified_time, file_id)
             self.cursor.execute(sql2, values)
-            
-            # Definimos la consulta SQL, valores y ejecutamos la consulta
-            sql3= f"UPDATE {self.table_inv} SET was_public=%s WHERE id=%s"
-            values= (was_public, file_id)        
-            self.cursor.execute(sql3, values)
 
             #Guarda los cambios
             self.connection.commit()

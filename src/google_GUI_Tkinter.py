@@ -6,11 +6,7 @@ from google_Database import Database
 from google_DriveInventory import GoogleDriveInventory
 from dotenv import load_dotenv
 import os
-
-"""def salirAplicacion():
-	valor=messagebox.askquestion("Salir","¿Está seguro que desea salir de la Aplicación?")
-	if valor=="yes":
-		root.destroy()"""
+from logger import Logger
 
 class App:
     """
@@ -26,7 +22,7 @@ class App:
         Returns: None
         """
         
-        self.driveAPI = GoogleDriveAPI()
+        
         
         # Carga las variables de entorno desde el archivo .env
         load_dotenv('config/.env')
@@ -35,14 +31,21 @@ class App:
         db_password = os.getenv("DB_PASSWORD")
         db_host = os.getenv("DB_HOST")
         
+        self.logger = Logger().get_logger()
+        self.driveAPI = GoogleDriveAPI()
         self.db= Database(db_user, db_password, db_host)
         self.driveINV = GoogleDriveInventory(self.db, self.driveAPI)
+        
+        self.db.logger= self.logger
+        self.driveINV.logger= self.logger
+        self.driveAPI.logger=self.logger
 
         
         # Definimos el objeto raíz de la aplicación y estableciendo el título de la ventana.
         self.root = root
         self.root.title("Challenge Docs en Drive Publico")
         self.root.configure(background="#7cdaf9")
+        self.root.protocol("WM_DELETE_WINDOW", self.salirAplicacion())
         
         self.crear_ventana_bienvenida()
         self.crear_boton_inicio()
@@ -109,23 +112,24 @@ class App:
         """
         # Crear la tabla
         self.tree_inv = ttk.Treeview(self.tab1)
-        self.tree_inv["columns"] = ('file_id','name','extension','owner','visibility','last_modified_date','was_public')
-        self.tree_inv.heading("#0", text="id", anchor='center')
+        self.tree_inv["columns"] = ('id','file_id','name','extension','owner','visibility','last_modified_date')
+        self.tree_inv.heading("#0", text="", anchor='center')
+        self.tree_inv.heading("id", text="id", anchor='center')
         self.tree_inv.heading("file_id", text="file_id", anchor='center')
         self.tree_inv.heading("name", text="name", anchor='center')
         self.tree_inv.heading("extension", text="extension", anchor='center')
         self.tree_inv.heading("owner", text="Owner", anchor='center')
         self.tree_inv.heading("visibility", text="visibility", anchor='center')
         self.tree_inv.heading("last_modified_date", text="last_modified_date", anchor='center')
-        self.tree_inv.heading("was_public", text="was_public", anchor='center')
         
-        self.tree_inv.column('file_id', width=100)
-        self.tree_inv.column('name', width=100)
-        self.tree_inv.column('extension', width=80)
-        self.tree_inv.column('owner', width=100)
+        self.tree_inv.column("#0", width=0)
+        self.tree_inv.column("id", width=60)
+        self.tree_inv.column('file_id', width=200)
+        self.tree_inv.column('name', width=200)
+        self.tree_inv.column('extension', width=100)
+        self.tree_inv.column('owner', width=200)
         self.tree_inv.column('visibility', width=100)     
-        self.tree_inv.column('last_modified_date', width=120)
-        self.tree_inv.column('was_public', width=100)
+        self.tree_inv.column('last_modified_date', width=200)
         
         self.tree_inv.pack(side="bottom", padx=20, pady=10)
     
@@ -137,21 +141,24 @@ class App:
         """
         # Crear la tabla
         self.tree_hist = ttk.Treeview(self.tab2)
-        self.tree_hist["columns"] = ('file_id','name','extension','owner','last_modified_date')
-        self.tree_hist.heading("#0", text="id", anchor='center')
+        self.tree_hist["columns"] = ('id','file_id','name','extension','owner','last_modified_date')
+        self.tree_hist.heading("id", text="id", anchor='center')
         self.tree_hist.heading("file_id", text="file_id", anchor='center')
         self.tree_hist.heading("name", text="name", anchor='center')
         self.tree_hist.heading("extension", text="extension", anchor='center')
         self.tree_hist.heading("owner", text="Owner", anchor='center')
         self.tree_hist.heading("last_modified_date", text="last_modified_date", anchor='center')
         
-        self.tree_hist.column('file_id', width=100)
+        self.tree_hist.column('id', width=20)
+        self.tree_hist.column('file_id', width=200)
         self.tree_hist.column('name', width=100)
         self.tree_hist.column('extension', width=80)
-        self.tree_hist.column('owner', width=100)
+        self.tree_hist.column('owner', width=150)
         self.tree_hist.column('last_modified_date', width=120)
         
         self.tree_hist.pack(side="bottom", padx=20, pady=10)
+    
+    
     ########## ALERTAS ##########
     def alerta_google_drive(self):
         """
@@ -162,8 +169,7 @@ class App:
         #messagebox.showwarning("Actualizacion", "Conectado a Google Drive con exito.\n Se procede a conectarse con la base de datos") 
         messagebox.showinfo("Conexion Exitosa", "Conectado a Google Drive con exito.\n Se procede a conectarse con la base de datos")
         #self.root.mainloop()
-        
-        
+           
     def alerta_base_datos(self):
         """
         Muestra una alerta.
@@ -173,7 +179,8 @@ class App:
         Returns: None.
         
         """
-        messagebox.showwarning("Actualizacion","Conectado a la Base de Datos con exito. \n Se procede a listar los archivos en Google Drive")
+        messagebox.showinfo("Conexion exitosa","Conectado a la Base de Datos y creadas las tablas con exito. \n Se procede a listar los archivos en Google Drive")
+       # messagebox.showwarning("Actualizacion","Conectado a la Base de Datos con exito. \n Se procede a listar los archivos en Google Drive")
 
     def alerta_archivos_listados(self):
         """
@@ -183,7 +190,8 @@ class App:
 
         Returns:  None.
         """
-        messagebox.showwarning("Actualizacion","Archivos obtenidos correctamente. \nComienza el análisis.") 
+        messagebox.showinfo("Archivos obtenidos","Archivos obtenidos con exito. \nComienza el análisis.")
+        #messagebox.showwarning("Actualizacion","Archivos obtenidos correctamente. \nComienza el análisis.") 
        
     def alerta_finalizacion(self):
         """
@@ -194,8 +202,9 @@ class App:
 
         Returns: None.
         """
+        messagebox.showinfo("Completado con exito","Analisis finalizado: \n Se agregaron archivos a la Base de Datos \n - Se pasaron los archivos publicos a privados.")
+       # messagebox.showwarning("Actualizacion","Analisis finalizado. Se hicieron los siguientes cambios: \n - Se pasaron los archivos publicos a privados.")
         
-        messagebox.showwarning("Actualizacion","Analisis finalizado. Se hicieron los siguientes cambios: \n - Se pasaron los archivos publicos a privados.")
         print("Se empieza a descargar todo para la aplicacion") 
         self.completar_tablas_app()
     
@@ -208,10 +217,16 @@ class App:
         Returns: None.
         """
         
-        messagebox.showwarning("Actualizacion","Analisis finalizado. Se hicieron los siguientes cambios: \n - Se pasaron los archivos publicos a privados.")
+        messagebox.showwarning("Programa Finalizado","Se termino el programa. \n Se desconecta de la base de datos y de Google Drive.")
         print("Se empieza a descargar todo para la aplicacion") 
         self.desconectar_aplicacion()
+        self.salirAplicacion()
         
+    def salirAplicacion(self):
+        valor = messagebox.askquestion("Salir", "¿Está seguro que desea salir de la Aplicación?")
+        if valor == "yes":
+            self.root.destroy()  
+  
     ########## FUNCION PARA AGREGAR INFORMACION A LA TABLA ##########
     def add_table_inventario(self, files):
         """
@@ -230,14 +245,15 @@ class App:
       
         # Agregar cada archivo como una fila en la tabla
         for file in files:
+            print("Imprimo un archivo que se esta agregando: ", file)
            # fecha_ultima_modificacion= datetime.datetime.strptime(file['fecha_ultima_modificacion'], '%Y-%m-%dT%H:%M:%S.%fZ')
-            self.tree_inv.insert('', 'end', values=(file['id'], 
+            self.tree_inv.insert('', 'end', values=(file['id'],
+                                                file['file_id'], 
                                                 file['name'], 
                                                 file['extension'], 
                                                 file['owner'], 
                                                 file['visibility'], 
-                                                file['fecha_ultima_modificacion'], 
-                                                file['was_public']))
+                                                file['fecha_ultima_modificacion']))
              
     def add_table_historico(self, files):
         """
@@ -254,7 +270,8 @@ class App:
     # Agregar cada archivo como una fila en la tabla
         for file in files:
            # fecha_ultima_modificacion= datetime.datetime.strptime(file['fecha_ultima_modificacion'], '%Y-%m-%dT%H:%M:%S.%fZ')
-            self.tree_hist.insert('', 'end', values=(file['id'], 
+            self.tree_hist.insert('', 'end', values=(file['id'],
+                                                file['file_id'], 
                                                 file['name'], 
                                                 file['extension'], 
                                                 file['owner'], 
@@ -262,7 +279,6 @@ class App:
     
 
     ########## RECORRIDO DEL PROGRAMA ##########
-
     def conectarse_google_drive(self):
         """
         Conecta a la API de Google Drive.
@@ -320,6 +336,7 @@ class App:
         if flag_fin:
             self.alerta_finalizacion()
         
+    
     ########## FUNCION PARA LOS BOTONES ##########       
     def ejecucion_del_programa(self):
         """

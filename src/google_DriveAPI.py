@@ -24,10 +24,11 @@ class GoogleDriveAPI:
             
         Returns: Ninguno
         """
-        #self.SCOPES = ['https://www.googleapis.com/auth/drive']
-        self.SCOPES =['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive']
+        self.SCOPES = ['https://www.googleapis.com/auth/drive']
+        #self.SCOPES =['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive']
         self.creds = None
-        self.logger = Logger().get_logger()
+        #self.logger = Logger().get_logger()
+        self.logger = None
     
     
     ########## FUNCIONES PARA CONECTARSE ##########
@@ -133,11 +134,7 @@ class GoogleDriveAPI:
                 # Obtener la lista de permisos del archivo
                 permissions = item.get('permissions', [])
                 #is_public = self.es_publico(permissions)
-                is_public = False
-                for perm in permissions:
-                    if  perm.get('id', '') == 'anyoneWithLink':
-                        is_public = True
-                        break 
+                is_public = self.es_publico(permissions)
         
                 # Agregar un diccionario con los campos que nos interesan a la lista de archivos
                 files.append({
@@ -311,10 +308,8 @@ class GoogleDriveAPI:
         """
         
         # Buscar si hay algún permiso
-        is_public = False
         for perm in permissions:
             print("Imprimo el permiso:", perm)
             if  perm.get('id', '') == 'anyoneWithLink':
-                is_public = True
-                break 
-        return is_public
+                return True  
+        return False

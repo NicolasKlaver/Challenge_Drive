@@ -6,8 +6,6 @@ class GoogleDriveInventory:
     """ 
     Clase para manejar los archivos de Google Drive.
 
-    Returns:
-        _type_: _description_
     """
   ##### FUNCINO DE INICIALIZACION #####
     def __init__(self, db, drive_api):
@@ -29,9 +27,11 @@ class GoogleDriveInventory:
         self.db = db
         self.drive_api = drive_api
         self.email = EmailNotifier()
-        self.logger = Logger().get_logger()
+        #self.logger = Logger().get_logger()
+        self.logger= None
         
     
+    ########## FUNCIONES PARA MANEJAR LOS ARCHIVOS ##########
     def handler_files(self):
         """
         Función que maneja los archivos obtenidos de Google Drive. 
@@ -50,7 +50,6 @@ class GoogleDriveInventory:
         print("GoogleDriveInventory: handler_files - inventory_files OUT")
         return 1
     
-    ########## FUNCIONES PARA MANEJAR LOS ARCHIVOS ##########
     def inventory_files(self, files_list):
         """Actualiza la información de los archivos recibidos de Google Drive.
 
@@ -79,78 +78,83 @@ class GoogleDriveInventory:
         self.logger.info("Inventory files: Se empiezan a analizar archivo a archivo")
         #Recorro la lista archivo a archivo
         for file in files_list:
-            file_id = file['id']
-            
-            #Me fijo si es publico o no
-            if file['visibility'] == 'publico':
-              file['was_public']= 1
-            else:
-              file['was_public']= 0
- 
             ######## Aca arranca la rutina de comparacion ########
             
             # Me fijo que NO este en la Base de Datos
-            if not self.estaEnInventario(file_id):
+            if not self.estaEnInventario(file):             
               #Si NO esta  --> Es un Archivo nuevo
               self.handler_archivos_nuevos(file)              
               
-            # Si ESTA en la Base de Datos pero por algun motivo cambiaron el archivo a Publico
-            else:
+            # Si ESTA en la Base de Datos
+            else:              
               self.handler_archivos_viejos(file)
             #self.logger.info("Archivo analizado correctamente")
         self.logger.info("Lista de Archivos terminados de analizar correctamente")
         
                 
-    def estaEnInventario(self, file_id):     
+    
+     ########## FUNCIONES INSERTAR ARCHIVOS ##########      
+    
+    def handler_archivos_nuevos(self, file):
+      """
+        Maneja los archivos nuevos que se encuentran en Google Drive.
+        
+        Args:
+            file (dict): Diccionario con la información del archivo.
+
+        Returns: None
+        """
+      print("\nSe inserta un archivo en el inventario")
+      self.insertar_inventario(file)
+      
+      if file['visibility'] == "publico":
+        # Lo agrego al historico y le cambio la visibilidad
+        self.insertar_historico(file)
+        self.handler_visibility(file) 
+
+    def handler_archivos_viejos(self, file):
+      """
+        Maneja los archivos que ya se encuentran en la base de datos.
+
+      Args:
+          file (dict): Diccionario con la información del archivo.
+      """
+      
+      if file['visibility'] == 'publico':
+        # Si NO esta en el historico lo agrego
+        if not self.estaEnHistorico(file):     
+          self.insertar_historico(file)
+        
+        self.handler_visibility(file)
+      
+      #Chequeo si hubo alguna modificacion en la fecha de ultima modificacion   
+      else:
+        self.handler_last_modified(file)
+        
+    
+    ######### FUNCIONES AUXILIARES #########
+    def estaEnInventario(self, file):     
         """
         Verifica si el archivo recibido de Google Drive está registrado en la base de datos.
         Args:
-            files_id (str): id del archivo
+            file (dict): Diccionario con la información del archivo.
 
         Returns:
             bool: True si el archivo está registrado en la base de datos, False en caso contrario.
-        """       
+        """
+        file_id = file['id']       
         return self.db.existe_archivo(file_id, flag_inventario=1, flag_historico=0)
     
     def estaEnHistorico(self, file): 
       """
         Verifica si el archivo recibido de Google Drive está registrado en la tabla del historico.
         Args:
-            files_id (str): id del archivo
+            file (dict): Diccionario con la información del archivo.
 
         Returns:
             bool: True si el archivo está registrado en la base de datos, False en caso contrario.
         """           
       return self.db.existe_archivo(file['id'], flag_inventario=0, flag_historico=1)
-      
-    ########## FUNCIONES INSERTAR ARCHIVOS ##########      
-    def handler_archivos_nuevos(self, file):
-      """
-        Inserta un archivo en la base de datos.
-        
-        Args:
-            file (dict): Diccionario con la información del archivo.
-            file_was_public (bool): True si el archivo es público, False en caso contrario.
-
-        Returns: None
-        """
-      print("\nSe inserta un archivo en el inventario")
-      self.insertar_inventario(file)
-      print("file['was_public']: ", file['was_public'])
-      if file['was_public']:
-        # Lo agrego al historico y le cambio la visibilidad
-        self.insertar_historico(file)
-        self.handler_visibility(file) 
-
-    def handler_archivos_viejos(self, file):
-      if file['visibility'] == 'publico':
-        if not self.estaEnHistorico(file):
-          self.insertar_historico(file)
-        
-        self.handler_visibility(file)
-              
-      else:
-        self.handler_last_modified(file)
         
     def insertar_inventario(self, file):
       """
@@ -181,9 +185,7 @@ class GoogleDriveInventory:
         Actualiza la fecha de última modificación de un archivo en la base de datos en caso de que haya sido modificada.
         
         Args:
-            file_id(str): id del archivo.
-            file_modified_time (datetime): Fecha de última modificación del archivo.
-
+            file (dict): Diccionario con la información del archivo.
         Returns: None
         """
       file_id= file['id']
@@ -193,8 +195,8 @@ class GoogleDriveInventory:
       
       if se_modifico_el_archivo:
         if self.estaEnHistorico(file):
-          self.db.update_time_historico(file_id, file_modified_time)
-        self.db.update_time_inventario(file_id, file_modified_time)
+          self.db.update_time(file_id, file_modified_time, flag_inventario=0, flag_historico=1)
+        self.db.update_time(file_id, file_modified_time, flag_inventario=1, flag_historico=0)
     
     ########## FUNCIONES PARA CAMBIAR LA VISIBILIDAD ##########   
     def handler_visibility(self, file):
@@ -202,8 +204,7 @@ class GoogleDriveInventory:
         Actualiza la visibilidad de un archivo en la base de datos en caso de que haya sido modificada.
         
         Args:
-            file(dict): Diccionario con la información del archivo.
-            file_id(str): id del archivo.
+            file (dict): Diccionario con la información del archivo.
         Returns: None
         """
       file_id= file['id']
