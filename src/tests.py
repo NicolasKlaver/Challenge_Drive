@@ -90,6 +90,8 @@ def conexion_db():
 
 ############################################################################
 
+
+
 # Test que se conecta a la API de Google Drive y lista los archivos
 def test_connect_drive_and_list_files():
     """
@@ -175,3 +177,8 @@ def test_email():
     assert email.send_email(recipient, subject, body) == None
 
 
+
+#test_connect_drive_and_list_files()
+#logger = Logger().get_logger()
+#api= GoogleDriveAPI()
+#api.connect()

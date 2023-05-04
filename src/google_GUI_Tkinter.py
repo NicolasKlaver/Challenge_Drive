@@ -38,14 +38,15 @@ class App:
         
         self.db.logger= self.logger
         self.driveINV.logger= self.logger
-        self.driveAPI.logger=self.logger
+        #self.driveAPI.logger=self.logger
 
         
         # Definimos el objeto raíz de la aplicación y estableciendo el título de la ventana.
         self.root = root
         self.root.title("Challenge Docs en Drive Publico")
         self.root.configure(background="#7cdaf9")
-        self.root.protocol("WM_DELETE_WINDOW", self.salirAplicacion())
+        
+        # self.root.protocol("WM_DELETE_WINDOW", self.salirAplicacion())
         
         self.crear_ventana_bienvenida()
         self.crear_boton_inicio()

@@ -27,8 +27,8 @@ class GoogleDriveAPI:
         self.SCOPES = ['https://www.googleapis.com/auth/drive']
         #self.SCOPES =['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive']
         self.creds = None
-        #self.logger = Logger().get_logger()
-        self.logger = None
+        self.logger = Logger().get_logger()
+        #self.logger = None
     
     
     ########## FUNCIONES PARA CONECTARSE ##########
@@ -296,7 +296,7 @@ class GoogleDriveAPI:
             self.logger.error(f"Se produjo un error al obtener la información del usuario autenticado: {error}")
             return None 
     
-    def es_publico(permissions):
+    def es_publico(self, permissions):
         """
         Verificar si un archivo de Google Drive es público o no, en base a la lista de permisos del archivo.
         

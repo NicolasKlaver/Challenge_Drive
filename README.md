@@ -311,6 +311,23 @@ Clase para enviar correos electrónicos a través de Yagmail.SMTP.
   - Inicializa la interfaz grafica.
 
 
+# Tests
+- Por el momento cuento con los 4 tests que pedia el enunciado.
+- El programa lo fui probando a medida que lo fui resolviendo y por error no fui guardando las pruebas. Es una parte que me gustaria tener mas completa pero por un tema de tiempos y organización no llegué.
+
+**def test_connect_drive_and_list_files()**: Se conecta a la API de Google Drive y lista los archivos.
+
+
+**def test_save_files_in_database()**: Guardar los archivos solicitados en la base de datos.
+
+
+**def test_change_visibility()**: Cambiar la visibilidad del archivo de público a privado
+
+
+**def test_email()**: Enviar un correo electrónico al Propietario del archivo, avisando que la visibilidad ha sido cambiada
+
+
+
 
 # Puntos que se pueden mejorar:
     - Mejorar los tests --> Crear modelos para listar los archivos y generar mas pruebas.

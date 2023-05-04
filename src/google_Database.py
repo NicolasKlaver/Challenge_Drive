@@ -293,7 +293,75 @@ class Database:
             print(f"Error al insertar el archivo: {err}")
             self.logger.error(f"Error al insertar el archivo: {err}")
 
+    ########## FUNCION PARA INSERTAR ARCHIVOS EN LA BASE DE DATOS ##########
+    def insertar_archivo_test(self, file):
+        """
+        Inserta un nuevo archivo en la tabla 'test'.
 
+        Args:
+            file: Un diccionario que contiene la información del archivo a insertar.
+        Returns:None
+
+        Raises:
+            mysql.connector.Error: Si ocurre un error al insertar el archivo en la tabla 'inventario'.
+        """
+
+        try:
+            # Cambio de formato la fecha
+            file_modified_time = datetime.datetime.strptime(file['modified_time'], '%Y-%m-%dT%H:%M:%S.%fZ')
+
+            # Crear el cursor
+            self.cursor = self.connection.cursor()    
+            
+            # Definimos la consulta SQL para crear la tabla
+            sql= f"INSERT INTO Test_Inventario (file_id, name, extension, owner, visibility, fecha_ultima_modificacion) VALUES (%s, %s, %s, %s, %s, %s)"
+            #Creamos una tupla con los valores a insertar
+            values = (file['id'], file['name'], file['extension'],file['owner'], file['visibility'],file_modified_time)
+
+            # Ejecutamos la consulta SQL para crear la tabla
+            self.cursor.execute(sql, values)
+            self.logger.info(f"Se ha insertado {file['name']} en el Inventario exitosamente.") 
+                 
+            # Guardamos los cambios
+            self.connection.commit()
+                      
+        
+        except mysql.connector.Error as err:
+            print(f"Error al insertar el archivo: {err}")
+            self.logger.error(f"Error al insertar el archivo: {err}")
+
+    def eliminar_table(self, table_name):
+        """
+        
+
+        Args:
+            file: Un diccionario que contiene la información del archivo a insertar.
+        Returns:None
+
+        Raises:
+            mysql.connector.Error: Si ocurre un error al insertar el archivo en la tabla 'inventario'.
+        """
+
+        try:
+            # Crear el cursor
+            self.cursor = self.connection.cursor()    
+            
+            # Definimos la consulta SQL para crear la tabla
+            sql= "DROP TABLE IF EXISTS {}".format(table_name)
+            #Creamos una tupla con los valores a insertar
+
+            # Ejecutamos la consulta SQL para crear la tabla
+            self.cursor.execute(sql)
+            print(f"Se ha eliminado la tabla: {table_name} en el Inventario exitosamente.")
+            self.logger.info(f"Se ha eliminado la tabla: {table_name} en el Inventario exitosamente.") 
+                 
+            # Guardamos los cambios
+            self.connection.commit()
+                      
+        except mysql.connector.Error as err:
+            print(f"Error al insertar el archivo: {err}")
+            self.logger.error(f"Error al insertar el archivo: {err}")
+    
     ########## FUNCION QUE DEVUELVE LOS ARCHIVOS  ##########
     def pedido_archivos(self, flag_inventario, flag_historico):
         """
@@ -342,7 +410,43 @@ class Database:
             print(f"Error al seleccionar los datos: {err}")
             self.logger.error(f"Error al seleccionar los datos de la tabla: {self.table_inv} {err}")
     
-    
+    def pedido_archivos_test(self):
+        """
+        Consulta en SQL para seleccionar todos los datos de la tabla correspondiente.
+        
+        Args: 
+            flag_inventario: Un booleano que indica si se debe seleccionar el archivo en la tabla 'inventario'.
+            flag_historico: Un booleano que indica si se debe seleccionar el archivo en la tabla 'historico'.
+            
+        Returns: lista de diccionarios, donde cada diccionario representa un archivo en el inventario.
+
+        Raises:
+            mysql.connector.Error: Si ocurre un error al seleccionar los datos en la tabla.
+        """
+        
+        try:
+            # Crear el cursor
+            self.cursor = self.connection.cursor()
+            
+            # Definimos la consulta SQL para seleccionar los datos de la tabla
+            sql = f"SELECT * FROM Test_Inventario"
+            self.cursor.execute(sql)                
+
+            # Obtener los datos de la consulta y crear una lista de diccionarios
+            rows= self.cursor.fetchall()
+            # Se guardan los nombres de las columnas
+            columns = [desc[0] for desc in self.cursor.description]
+            
+            self.logger.info(f"Se ha hecho un pedido de archivos historicos exitosamente.")
+            
+            # Devuelve una lista de diccionarios, donde cada diccionario representa un archivo en el inventario
+            return [dict(zip(columns, row)) for row in rows]
+        
+        except mysql.connector.Error as err:
+            # En caso de error, imprimir el mensaje correspondiente
+            print(f"Error al seleccionar los datos: {err}")
+            self.logger.error(f"Error al seleccionar los datos de la tabla: {err}")
+        
     ########## FUNCION AUXILIARES PARA BUSCAR EN LA BASE DE DATOS ##########
     def existe_archivo(self, file_id, flag_inventario, flag_historico):
         """
