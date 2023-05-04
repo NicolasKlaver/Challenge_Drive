@@ -169,7 +169,7 @@ class GoogleDriveAPI:
         try:
             # Definir los campos que queremos obtener para cada archivo
             fields = "nextPageToken, files(id, name, mimeType, owners(emailAddress), permissions, modifiedTime)"
-            query = "trashed = false and mimeType='application/pdf'"
+            query = "trashed = false and 'me' in owners"
             all_files = []
             page_token = None
             

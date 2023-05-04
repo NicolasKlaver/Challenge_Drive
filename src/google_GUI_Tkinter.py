@@ -221,7 +221,7 @@ class App:
         messagebox.showwarning("Programa Finalizado","Se termino el programa. \n Se desconecta de la base de datos y de Google Drive.")
         print("Se empieza a descargar todo para la aplicacion") 
         self.desconectar_aplicacion()
-        self.salirAplicacion()
+        #self.salirAplicacion()
         
     def salirAplicacion(self):
         valor = messagebox.askquestion("Salir", "¿Está seguro que desea salir de la Aplicación?")

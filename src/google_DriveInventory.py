@@ -217,7 +217,8 @@ class GoogleDriveInventory:
       
       #Update de la Tabla de Inventario --> Aca les paso archivos nuevos
       self.db.update_visibility_inventario(file_id, last_modified_time)
-      self.db.update_time_historico(file_id, last_modified_time)
+      self.db.update_time(file_id, last_modified_time, flag_inventario=1, flag_historico=0)
+      self.db.update_time(file_id, last_modified_time, flag_inventario=0, flag_historico=1)
       #Se envia un mail informando el cambio 
       self.send_email_owner(file)
     

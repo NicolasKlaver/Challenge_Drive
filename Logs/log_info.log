@@ -64,3 +64,369 @@
 2023-05-04 06:32:00,912 - INFO - Desconexión exitosa de Google Drive.
 2023-05-04 06:32:00,912 - INFO - Desconexión exitosa de Google Drive.
 2023-05-04 06:32:00,912 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:18:03,708 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:18:03,708 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:18:03,708 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:18:09,606 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:18:09,606 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:18:09,606 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:18:09,613 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:18:09,613 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:18:09,613 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:18:09,615 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:18:09,615 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:18:09,615 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:18:09,918 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:18:09,918 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:18:09,918 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:18:09,924 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:18:09,924 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:18:09,924 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:18:11,110 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:18:11,110 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:18:11,110 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:18:11,111 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:18:11,111 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:18:11,111 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:18:11,116 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,116 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,116 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,124 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:18:11,124 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:18:11,124 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:18:11,126 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,126 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,126 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,132 - INFO - Se ha Actualizado el archivo inventario correctamente.
+2023-05-04 16:18:11,132 - INFO - Se ha Actualizado el archivo inventario correctamente.
+2023-05-04 16:18:11,132 - INFO - Se ha Actualizado el archivo inventario correctamente.
+2023-05-04 16:18:11,136 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,136 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,136 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,139 - INFO - Se ha insertado sensorHall-B.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:18:11,139 - INFO - Se ha insertado sensorHall-B.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:18:11,139 - INFO - Se ha insertado sensorHall-B.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:18:11,172 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,172 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,172 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:18:11,175 - INFO - Se ha insertado sensorHall-F.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:18:11,175 - INFO - Se ha insertado sensorHall-F.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:18:11,175 - INFO - Se ha insertado sensorHall-F.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:18:11,180 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:18:11,180 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:18:11,180 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:18:11,182 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:18:11,182 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:18:11,182 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:18:12,084 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:18:12,084 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:18:12,084 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:18:13,973 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:18:13,973 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:18:13,973 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:18:15,233 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:18:15,233 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:18:15,233 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:18:15,235 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:18:15,235 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:18:15,235 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:21:56,072 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:21:56,072 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:21:56,072 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:21:56,845 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:21:56,845 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:21:56,845 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:21:56,851 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:21:56,851 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:21:56,851 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:21:56,852 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:21:56,852 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:21:56,852 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:21:57,109 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:21:57,109 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:21:57,109 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:21:57,115 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:21:57,115 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:21:57,115 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:21:57,966 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:21:57,966 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:21:57,966 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:21:57,967 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:21:57,967 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:21:57,967 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:21:57,972 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:21:57,972 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:21:57,972 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:21:57,973 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:21:57,973 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:21:57,973 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:21:57,979 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-04 16:21:57,979 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-04 16:21:57,979 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-04 16:21:58,755 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-04 16:21:58,755 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-04 16:21:58,755 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-04 16:21:59,007 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:21:59,007 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:21:59,007 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:22:57,112 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:22:57,112 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:22:57,112 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:22:58,561 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:22:58,561 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:22:58,561 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:22:58,568 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:22:58,568 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:22:58,568 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:22:58,569 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:22:58,569 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:22:58,569 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:22:58,851 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:22:58,851 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:22:58,851 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:22:58,857 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:22:58,857 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:22:58,857 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:22:59,777 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:22:59,777 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:22:59,777 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:22:59,779 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:22:59,779 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:22:59,779 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:22:59,782 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:22:59,782 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:22:59,782 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:22:59,788 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:22:59,788 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:22:59,788 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:22:59,791 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:22:59,791 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:22:59,791 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:22:59,794 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:22:59,794 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:22:59,794 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:22:59,797 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:22:59,797 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:22:59,797 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:22:59,800 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:22:59,800 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:22:59,800 - INFO - Se analiza si el archivo fue modificado correctamente.
+2023-05-04 16:22:59,802 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:22:59,802 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:22:59,802 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:22:59,803 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:22:59,803 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:22:59,803 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:23:00,290 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:23:00,290 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:23:00,290 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:23:01,664 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:23:01,664 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:23:01,664 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:23:02,527 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:23:02,527 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:23:02,527 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:23:02,532 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:23:02,532 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:23:02,532 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:24:16,020 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:24:16,020 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:24:16,020 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:24:16,920 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:24:16,920 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:24:16,920 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:24:16,936 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:24:16,936 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:24:16,936 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:24:16,937 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:24:16,937 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:24:16,937 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:24:17,238 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:24:17,238 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:24:17,238 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:24:17,256 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:24:17,256 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:24:17,256 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:24:18,337 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:24:18,337 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:24:18,337 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:24:18,338 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:24:18,338 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:24:18,338 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:24:18,343 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:24:18,343 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:24:18,343 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:24:18,358 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-04 16:24:18,358 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-04 16:24:18,358 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-04 16:24:18,363 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:24:18,363 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:24:18,363 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:24:18,366 - INFO - Se ha insertado sensorHall-B.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:24:18,366 - INFO - Se ha insertado sensorHall-B.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:24:18,366 - INFO - Se ha insertado sensorHall-B.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:24:18,369 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:24:18,369 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:24:18,369 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:24:18,372 - INFO - Se ha insertado sensorHall-F.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:24:18,372 - INFO - Se ha insertado sensorHall-F.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:24:18,372 - INFO - Se ha insertado sensorHall-F.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:24:18,376 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:24:18,376 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:24:18,376 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:24:18,377 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:24:18,377 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:24:18,377 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:24:19,158 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:24:19,158 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:24:19,158 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:24:19,163 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:24:19,163 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:24:19,163 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:24:21,034 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:24:21,034 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:24:21,034 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:24:21,036 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:24:21,036 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:24:21,036 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:25:01,623 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:25:01,623 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:25:01,623 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:25:02,914 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:25:02,914 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:25:02,914 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:25:02,930 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:25:02,930 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:25:02,930 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:25:02,932 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:25:02,932 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:25:02,932 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:25:03,202 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:25:03,202 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:25:03,202 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:25:03,209 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:25:03,209 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:25:03,209 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:25:04,283 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:25:04,283 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:25:04,283 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:25:04,285 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:25:04,285 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:25:04,285 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:25:04,287 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:25:04,287 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:25:04,287 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:25:04,289 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:25:04,289 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:25:04,289 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:25:04,293 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-04 16:25:04,293 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-04 16:25:04,293 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-04 16:25:04,898 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-04 16:25:04,898 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-04 16:25:04,898 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-04 16:25:05,143 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:25:05,143 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:25:05,143 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:26:16,390 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:26:16,390 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:26:16,390 - INFO - Conexión exitosa a Google Drive - Desde google_DriveAPI.
+2023-05-04 16:26:17,325 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:26:17,325 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:26:17,325 - INFO - Conectado a MySQL con éxito
+2023-05-04 16:26:17,331 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:26:17,331 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:26:17,331 - INFO - La base de datos se ha creado exitosamente.
+2023-05-04 16:26:17,332 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:26:17,332 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:26:17,332 - INFO - La base de datos: Inventario_Drive se ha seleccionado correctamente.
+2023-05-04 16:26:17,598 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:26:17,598 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:26:17,598 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:26:17,612 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:26:17,612 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:26:17,612 - INFO - La tabla Inventario_nicooklaver se ha creado exitosamente.
+2023-05-04 16:26:18,655 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:26:18,655 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:26:18,655 - INFO - Se listaron los archivos de Google Drive con exito.
+2023-05-04 16:26:18,657 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:26:18,657 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:26:18,657 - INFO - Inventory files: Se empiezan a analizar archivo a archivo
+2023-05-04 16:26:18,661 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:26:18,661 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:26:18,661 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:26:18,666 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-04 16:26:18,666 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-04 16:26:18,666 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Inventario exitosamente.
+2023-05-04 16:26:18,680 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-04 16:26:18,680 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-04 16:26:18,680 - INFO - Se ha insertado Klaver Nicolas CV.pdf en el Historico exitosamente.
+2023-05-04 16:26:19,283 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-04 16:26:19,283 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-04 16:26:19,283 - INFO - Permisos revocados para el archivo con ID 1HnwqujbFDA6wW_pXPeyrAOoAHb1Guo9-
+2023-05-04 16:26:19,630 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:26:19,630 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:26:19,630 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:26:19,636 - INFO - Se ha Actualizado el archivo inventario correctamente.
+2023-05-04 16:26:19,636 - INFO - Se ha Actualizado el archivo inventario correctamente.
+2023-05-04 16:26:19,636 - INFO - Se ha Actualizado el archivo inventario correctamente.
+2023-05-04 16:26:19,640 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-04 16:26:19,640 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-04 16:26:19,640 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-04 16:26:22,196 - INFO - Correo electrónico enviado correctamente.
+2023-05-04 16:26:22,196 - INFO - Correo electrónico enviado correctamente.
+2023-05-04 16:26:22,196 - INFO - Correo electrónico enviado correctamente.
+2023-05-04 16:26:22,196 - INFO - Email sent to inform the change of visibility
+2023-05-04 16:26:22,196 - INFO - Email sent to inform the change of visibility
+2023-05-04 16:26:22,196 - INFO - Email sent to inform the change of visibility
+2023-05-04 16:26:22,208 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:26:22,208 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:26:22,208 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:26:22,211 - INFO - Se ha insertado prueba_pdf.pdf en el Inventario exitosamente.
+2023-05-04 16:26:22,211 - INFO - Se ha insertado prueba_pdf.pdf en el Inventario exitosamente.
+2023-05-04 16:26:22,211 - INFO - Se ha insertado prueba_pdf.pdf en el Inventario exitosamente.
+2023-05-04 16:26:22,244 - INFO - Se ha insertado prueba_pdf.pdf en el Historico exitosamente.
+2023-05-04 16:26:22,244 - INFO - Se ha insertado prueba_pdf.pdf en el Historico exitosamente.
+2023-05-04 16:26:22,244 - INFO - Se ha insertado prueba_pdf.pdf en el Historico exitosamente.
+2023-05-04 16:26:22,804 - INFO - Permisos revocados para el archivo con ID 19znWgF8kOggXHWnpbZ6ejYUDRYtPaQN8
+2023-05-04 16:26:22,804 - INFO - Permisos revocados para el archivo con ID 19znWgF8kOggXHWnpbZ6ejYUDRYtPaQN8
+2023-05-04 16:26:22,804 - INFO - Permisos revocados para el archivo con ID 19znWgF8kOggXHWnpbZ6ejYUDRYtPaQN8
+2023-05-04 16:26:23,033 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:26:23,033 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:26:23,033 - INFO - Se ha actualizado la visibilidad del archivo en la DB correctamente.
+2023-05-04 16:26:23,035 - INFO - Se ha Actualizado el archivo inventario correctamente.
+2023-05-04 16:26:23,035 - INFO - Se ha Actualizado el archivo inventario correctamente.
+2023-05-04 16:26:23,035 - INFO - Se ha Actualizado el archivo inventario correctamente.
+2023-05-04 16:26:23,037 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-04 16:26:23,037 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-04 16:26:23,037 - INFO - Se ha Actualizado el archivo historico correctamente.
+2023-05-04 16:26:26,617 - INFO - Correo electrónico enviado correctamente.
+2023-05-04 16:26:26,617 - INFO - Correo electrónico enviado correctamente.
+2023-05-04 16:26:26,617 - INFO - Correo electrónico enviado correctamente.
+2023-05-04 16:26:26,632 - INFO - Email sent to inform the change of visibility
+2023-05-04 16:26:26,632 - INFO - Email sent to inform the change of visibility
+2023-05-04 16:26:26,632 - INFO - Email sent to inform the change of visibility
+2023-05-04 16:26:26,635 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:26:26,635 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:26:26,635 - INFO - Se ha comprobado si existe el archivo.
+2023-05-04 16:26:26,638 - INFO - Se ha insertado sensorHall-B.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:26:26,638 - INFO - Se ha insertado sensorHall-B.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:26:26,638 - INFO - Se ha insertado sensorHall-B.SilkS.pdf en el Inventario exitosamente.
+2023-05-04 16:26:26,643 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:26:26,643 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:26:26,643 - INFO - Lista de Archivos terminados de analizar correctamente
+2023-05-04 16:26:26,644 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:26:26,644 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:26:26,644 - INFO - Archivos terminados de analizar correctamente
+2023-05-04 16:26:28,772 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:26:28,772 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:26:28,772 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:26:28,778 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:26:28,778 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:26:28,778 - INFO - Se ha hecho un pedido de archivos historicos exitosamente.
+2023-05-04 16:26:29,758 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:26:29,758 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:26:29,758 - INFO - Desconectado a MySQL con éxito
+2023-05-04 16:26:29,760 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:26:29,760 - INFO - Desconexión exitosa de Google Drive.
+2023-05-04 16:26:29,760 - INFO - Desconexión exitosa de Google Drive.
