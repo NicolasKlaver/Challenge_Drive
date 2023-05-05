@@ -12,10 +12,10 @@
   - Ejecutar el archivo "main.py" (desde el directorio de trabajo)
 
 2) Abrir Docker Desktop
-- Es necesario ejecutar el programa de la forma anterior, para tener el token de acceso a su cuenta (no encontre la forma de entrar a su cuenta de Google Drive ejecutando desde Docker)
-- For Windows:[ Instalar Xming X Server](ruta)
-- Ir a la ubicacion donde se descargo y en una terminar ejecutar el comando: "Xming.exe -ac"
-- En el archivo Dockerfile_python, debera cambiar en DISPLAY=SU_DIRECCION-IP:0.0
+- Es necesario ejecutar el programa de la forma anterior para tener el token de acceso a su cuenta (no encontre la forma de entrar a Google Drive ejecutando desde Docker)
+- Necesitamos una pantalla, For Windows:[ Instalar Xming X Server](https://github.com/NicolasKlaver/Challenge_Drive/tree/main/Xming)
+- Ir a la ubicacion donde se instalo y en una terminal ejecutar el comando: "Xming.exe -ac"
+- Modificar el valor DISPLAY del archivo Dockerfile_python: cambiar en DISPLAY=SU_DIRECCION-IP:0.0
 - En el directorio del proyecto ejecutar: docker-compose up
 
 #### Instalar bibliotecas para ejecutar:
@@ -149,10 +149,10 @@ En esta caso estoy cargando un archivo nuevo con Visibilidad publica y en el mis
 **def create_database(self, db_name):** crea la Database si no existe.
 
 **create_table_inventario(self, table_name):** creo la tabla y inicializo la variable.
-  https://github.com/NicolasKlaver/Challenge_Meli/blob/114fc2a93de5c425fe2c9324543e2bb83f4953d1/src/google_Database.py#L172-L179
+  https://github.com/NicolasKlaver/Challenge_Drive/blob/e27c63f4e538fe5da8d7724af0185b7a5443d016/src/google_Database.py#L171-L178
 
 **create_table_historico(self, table_name):** Creo la tabla y inicializo la variable.
-https://github.com/NicolasKlaver/Challenge_Meli/blob/114fc2a93de5c425fe2c9324543e2bb83f4953d1/src/google_Database.py#L216-L222
+https://github.com/NicolasKlaver/Challenge_Drive/blob/e27c63f4e538fe5da8d7724af0185b7a5443d016/src/google_Database.py#L215-L221
 
 
 ### Funcion para Agregar Archivos 
