@@ -389,4 +389,3 @@ class App:
         self.db.close_connection()
         self.driveAPI.disconnect()
         
-

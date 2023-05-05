@@ -1,1 +1,5 @@
-FROM mysql:latest
+FROM mysql
+ENV MYSQL_ROOT_PASSWORD=root
+
+#docker build -t mi_mysql -f Dockerfile_mysql .
+#docker run --network="host" -d mi_mysql

@@ -41,7 +41,7 @@ class GoogleDriveInventory:
           int: 1 si se ejecuta correctamente.
         """
         # obtener una lista de archivos de Google Drive
-        files_list =  self.drive_api.get_files()
+        files_list =  self.drive_api.get_all_files()
         # agregar los archivos a la tabla de inventario
         self.inventory_files(files_list)
         

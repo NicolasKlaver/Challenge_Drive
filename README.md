@@ -4,8 +4,31 @@
 ![](https://github.com/NicolasKlaver/Challenge_Drive/blob/main/img/programa.jpg)
 
 
+# Ejecucion del programa
+1)  Debera tener instaladas las bibliotecas necesarias
+- pip install pytest yagmail google-auth-httplib2 google-auth-oauthlib google-api-python-client python-dotenv mysql-connector-python cryptography
+  - Tener instalado y ejecutandose el servicio de MySQL.
+  - git clone https://github.com/NicolasKlaver/Challenge_Drive.git
+  - Ejecutar el archivo "main.py" (desde el directorio de trabajo)
+
+2) Abrir Docker Desktop
+- Es necesario ejecutar el programa de la forma anterior, para tener el token de acceso a su cuenta (no encontre la forma de entrar a su cuenta de Google Drive ejecutando desde Docker)
+- For Windows:[ Instalar Xming X Server](ruta)
+- Ir a la ubicacion donde se descargo y en una terminar ejecutar el comando: "Xming.exe -ac"
+- En el archivo Dockerfile_python, debera cambiar en DISPLAY=SU_DIRECCION-IP:0.0
+- En el directorio del proyecto ejecutar: docker-compose up
+
 #### Instalar bibliotecas para ejecutar:
-- pip install pytest yagmail google-auth-httplib2 google-auth-oauthlib google-api-python-client python-dotenv mysql-connector-python
+- pip install pytest yagmail google-auth-httplib2 google-auth-oauthlib google-api-python-client python-dotenv mysql-connector-python cryptography
+
+
+# Aclaraciones acerca de la construccion y el objetivo del programa.
+ - Realice el programa pensando que trabajo en el área de Seguridad Informática, y que el objetivo es tratar con archivos sensibles que pueden llegar a ser publicos. 
+ - Por eso, como podras ver mas adelante, el usuario no tiene relación ni elección con la ejecución del programa, si no que se le deberá explicar de que se trata y ejecutarlo en caso de que este de acuerdo.
+- Por un tema practico de no tener que compartir archivos, estoy usando la clave para desencriptar las credenciales y contraseñas como un string.
+- Mi objetivo con el tratamiento de las credenciales es que cada cierto tiempo a determinar automatizar un script para que genere nuevas key y se actualice en la carpeta del usuario donde lo tenga instalado.
+
+
 
 ## Estructuras de las carpetas
 - Challenge_Meli:
@@ -36,27 +59,11 @@
     - Dockerfile-compose.yml: conexion de estas dos imagenes.
 
 
-# Aclaraciones acerca de la construccion y el objetivo del programa.
- - Realice el programa pensando que trabajo en el área de Seguridad Informática, y que el objetivo es tratar con archivos sensibles que pueden llegar a ser publicos. 
- - Por eso, como podras ver mas adelante, el usuario no tiene relación ni elección con la ejecución del programa, si no que se le deberá explicar de que se trata y ejecutarlo en caso de que este de acuerdo.
-- Por un tema practico de no tener que compartir archivos, estoy usando la clave para desencriptar las credenciales y contraseñas como un string.
-- Mi objetivo con el tratamiento de las credenciales es que cada cierto tiempo a determinar automatizar un script para que genere nuevas key y se actualice en la carpeta del usuario donde lo tenga instalado.
-
-
 # Puntos Pendientes
-   
-- Dockerfile: no llegue a terminar de implementarlo correctamente para que ande. 
 - Mejorar los tests, faltan crear modelos para generar mas pruebas y organizarlos mejor.
 -  Separar en una nueva clase la Interfaz grafica de la ejecucion del programa.
 -  Para la ejecucion del programa pensaba crear una maquina de estado.
 - Mejorar la interfaz grafica para que tenga mas informacion y seguridad.
-
-
-# Ejecucion del programa
-  - Debera tener instaladas las bibliotecas necesarias.
-  - Tener instalado y ejecutandose el servicio de MySQL.
-  - git clone https://github.com/NicolasKlaver/Challenge_Drive.git
-  - Ejecutar el archivo "main.py" (desde el directorio de trabajo)
 
 
   # Explicacion de la estructura del codigo

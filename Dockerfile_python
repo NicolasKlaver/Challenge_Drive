@@ -5,20 +5,20 @@ FROM python:3.9
 WORKDIR /app
 
 # Copiar el archivo requirements.txt a la imagen
-COPY config/requirements.txt .
-COPY config/requirements_gui.txt .
-
-# Instalar las dependencias
-RUN pip install -r requirements.txt
-
-# Para la interfaz grafica utilizo Xming
-RUN config/requirements_gui.txt
-
+#COPY config/requirements.txt .
+#COPY config/requirements_gui.txt .
 # Copiar el código fuente de la aplicación a la imagen
 COPY . .
 
-# Exponer el puerto 5000
-EXPOSE 5000
+# Instalar las dependencias
+#RUN pip install -r requirements.txt#==3
+RUN pip install cryptography 
+RUN pip install pytest yagmail google-auth-httplib2 google-auth-oauthlib google-api-python-client python-dotenv mysql-connector-python
+
+# Para la interfaz grafica utilizo Xming
+#RUN config/requirements_gui.txt
+RUN apt-get update && apt-get install -y libx11-6 libxext-dev libxrender-dev libxinerama-dev libxi-dev libxrandr-dev libxcursor-dev libxtst-dev tk-dev && rm -rf /var/lib/apt/lists/*
+
 
 # Iniciar la aplicación
 CMD ["python", "src/main.py"]
@@ -29,13 +29,12 @@ CMD ["python", "src/main.py"]
 
 ##############################################################
 ##############################################################
-#  Crear imagen
-#docker build -t gui_image .
 
 # Ejecutar contenedor
-#set DISPLAY=ip:0.0
-#XmingXming.exe -ac
-#docker run -it --rm -e DISPLAY=%DISPLAY% --network="host" --name gui_container gui_image
+# docker build -t gui_image -f Dockerfile_python . 
+#set DISPLAY=192.168.0.50:0.0
+#Xming.exe -ac
+# docker run -it --rm -e DISPLAY=%DISPLAY% --network="host" --name gui_container gui_image
 
 ##############################################################
 ##############################################################

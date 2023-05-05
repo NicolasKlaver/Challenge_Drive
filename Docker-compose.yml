@@ -1,23 +1,20 @@
-version: "3.9"
+version: '3'
 services:
-  mi_app_python:
-    build: 
-      context: .
-      dockerfile: Dockerfile_python
-    depends_on:
-      - mi_app_mysql
-
-  mi_app_mysql:
-    build: 
+  mysql:
+    build:
       context: .
       dockerfile: Dockerfile_mysql
-    container_name: mysql
-    ports:
-      - 3306:3306
     environment:
-      - MYSQL_ROOT_PASSWORD: "root"
-      #- MYSQL_USER: "root"
-      # MY_SQL_PASSWORD: "root"
-      #- MYSQL_DATABASE: "name"
+      MYSQL_ROOT_PASSWORD: root
+    network_mode: "host"
+    restart: always
 
-# Generar Volumes
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile_python
+    network_mode: "host"
+    environment:
+      - DISPLAY=192.168.0.50:0.0
+      #- DISPLAY=:0
+    command: python src/main.py
