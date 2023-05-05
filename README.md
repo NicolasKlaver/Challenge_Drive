@@ -5,13 +5,7 @@
 
 
 #### Instalar bibliotecas para ejecutar:
-- pip install pytest
-- pip install yagmai
-- pip install google-auth-httplib2
-- pip install google-auth-oauthlib
-- pip install google-api-python-client
-- pip install python-dotenv
-- pip install mysql-connector-python
+- pip install pytest yagmail google-auth-httplib2 google-auth-oauthlib google-api-python-client python-dotenv mysql-connector-python
 
 ## Estructuras de las carpetas
 - Challenge_Meli:
@@ -23,6 +17,7 @@
       - google_GUI_Tkinter: contiene la clase "App" donde se encuentra la parte de la Interfaz Grafica y la lógica para ejecutar el programa.
       - logger: contiene la clase "Logger" que se utiliza para imprimir los logs correspondientes.
       - main: contiene la ejecucion del programa.
+      - cifrado: contiene la clase para encriptar y desencriptar archivos.
     
     - Logs:
       - log_info: contiene los logs de la ejecucion.
@@ -31,9 +26,10 @@
       - test_general: contienen los tests para probar el programa.
   
     - Config:
-      - credential_drive.json
-      - .env: archivo con las variables y contraseñas.
+      - credential_drive.json.encrypted: credenciales para google drive
+      - .env.encrypted: archivo con las variables y contraseñas.
       - requirement.txt: archivo que le paso a docker con las librerias necesarias para ejecutar el programa.
+      - clave.key: contiene la clave para desencriptar los archivos
     
     - Dockerfile_python: configuracion de la imagen de python.
     - Dockerfile_mysql: configuracion de la imagen de mysql.
@@ -43,17 +39,17 @@
 # Aclaraciones acerca de la construccion y el objetivo del programa.
  - Realice el programa pensando que trabajo en el área de Seguridad Informática, y que el objetivo es tratar con archivos sensibles que pueden llegar a ser publicos. 
  - Por eso, como podras ver mas adelante, el usuario no tiene relación ni elección con la ejecución del programa, si no que se le deberá explicar de que se trata y ejecutarlo en caso de que este de acuerdo.
-   
+- Por un tema practico de no tener que compartir archivos, estoy usando la clave para desencriptar las credenciales y contraseñas como un string.
+- Mi objetivo con el tratamiento de las credenciales es que cada cierto tiempo a determinar automatizar un script para que genere nuevas key y se actualice en la carpeta del usuario donde lo tenga instalado.
+
 
 # Puntos Pendientes
-- Manejo mas seguro de las credenciales, no llegue a terminar de implementarlo, la idea es guardar las credenciales en AWS Secrets Manager y la libreria cryptography para su cifrado.
-     
-- Dockerfile: no llegue a terminar de implementarlo correctamente para que ande. Tuve varias complicaciones debido a que realice una aplicación de escritorio, pero estoy viendo si hoy puedo hacerlo andar.
-  
+   
+- Dockerfile: no llegue a terminar de implementarlo correctamente para que ande. 
 - Mejorar los tests, faltan crear modelos para generar mas pruebas y organizarlos mejor.
 -  Separar en una nueva clase la Interfaz grafica de la ejecucion del programa.
-
--Mejorar el manejo de las excepciones
+-  Para la ejecucion del programa pensaba crear una maquina de estado.
+- Mejorar la interfaz grafica para que tenga mas informacion y seguridad.
 
 
 # Ejecucion del programa
@@ -203,6 +199,7 @@ https://github.com/NicolasKlaver/Challenge_Meli/blob/114fc2a93de5c425fe2c9324543
 
     - Se utiliza el metodo 'InstalledAppFlow' de la API de Google, que solicita al usuario que autentique la aplicación en su cuenta de Google para un determinado Scope.
     - Se cargan las credenciales desde un archivo que fue configurado en la Consola de APIs de Google.
+    - Estas credenciales se encuentran encriptadas, asique se ejecuta la etapa de desencriptado para obtenerlas.
     - Finalmente, una vez que se ha obtenido el token de acceso, este se almacena en un archivo 'token.pickle' para su uso posterior. 
 
 **def connect(self):**
