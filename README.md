@@ -15,7 +15,7 @@
 - Es necesario ejecutar el programa de la forma anterior para tener el token de acceso a su cuenta (no encontre la forma de entrar a Google Drive ejecutando desde Docker)
 - Necesitamos una pantalla, For Windows:[ Instalar Xming X Server](https://github.com/NicolasKlaver/Challenge_Drive/tree/main/Xming)
 - Ir a la ubicacion donde se instalo y en una terminal ejecutar el comando: "Xming.exe -ac"
-- Modificar el valor DISPLAY del archivo Dockerfile_python: cambiar en DISPLAY=SU_DIRECCION-IP:0.0
+- Modificar el valor DISPLAY del archivo docker-compose.yml: cambiar en DISPLAY=SU_DIRECCION-IP:0.0
 - En el directorio del proyecto ejecutar: docker-compose up
 
 #### Instalar bibliotecas para ejecutar:
