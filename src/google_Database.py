@@ -36,8 +36,7 @@ class Database:
         self.cursor = None
         self.table_inv= None
         self.table_historico= None
-        #self.logger = Logger().get_logger()
-        self.logger= None
+        self.logger = Logger().get_logger()
 
 
     ########## FUNCION DE CONEXION ##########

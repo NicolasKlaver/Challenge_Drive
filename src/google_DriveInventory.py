@@ -27,8 +27,7 @@ class GoogleDriveInventory:
         self.db = db
         self.drive_api = drive_api
         self.email = EmailNotifier()
-        #self.logger = Logger().get_logger()
-        self.logger= None
+        self.logger = Logger().get_logger()
         
     
     ########## FUNCIONES PARA MANEJAR LOS ARCHIVOS ##########

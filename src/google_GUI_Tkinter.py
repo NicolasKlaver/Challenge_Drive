@@ -7,6 +7,8 @@ from google_DriveInventory import GoogleDriveInventory
 from dotenv import load_dotenv
 import os
 from logger import Logger
+from cifrado import Cypher
+import io
 
 class App:
     """
@@ -21,11 +23,12 @@ class App:
         
         Returns: None
         """
-        
-        
+        cipher= Cypher()
+        datos_env= cipher.decrypt(flag_cred=0, flag_env=1)
+        datos_env= io.StringIO(datos_env)
         
         # Carga las variables de entorno desde el archivo .env
-        load_dotenv('config/.env')
+        load_dotenv(stream= datos_env)
         # Obtiene las credenciales de la base de datos desde las variables de entorno
         db_user = os.getenv("DB_USER")
         db_password = os.getenv("DB_PASSWORD")
@@ -35,11 +38,6 @@ class App:
         self.driveAPI = GoogleDriveAPI()
         self.db= Database(db_user, db_password, db_host)
         self.driveINV = GoogleDriveInventory(self.db, self.driveAPI)
-        
-        self.db.logger= self.logger
-        self.driveINV.logger= self.logger
-        #self.driveAPI.logger=self.logger
-
         
         # Definimos el objeto raíz de la aplicación y estableciendo el título de la ventana.
         self.root = root
@@ -391,3 +389,4 @@ class App:
         self.db.close_connection()
         self.driveAPI.disconnect()
         
+

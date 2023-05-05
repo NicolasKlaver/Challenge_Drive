@@ -6,6 +6,8 @@ from googleapiclient.errors import HttpError
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from logger import Logger
+from cifrado import Cypher
+import json
 
 
 class GoogleDriveAPI:
@@ -55,14 +57,20 @@ class GoogleDriveAPI:
             else:
                 # Si no existe un token o está vencido y no se cuenta con el refresh token, se procede
                 # a realizar la autenticación con el usuario.
-                # Carga las variables de entorno desde el archivo .env
-                load_dotenv('config/.env')
-                flow = InstalledAppFlow.from_client_secrets_file(os.getenv("DRIVE_CREDENTIALS"), self.SCOPES)
+                
+                # Creo el archivo de las credenciales
+                self.desencriptar_credenciales()
+
+                flow = InstalledAppFlow.from_client_secrets_file("credenciales.json", self.SCOPES)
                 self.creds = flow.run_local_server(port=0)
                 
+                # Eliminar el archivo temporal de credenciales
+                self.eliminar_credenciales_desencriptadas()
+                
+            
             # Una vez que se obtiene el token, se almacena en un archivo local para futuras consultas
             #with open('token.json', 'w') as token:
-             #   token.write(self.creds.to_json())
+            #    token.write(self.creds.to_json())
             with open('token.pickle', 'wb') as token:
                 pickle.dump(self.creds, token)
              
@@ -101,6 +109,16 @@ class GoogleDriveAPI:
         print("Desconexión exitosa de Google Drive.")
         self.logger.info("Desconexión exitosa de Google Drive.")
     
+    def desencriptar_credenciales(self):
+        cipher = Cypher()
+        datos_cred = cipher.decrypt(flag_cred=1, flag_env=0)
+        
+        # Creo un archivo temporalmente
+        with open("credenciales.json", "w") as f:
+            json.dump(datos_cred, f)
+    
+    def eliminar_credenciales_desencriptadas(self):
+        os.remove("credenciales.json")
     
     ########## FUNCIONES PARA OBTENER ARCHIVOS ##########
     
@@ -370,3 +388,5 @@ class GoogleDriveAPI:
             if  perm.get('id', '') == 'anyoneWithLink':
                 return True  
         return False
+
+
